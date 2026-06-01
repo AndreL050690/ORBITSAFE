@@ -15,5 +15,7 @@ Turma: 1TDSPH FIAP — 2026
 - HTML5
 - CSS3
 - JavaScript
+- Chart.js
+- Leaflet.js
 
 ## Repositório
