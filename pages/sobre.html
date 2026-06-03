@@ -3,31 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OrbitSafe - Quem Somos</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <link rel="stylesheet" href="../css/sobre.css"> 
 
     <script src="../js/script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <nav>
+<!-- Link de salto para acessibilidade via teclado para as pessoas com deficiências visuais-->
+<a href="#conteudo-principal" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o conteúdo principal</a>
 
+<header>
+    <nav aria-label="Navegação Principal">
+        <h1>ORBITSAFE</h1>
+
+        <!-- Lista de navegação com os links corrigidos saindo da pasta pages/ -->
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <!-- aria-current="page" indica que o usuário está na página de (sobre)-->
+            <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<!-- ID para o link de salto lá de cima funcionar perfeitamente -->
+<main id="conteudo-principal">
 
-    <section>
+<!-- Seção de Misões da Empresa -->
+    <section class="sobre-section" aria-labelledby="titulo-sobre">
+        <h2 id="titulo-sobre">Nossa Missão</h2>
+        <p>A OrbitSafe nasceu com o propósito de solucionar uma das maiores vulnerabilidades em cenários de desastres climáticos: a perda de comunicação terrestre. Desenvolvemos uma plataforma inteligente capaz de gerenciar e manter fluxos de dados vitais ativos através de tecnologia de satélites de órbita baixa.</p>
+    </section>
 
+    <!-- Seção de Valores da Empresa -->
+    <section class="valores-section" aria-labelledby="titulo-valores" style="margin-top: 30px;">
+        <h2 id="titulo-valores">Valores Fundamentais</h2>
+        <p>Guiamos nossa tecnologia através de pilares essenciais para o suporte humanitário e a segurança global.</p>
+
+        <div class="grid-valores" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            
+            <article style="flex: 1; min-width: 250px;">
+                <h3>Confiabilidade Absoluta</h3>
+                <p>Garantia de redundância de dados e estabilidade em ambientes extremos onde cada segundo conta.</p>
+            </article>
+
+            <article style="flex: 1; min-width: 250px;">
+                <h3>Impacto Global</h3>
+                <p>Soluções projetadas para atender desde defesas civis locais até frotas de resgate internacionais.</p>
+            </article>
+
+            <article style="flex: 1; min-width: 250px;">
+                <h3>Inovação Humana</h3>
+                <p>Uso direcionado de Inteligência Artificial e ciência espacial aplicadas puramente para a preservação de vidas.</p>
+            </article>
+        </div>
     </section>
 
 </main>
 
 <footer>
-
+    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 </footer>
 
 </body>
