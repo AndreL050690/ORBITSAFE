@@ -1,34 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OrbitSafe - Perguntas Frequentes (FAQ)</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <link rel="stylesheet" href="../css/faq.css">
 
     <script src="../js/script.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <nav>
+    <!-- Link oculto de salto para acessibilidade via teclado para as pessoas com deficiências visuais-->
+    <a href="#conteudo-principal" class="sr-only"
+        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o
+        conteúdo principal</a>
 
-    </nav>
-</header>
 
-<main>
+    <header>
+        <nav aria-label="Navegação Principal">
+            <h1>ORBITSAFE</h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="monitoramento.html">Monitoramento</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <!-- Identificação semântica (aria-current) indicando qual link do menu está ativo no momento -->
+                <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="integrantes.html">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section>
 
-    </section>
+    <main id="conteudo-principal">
 
-</main>
+        <!-- Seção de perguntas frequentes: Agrupa o título explicativo e a lista dinâmica de perguntas frequentes -->
+        <section class="faq-section" aria-labelledby="titulo-faq">
+            <h2 id="titulo-faq">Perguntas Frequentes</h2>
+            <p>Encontre respostas rápidas sobre o funcionamento, estabilidade e implementação do sistema OrbitSafe in
+                áreas de risco.</p>
 
-<footer>
 
-</footer>
+            <div class="lista-faq">
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">O que acontece se a tempestade danificar as antenas locais?</summary>
+                    <p class="resposta-faq">O OrbitSafe foi desenhado para operar com terminais portáteis de alta
+                        resiliência. Caso uma antena principal seja danificada, o sistema redireciona automaticamente o
+                        tráfego de dados vitais para os nós de comunicação móveis mais próximos.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">Como o chatbot funciona sem internet convencional?</summary>
+                    <p class="resposta-faq">O nosso chatbot roda em pacotes de dados extremamente leves (via satélites
+                        de órbita baixa). Ele não precisa da rede de telefonia móvel tradicional (4G/5G) ou cabos de
+                        fibra óptica para receber e enviar orientações de triagem.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">Qual o tempo de resposta para detectar uma queda de rede?</summary>
+                    <p class="resposta-faq">A nossa IA de monitoramento faz checagens (pings) contínuas nas bases de
+                        apoio. Qualquer desconexão ou anomalia severa é detectada em menos de 30 segundos, disparando um
+                        alerta imediato no painel de controle.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">Quem pode ter acesso ao Dashboard de monitoramento?</summary>
+                    <p class="resposta-faq">O acesso ao Dashboard é restrito a administradores cadastrados, órgãos de
+                        Defesa Civil e equipes de resgate autorizadas, garantindo a segurança dos dados operacionais
+                        durante a crise.</p>
+                </details>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
+    </footer>
 
 </body>
+
 </html>
