@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OrbitSafe - Central de Monitoramento</title>
 
+    <!-- Links apontando corretamente para fora da pasta pages -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/monitoramento.css">
 
     <script src="../js/script.js" defer></script>
 </head>
@@ -14,20 +16,84 @@
 
 <header>
     <nav>
-
+        <h1>ORBITSAFE</h1>
+        <ul>
+            <!-- Menu com caminhos internos corretos -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="sos.html">Painel SOS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<main class="container-monitoramento">
 
-    <section>
-
+    <!-- Cabeçalho da área de monitoramento -->
+    <section class="titulo-central">
+        <h2>📡 Central de Monitoramento Espacial</h2>
+        <p>Acompanhamento em tempo real da cobertura da constelação OrbitSafe e tráfego de dados prioritários para a Defesa Civil.</p>
     </section>
+
+    <!-- Cards de Indicadores (Métricas Rápidas) -->
+    <section class="cards-indicadores">
+        <div class="card">
+            <h3>Satélites em Órbita</h3>
+            <p class="numero">24 / 24</p>
+            <span class="status operacional">100% Operacional</span>
+        </div>
+        <div class="card">
+            <h3>Conexões Ativas</h3>
+            <p class="numero">1,420</p>
+            <span class="status">Pontos Isolados Atendidos</span>
+        </div>
+        <div class="card">
+            <h3>Chamados Respondidos</h3>
+            <p class="numero">98.4%</p>
+            <span class="status">Tempo médio: 45s</span>
+        </div>
+    </section>
+
+    <!-- Simulador de Mapa e Lista de Ocorrências -->
+    <div class="painel-grade">
+        
+        <!-- Bloco do Mapa -->
+        <section class="bloco-mapa">
+            <h3>Visualização da Constelação</h3>
+            <div class="mapa-ficticio">
+                <p>[ Grade do Radar de Cobertura de Satélites Ativa ]</p>
+            </div>
+        </section>
+
+        <!-- Bloco das Ocorrências Atualizado (Sem Mauá) -->
+        <section class="bloco-ocorrencias">
+            <h3>⚠️ Alertas e Ocorrências Ativas</h3>
+            <ul class="lista-alertas">
+                <li class="alerta critico">
+                    <strong>Região Sudeste (Litoral)</strong>
+                    <p>Volume crítico de chuvas detectado. Satélite OrbitSafe-3 direcionando banda de emergência e canais de rádio prioritários para as equipes de salvamento locais.</p>
+                </li>
+                <li class="alerta moderado">
+                    <strong>Região Norte (Comunidade Remota)</strong>
+                    <p>Bloqueio em antenas terrestres devido a tempestade. Conexão via satélite OrbitSafe estabelecida com sucesso.</p>
+                </li>
+                <li class="alerta informativo">
+                    <strong>Vale do Paraíba</strong>
+                    <p>Monitoramento preventivo iniciado devido a alertas de deslizamento de terra em encostas.</p>
+                </li>
+            </ul>
+        </section>
+
+    </div>
 
 </main>
 
 <footer>
-
+    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 </footer>
 
 </body>

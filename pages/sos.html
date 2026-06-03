@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbitSafe - Painel SOS</title>
+
+    <!-- Como esta página está dentro da pasta 'pages', usamos '../' para buscar o CSS na pasta correta -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sos.css">
+
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>ORBITSAFE</h1>
+        <ul>
+            <!-- Menu corrigido: para voltar para a home que está na raiz, usamos '../index.html' -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="sos.html">Painel SOS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container-sos">
+
+    <!-- Seção do Formulário de Emergência -->
+    <section class="formulario-sos">
+        <h2>🚨 Enviar Chamado de Emergência (SOS)</h2>
+        <p>Caso esteja em uma área afetada e sem conectividade convencional, preencha os dados abaixo. As informações serão transmitidas via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+        
+        <form action="#">
+            <div class="campo-grupo">
+                <label for="nome">Nome do Solicitante / Organização:</label>
+                <input type="text" id="nome" placeholder="Ex: João Silva ou Defesa Civil local" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="gravidade">Nível de Urgência:</label>
+                <select id="gravidade" required>
+                    <option value="" disabled selected>Selecione o nível...</option>
+                    <option value="alto">Crítico (Risco imediato à vida)</option>
+                    <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                    <option value="baixo">Informativo / Alerta de risco</option>
+                </select>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="mensagem">Descrição da Situação e Necessidades:</label>
+                <textarea id="mensagem" rows="5" placeholder="Descreva o que aconteceu e do que precisam (ex: resgate médico, água potável, botes...)" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
+</footer>
+
+</body>
+</html>
