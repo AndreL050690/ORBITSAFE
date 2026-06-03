@@ -3,31 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OrbitSafe - Equipe de Desenvolvimento</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <link rel="stylesheet" href="../css/integrantes.css">
 
     <script src="../js/script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <nav>
+<a href="#conteudo-principal" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o conteúdo principal</a>
 
+<header>
+    <nav aria-label="Navegação Principal">
+        <h1>ORBITSAFE</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="sos.html">Painel SOS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="integrantes.html" aria-current="page">Equipe</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<main id="conteudo-principal">
 
-    <section>
+    <section class="secao-equipe" aria-labelledby="titulo-equipe">
+        <h2 id="titulo-equipe">Nossa Equipe</h2>
+        <p>Conheça os desenvolvedores responsáveis pela criação e arquitetura do ecossistema OrbitSafe.</p>
+        <p><strong>Turma:</strong> 1TDSPH &mdash; FIAP</p>
 
+        <div class="grid-equipe" style="display: flex; gap: 25px; flex-wrap: wrap; margin-top: 40px; justify-content: center;">
+            
+            <article class="card-integrante" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; width: 220px; text-align: center;">
+                <img src="../images/integranteIsabelle.png" alt="Foto de Isabelle Ferreira, desenvolvedora do projeto" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #444;">
+                <h3>Isabelle Ferreira</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem;">RM 573507</p>
+                <span class="cargo" style="display: inline-block; background: #0070f3; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; margin: 10px 0;">JavaScript General & UI</span>
+                <div class="links-sociais" style="margin-top: 10px;">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub de Isabelle Ferreira" style="margin: 0 5px;">GitHub</a>
+                </div>
+            </article>
+
+            <article class="card-integrante" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; width: 220px; text-align: center;">
+                <img src="../images/integranteAndre.png" alt="Foto de André, desenvolvedor do projeto" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #444;">
+                <h3>André L.</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem;">RM [Inserir RM]</p>
+                <span class="cargo" style="display: inline-block; background: #0070f3; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; margin: 10px 0;">Git Architect & Repo</span>
+                <div class="links-sociais" style="margin-top: 10px;">
+                    <a href="https://github.com/AndreL050690" target="_blank" aria-label="GitHub de André" style="margin: 0 5px;">GitHub</a>
+                </div>
+            </article>
+
+            <article class="card-integrante" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; width: 220px; text-align: center;">
+                <img src="../images/integranteMilena.png" alt="Foto de Milena, desenvolvedora do projeto" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #444;">
+                <h3>Milena</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem;">RM [Inserir RM]</p>
+                <span class="cargo" style="display: inline-block; background: #0070f3; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; margin: 10px 0;">HTML Semantics & UX</span>
+                <div class="links-sociais" style="margin-top: 10px;">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub de Milena" style="margin: 0 5px;">GitHub</a>
+                </div>
+            </article>
+
+            <article class="card-integrante" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; width: 220px; text-align: center;">
+                <img src="../images/integranteEduardo.png" alt="Foto de Eduardo, desenvolvedor do projeto" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #444;">
+                <h3>Eduardo</h3>
+                <p style="opacity: 0.7; font-size: 0.9rem;">RM [Inserir RM]</p>
+                <span class="cargo" style="display: inline-block; background: #0070f3; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; margin: 10px 0;">CSS Styling & Design</span>
+                <div class="links-sociais" style="margin-top: 10px;">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub de Eduardo" style="margin: 0 5px;">GitHub</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="repositorio-projeto" style="text-align: center; margin-top: 50px;" aria-labelledby="titulo-repo">
+        <h3 id="titulo-repo">Repositório do Projeto</h3>
+        <p>Acesse o código-fonte completo e o histórico de desenvolvimento da Global Solution no GitHub.</p>
+        <a href="https://github.com/AndreL050690/ORBITSAFE" target="_blank" class="btn-secundario" style="margin-top: 15px; display: inline-block; padding: 10px 20px;" aria-label="Acessar repositório do projeto OrbitSafe no GitHub">Ver Repositório no GitHub</a>
     </section>
 
 </main>
 
 <footer>
-
+    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 </footer>
 
 </body>
