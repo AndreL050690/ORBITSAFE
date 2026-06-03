@@ -3,31 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OrbitSafe - Contato e Suporte</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <link rel="stylesheet" href="../css/contato.css">
 
     <script src="../js/script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <nav>
+<a href="#conteudo-principal" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o conteúdo principal</a>
 
+<header>
+    <nav aria-label="Navegação Principal">
+        <h1>ORBITSAFE</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="sos.html">Painel SOS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html" aria-current="page">Contato</a></li>
+            <li><a href="integrantes.html">Equipe</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<main id="conteudo-principal">
 
-    <section>
+    <section class="secao-contato" aria-labelledby="titulo-contato">
+        <h2 id="titulo-contato">Fale Conosco</h2>
+        <p>Envie sua mensagem, dúvida técnica ou solicitação de suporte operacional para desastres.</p>
 
+        <form id="form-contato" novalidate style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; max-width: 500px;">
+            
+            <div class="grupo-campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                <span class="msg-erro" id="erro-nome" style="color: #ff4a4a; font-size: 0.9rem; display: none;"></span>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email">E-mail Corporativo ou Institucional:</label>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                <span class="msg-erro" id="erro-email" style="color: #ff4a4a; font-size: 0.9rem; display: none;"></span>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="mensagem">Mensagem / Relato do Problema:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como podemos ajudar sua equipe?"></textarea>
+                <span class="msg-erro" id="erro-mensagem" style="color: #ff4a4a; font-size: 0.9rem; display: none;"></span>
+            </div>
+
+            <button type="submit" class="btn-principal" style="cursor: pointer; padding: 10px 20px;">Enviar Mensagem</button>
+        </form>
     </section>
+
+    <div id="modal-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index: 1000;">
+        <div class="modal-conteudo" style="background: #222; padding: 30px; border-radius: 8px; text-align: center; max-width: 400px; width: 90%;">
+            <h3 id="modal-titulo">Mensagem Enviada!</h3>
+            <p id="modal-texto">Sua solicitação foi registrada na nossa rede de satélites com sucesso.</p>
+            <button id="btn-fechar-modal" class="btn-secundario" style="margin-top: 20px; cursor: pointer; padding: 8px 15px;">Fechar</button>
+        </div>
+    </div>
 
 </main>
 
 <footer>
-
+    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 </footer>
 
 </body>
