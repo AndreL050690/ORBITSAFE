@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrbitSafe - Central de Monitoramento</title>
 
-    <!-- Links apontando corretamente para fora da pasta pages -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/monitoramento.css">
@@ -14,14 +13,16 @@
 </head>
 <body>
 
+    <!-- Link oculto de salto para acessibilidade via teclado para as pessoas com deficiências visuais-->
+<a href="#conteudo-principal" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o conteúdo principal</a>
+
 <header>
-    <nav>
+    <nav aria-label="Navegação Principal">
         <h1>ORBITSAFE</h1>
         <ul>
-            <!-- Menu com caminhos internos corretos -->
             <li><a href="../index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="monitoramento.html">Monitoramento</a></li>
+            <li><a href="monitoramento.html" aria-current="page">Monitoramento</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="sos.html">Painel SOS</a></li>
             <li><a href="faq.html">FAQ</a></li>
@@ -31,47 +32,46 @@
     </nav>
 </header>
 
-<main class="container-monitoramento">
+<main class="container-monitoramento" id="conteudo-principal">
 
-    <!-- Cabeçalho da área de monitoramento -->
-    <section class="titulo-central">
-        <h2>📡 Central de Monitoramento Espacial</h2>
+    <section class="titulo-central" aria-labelledby="principal-monitoramento">
+        <h2 id="principal-monitoramento"> Central de Monitoramento Espacial</h2>
         <p>Acompanhamento em tempo real da cobertura da constelação OrbitSafe e tráfego de dados prioritários para a Defesa Civil.</p>
     </section>
 
-    <!-- Cards de Indicadores (Métricas Rápidas) -->
-    <section class="cards-indicadores">
-        <div class="card">
+    <section class="cards-indicadores" aria-label="Indicadores de desempenho e status do sistema">
+        <h3 class="sr-only">Métricas de Desempenho</h3>
+        
+        <article class="card">
             <h3>Satélites em Órbita</h3>
             <p class="numero">24 / 24</p>
             <span class="status operacional">100% Operacional</span>
-        </div>
-        <div class="card">
+        </article>
+        
+        <article class="card">
             <h3>Conexões Ativas</h3>
-            <p class="numero">1,420</p>
+            <p class="numero">1.420</p>
             <span class="status">Pontos Isolados Atendidos</span>
-        </div>
-        <div class="card">
+        </article>
+        
+        <article class="card">
             <h3>Chamados Respondidos</h3>
             <p class="numero">98.4%</p>
             <span class="status">Tempo médio: 45s</span>
-        </div>
+        </article>
     </section>
 
-    <!-- Simulador de Mapa e Lista de Ocorrências -->
     <div class="painel-grade">
         
-        <!-- Bloco do Mapa -->
-        <section class="bloco-mapa">
-            <h3>Visualização da Constelação</h3>
-            <div class="mapa-ficticio">
+        <section class="bloco-mapa" aria-labelledby="titulo-mapa">
+            <h3 id="titulo-mapa">Visualização da Constelação</h3>
+            <div class="mapa-ficticio" role="img" aria-label="Radar mostrando o mapa de cobertura com 24 satélites ativos sobre a América do Sul">
                 <p>[ Grade do Radar de Cobertura de Satélites Ativa ]</p>
             </div>
         </section>
 
-        <!-- Bloco das Ocorrências Atualizado (Sem Mauá) -->
-        <section class="bloco-ocorrencias">
-            <h3>⚠️ Alertas e Ocorrências Ativas</h3>
+        <section class="bloco-ocorrencias" aria-labelledby="titulo-alertas">
+            <h3 id="titulo-alertas">⚠️ Alertas e Ocorrências Ativas</h3>
             <ul class="lista-alertas">
                 <li class="alerta critico">
                     <strong>Região Sudeste (Litoral)</strong>
