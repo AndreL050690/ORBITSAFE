@@ -358,7 +358,7 @@ nav a:hover::after{
     line-height:1.8;
 }
 
-/* FOOTER */
+
 
 footer{
 
@@ -378,7 +378,7 @@ footer p{
     color:#94A3B8;
 }
 
-/* RESPONSIVO */
+
 
 @media(max-width:900px){
 
