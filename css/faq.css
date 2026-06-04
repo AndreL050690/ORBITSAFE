@@ -1,8 +1,73 @@
-main{
+/* ==========================================================================
+   FAQ ORBITSAFE: Estilização Profissional (Padrão Unificado)
+   ========================================================================== */
+
+/* Fundo da página e texto global do FAQ */
+body {
+    background-color: #0b0e14;
+    color: #ffffff;
 }
 
-.faq-container{
+/* Container principal */
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
-.faq-item{
+.faq-section h2 {
+    color: #00d2ff;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.faq-section p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* Container da lista */
+.lista-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Card da pergunta */
+.item-faq {
+    background-color: #151a23;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Título da pergunta (Summary) */
+.pergunta-faq {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.1rem;
+    list-style: none; /* Remove a setinha padrão */
+}
+
+/* Remove a setinha do Chrome/Safari */
+.pergunta-faq::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo da resposta */
+.resposta-faq {
+    color: #cbd5e1;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    line-height: 1.6;
+}
+
+/* Efeito ao passar o mouse */
+.item-faq:hover {
+    border-color: #00d2ff;
 }
