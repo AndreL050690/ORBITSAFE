@@ -1,3 +1,421 @@
-main{
 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+
+.sr-only{
+    position:absolute;
+    left:-9999px;
+}
+
+
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(2,6,23,.95);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,207,255,.10);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.logo-orbitsafe img{
+
+    height:75px;
+
+    width:auto;
+
+    display:block;
+
+    transition:.3s;
+
+    filter:
+    drop-shadow(
+        0 0 12px rgba(0,207,255,.6)
+    )
+    drop-shadow(
+        0 0 30px rgba(0,207,255,.25)
+    );
+}
+
+.logo-orbitsafe img:hover{
+
+    transform:scale(1.08);
+}
+
+
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+
+    font-weight:600;
+
+    position:relative;
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-6px;
+
+    background:#00CFFF;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#00CFFF;
+}
+
+nav a:hover::after{
+
+    width:100%;
+}
+
+
+
+.hero-section{
+
+    min-height:90vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #010816,
+        #02152E,
+        #031F44,
+        #010816
+    );
+
+    box-shadow:
+    inset 0 0 100px rgba(0,207,255,.05);
+}
+
+.hero-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(
+        rgba(255,255,255,.8) 1px,
+        transparent 1px
+    );
+
+    background-size:55px 55px;
+
+    opacity:.18;
+
+    pointer-events:none;
+}
+
+.hero-section h2{
+
+    font-size:5rem;
+
+    max-width:1000px;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    text-shadow:
+    0 0 15px rgba(0,207,255,.7),
+    0 0 35px rgba(0,207,255,.4),
+    0 0 60px rgba(0,207,255,.15);
+}
+
+.hero-section p{
+
+    max-width:850px;
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+    font-size:1.25rem;
+}
+
+
+
+.botao-monitoramento{
+
+    text-decoration:none;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00CFFF,
+        #38BDF8
+    );
+
+    color:#020617;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 20px rgba(0,207,255,.35);
+}
+
+.botao-monitoramento:hover{
+
+    background:
+    linear-gradient(
+        135deg,
+        #00B8E6,
+        #00CFFF
+    );
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 30px rgba(0,207,255,.55);
+}
+
+
+
+.orbitsafe-section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:120px 20px;
+}
+
+.orbitsafe-section h2{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 15px rgba(0,207,255,.2);
+}
+
+.orbitsafe-section > p{
+
+    text-align:center;
+
+    color:#CBD5E1;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+
+
+
+.orbitsafe-cards{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:60px;
+}
+
+.orbitsafe-card{
+
+    flex:1;
+
+    min-width:300px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #07142E,
+        #0B2C5A
+    );
+
+    padding:35px;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 15px rgba(0,207,255,.08);
+
+    backdrop-filter:blur(10px);
+}
+
+.orbitsafe-card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.02);
+
+    border-color:#00CFFF;
+
+    box-shadow:
+    0 0 35px rgba(0,207,255,.30),
+    0 0 60px rgba(0,207,255,.10);
+}
+
+.orbitsafe-card h3{
+
+    color:#00CFFF;
+
+    margin-bottom:15px;
+
+    font-size:1.4rem;
+}
+
+.orbitsafe-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:120px;
+
+    background:#010915;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(0,207,255,.15);
+}
+
+footer p{
+
+    color:#94A3B8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero-section h2{
+
+        font-size:3rem;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero-section h2{
+
+        font-size:2rem;
+    }
+
+    .hero-section p{
+
+        font-size:1rem;
+    }
+
+    .orbitsafe-card{
+
+        min-width:100%;
+    }
 }
