@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitSafe - Conheça nossa missão de salvar vidas e garantir conectividade resiliente através de constelações orbitais.">
     <title>OrbitSafe - Quem Somos</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/sobre.css">
 
     <script src="../js/script.js" defer></script>
@@ -14,66 +16,55 @@
 
 <body>
 
-    <!-- Link oculto de salto para acessibilidade via teclado para as pessoas com deficiências visuais-->
-    <a href="#conteudo-principal" class="sr-only"
-        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o
-        conteúdo principal</a>
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
     <header>
         <nav aria-label="Navegação Principal">
-            <h1>ORBITSAFE</h1>
+            <h1 class="logo">ORBITSAFE</h1>
 
-            <!-- Lista de navegação com os links corrigidos saindo da pasta pages/ -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <!-- aria-current="page" indica que o usuário está na página de (sobre)-->
                 <li><a href="sobre.html" aria-current="page">Sobre</a></li>
                 <li><a href="monitoramento.html">Monitoramento</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="chatbot.html">Chatbot</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ID para o link de salto lá de cima funcionar perfeitamente -->
     <main id="conteudo-principal">
 
-        <!-- Seção de Misões da Empresa -->
         <section class="sobre-section" aria-labelledby="titulo-sobre">
             <h2 id="titulo-sobre">Nossa Missão</h2>
-            <p>A OrbitSafe nasceu com o propósito de solucionar uma das maiores vulnerabilidades em cenários de
-                desastres climáticos: a perda de comunicação terrestre. Desenvolvemos uma plataforma inteligente capaz
-                de gerenciar e manter fluxos de dados vitais ativos através de tecnologia de satélites de órbita baixa.
-            </p>
+            <p>A OrbitSafe nasceu com o propósito de solucionar uma das maiores vulnerabilidades em cenários de desastres climáticos: a perda de comunicação terrestre. Desenvolvemos uma plataforma inteligente capaz de gerenciar e manter fluxos de dados vitais ativos através de tecnologia de satélites de órbita baixa. Inspirados por soluções desenvolvidas pela NASA e ESA, integramos dados orbitais com Inteligência Artificial para fornecer alertas em tempo real e apoio de decisão rápido para resgates.</p>
         </section>
 
-        <!-- Seção de Valores da Empresa -->
-        <section class="valores-section" aria-labelledby="titulo-valores" style="margin-top: 30px;">
+        <section class="valores-section" aria-labelledby="titulo-valores">
             <h2 id="titulo-valores">Valores Fundamentais</h2>
-            <p>Guiamos nossa tecnologia através de pilares essenciais para o suporte humanitário e a segurança global.
-            </p>
+            <p>Guiamos nossa tecnologia através de pilares essenciais para o suporte humanitário e a segurança global.</p>
 
-            <div class="grid-valores" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-
-                <article style="flex: 1; min-width: 250px;">
+            <div class="grid-valores">
+                <article>
                     <h3>Confiabilidade Absoluta</h3>
-                    <p>Garantia de redundância de dados e estabilidade em ambientes extremos onde cada segundo conta.
-                    </p>
+                    <p>Garantia de redundância de dados e estabilidade em ambientes extremos onde cada segundo conta.</p>
                 </article>
 
-                <article style="flex: 1; min-width: 250px;">
+                <article>
                     <h3>Impacto Global</h3>
-                    <p>Soluções projetadas para atender desde defesas civis locais até frotas de resgate internacionais.
-                    </p>
+                    <p>Soluções projetadas para atender desde defesas civis locais até frotas de resgate internacionais.</p>
                 </article>
 
-                <article style="flex: 1; min-width: 250px;">
+                <article>
                     <h3>Inovação Humana</h3>
-                    <p>Uso direcionado de Inteligência Artificial e ciência espacial aplicadas puramente para a
-                        preservação de vidas.</p>
+                    <p>Uso direcionado de Inteligência Artificial e ciência espacial aplicadas puramente para a preservação de vidas.</p>
                 </article>
             </div>
         </section>
@@ -83,6 +74,60 @@
     <footer>
         <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
     </footer>
+
+    <!-- Botão SOS Flutuante -->
+    <button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+
+    <!-- Modal SOS -->
+    <div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
+        <div class="modal-conteudo">
+            <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
+            <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
+            <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+            
+            <form id="form-sos" class="formulario-estrutura-sos" novalidate>
+                <div class="campo-grupo">
+                    <label for="nome-sos">Nome do Solicitante / Organização:</label>
+                    <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
+                    <span class="msg-erro" id="erro-nome-sos"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                    <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+                    <span class="msg-erro" id="erro-localizacao"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="gravidade">Nível de Urgência:</label>
+                    <select id="gravidade" required>
+                        <option value="" disabled selected>Selecione o nível...</option>
+                        <option value="alto">Crítico (Risco imediato à vida)</option>
+                        <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                        <option value="baixo">Informativo / Alerta de risco</option>
+                    </select>
+                    <span class="msg-erro" id="erro-gravidade"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
+                    <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
+                    <span class="msg-erro" id="erro-mensagem-sos"></span>
+                </div>
+
+                <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal SOS Feedback -->
+    <div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
+        <div class="modal-conteudo">
+            <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
+            <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
+            <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
+        </div>
+    </div>
 
 </body>
 

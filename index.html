@@ -1,99 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitSafe - Conectividade via satélites de órbita baixa para prevenção e resposta a desastres climáticos.">
     <title>OrbitSafe - Home</title>
-
-    <!-- Importação do css organizadas pelo Eduardo -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
-
-    <!-- O 'defer' garante que o JS seja carregado sem travar a renderização visual da tela -->
     <script src="./js/script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- 
-     Os usuários cegos ou com limitações motoras navegam usando a tecla 'Tab'. 
-     Este link "escondido via css" permite que eles pulem a barra inteira de menu e vão direto ao texto principal, evitando ter que passar por todos os links toda vez que a página atualizar. -->
-    <a href="#conteudo-principal" class="sr-only"
-        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o
-        conteúdo principal</a>
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
-    <!-- A tag <header> demarca o topo do site -->
     <header>
-        <!-- O atributo aria-label descreve a função exata da tag <nav> para o leitor de tela -->
         <nav aria-label="Navegação Principal">
+            <h1 class="logo">ORBITSAFE</h1>
 
-            <h1>ORBITSAFE</h1>
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <!-- Lista estruturada de links -->
             <ul>
-                <!-- O aria-current="page" avisa ao usuário com deficiência visual qual link da página que ele se encontra no momento -->
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="pages/sobre.html">Sobre</a></li>
                 <li><a href="pages/monitoramento.html">Monitoramento</a></li>
                 <li><a href="pages/dashboard.html">Dashboard</a></li>
-                <li><a href="pages/chatbot.html">Chatbot</a></li>
                 <li><a href="pages/faq.html">FAQ</a></li>
                 <li><a href="pages/contato.html">Contato</a></li>
-                <li><a href="pages/integrantes.html">Equipe</a></li>
+                <li><a href="pages/integrantes.html">Integrantes</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- A tag <main> indica o conteúdo central e exclusivo desta página. 
-     O id="conteudo-principal" é o alvo exato do link de salto criado lá no topo do body -->
     <main id="conteudo-principal">
 
-        <!-- 
-         O aria-labelledby vincula essa seção ao título dela: h2 id="titulo-hero", fazendo com que o leitor anuncie o título ao entrar na seção -->
         <section class="hero-section" aria-labelledby="titulo-hero">
-
-            <h2 id="titulo-hero">Conectividade Espacial que Salva Vidas</h2>
-            <p>Garantindo comunicação inteligente via satélite para regiões remotas e equipes de resgate durante
-                desastres climáticos severos.</p>
-
-            <!-- O  aria-label aqui exibe a informação do botão, para que o usuário saiba exatamente para onde o link o levará -->
-            <a href="pages/monitoramento.html" class="btn-principal"
-                aria-label="Ir para a página de Monitoramento do sistema">Ver Monitoramento</a>
+            <h1 id="titulo-hero">Conectividade Espacial que Salva Vidas</h1>
+            <p>Garantindo comunicação inteligente via satélite para regiões remotas e equipes de resgate durante desastres climáticos severos.</p>
+            <a href="pages/monitoramento.html" class="btn-principal" aria-label="Ir para a página de Monitoramento do sistema">Ver Monitoramento</a>
         </section>
 
-        <section class="recursos-section" aria-labelledby="titulo-recursos" style="margin-top: 30px;">
+        <section class="recursos-section" aria-labelledby="titulo-recursos">
             <h2 id="titulo-recursos">Como o OrbitSafe Funciona?</h2>
-            <p>Nossa plataforma atua diretamente na resiliência de redes de comunicação quando a infraestrutura
-                terrestre falha.</p>
+            <p>Nossa plataforma atua diretamente na resiliência de redes de comunicação quando a infraestrutura terrestre falha.</p>
 
-            <!-- Container visual das caixas de recursos -->
-            <div class="grid-recursos" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-
-                <!-- A tag <article> indica um bloco de conteúdo independente, subdividindo recursos do sistema -->
-                <article style="flex: 1; min-width: 250px;">
+            <div class="grid-recursos">
+                <article>
                     <h3>Conexão Satelital Resiliente</h3>
                     <p>Roteamento automático de dados de emergência através de constelações de satélites parceiras.</p>
                 </article>
 
-                <article style="flex: 1; min-width: 250px;">
+                <article>
                     <h3>Alertas Automatizados</h3>
-                    <p>Identificação instantânea de quedas de conectividade em bases de apoio e envio de socorro
-                        técnico.</p>
+                    <p>Identificação instantânea de quedas de conectividade em bases de apoio e envio de socorro técnico.</p>
                 </article>
 
-                <article style="flex: 1; min-width: 250px;">
+                <article>
                     <h3>Integração com IA</h3>
-                    <p>Triagem de dados críticos de clima via chatbot para tomada de decisões rápidas pelas equipes em
-                        solo.</p>
+                    <p>Triagem de dados críticos de clima via chatbot para tomada de decisões rápidas pelas equipes em solo.</p>
                 </article>
             </div>
         </section>
 
     </main>
-    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
+
+    <footer>
+        <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
     </footer>
+
+    <!-- Botão SOS Flutuante -->
+    <button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+
+    <!-- Modal SOS -->
+    <div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
+        <div class="modal-conteudo">
+            <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
+            <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
+            <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+            
+            <form id="form-sos" class="formulario-estrutura-sos" novalidate>
+                <div class="campo-grupo">
+                    <label for="nome-sos">Nome do Solicitante / Organização:</label>
+                    <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
+                    <span class="msg-erro" id="erro-nome-sos"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                    <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+                    <span class="msg-erro" id="erro-localizacao"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="gravidade">Nível de Urgência:</label>
+                    <select id="gravidade" required>
+                        <option value="" disabled selected>Selecione o nível...</option>
+                        <option value="alto">Crítico (Risco imediato à vida)</option>
+                        <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                        <option value="baixo">Informativo / Alerta de risco</option>
+                    </select>
+                    <span class="msg-erro" id="erro-gravidade"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
+                    <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
+                    <span class="msg-erro" id="erro-mensagem-sos"></span>
+                </div>
+
+                <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal SOS Feedback -->
+    <div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
+        <div class="modal-conteudo">
+            <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
+            <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
+            <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
+        </div>
+    </div>
 
 </body>
 
