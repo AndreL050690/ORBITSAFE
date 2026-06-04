@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitSafe - Dashboard de monitoramento de dados, banda e relatórios da rede orbital de comunicação.">
     <title>OrbitSafe - Dashboard de Análise</title>
 
     <link rel="stylesheet" href="../css/style.css">
@@ -13,20 +14,26 @@
 </head>
 <body>
 
-<a href="#conteudo-principal" class="sr-only" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o conteúdo principal</a>
+<a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
 <header>
     <nav aria-label="Navegação Principal">
-        <h1>ORBITSAFE</h1>
+        <h1 class="logo">ORBITSAFE</h1>
+
+        <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="monitoramento.html">Monitoramento</a></li>
             <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
-            <li><a href="sos.html">Painel SOS</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li><a href="integrantes.html">Equipe</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
         </ul>
     </nav>
 </header>
@@ -38,39 +45,205 @@
         <p>Análise estatística volumétrica de dados transmitidos e relatórios de resiliência de banda de emergência.</p>
     </section>
 
+    <!-- Tabs para alternar visualizações -->
+    <div class="abas-dashboard">
+        <button class="btn-aba active" data-aba="geral">Visão Geral</button>
+        <button class="btn-aba" data-aba="satelites">Rede Satélites</button>
+        <button class="btn-aba" data-aba="banda">Alocação Banda</button>
+    </div>
+
+    <!-- Cards de Métricas -->
+    <section class="grid-metricas" aria-label="Principais métricas operacionais">
+        <div class="card-metrica">
+            <h4>Dados Transmitidos</h4>
+            <div class="valor-metrica" id="dado-trans">1.25 TB</div>
+            <span class="tendencia alta">▲ +12% vs ontem</span>
+        </div>
+        <div class="card-metrica">
+            <h4>Latência Média</h4>
+            <div class="valor-metrica" id="latencia-med">18ms</div>
+            <span class="tendencia baixa">▼ -2ms (Melhor)</span>
+        </div>
+        <div class="card-metrica">
+            <h4>Uso de IA (Triagem)</h4>
+            <div class="valor-metrica" id="ia-triagem">4.3k</div>
+            <span class="tendencia alta">▲ +8% vs ontem</span>
+        </div>
+        <div class="card-metrica">
+            <h4>Resiliência Total</h4>
+            <div class="valor-metrica" id="resiliencia-tot">99.98%</div>
+            <span class="tendencia estavel">■ Estável</span>
+        </div>
+    </section>
+
+    <!-- Grade do Dashboard com Gráficos -->
     <div class="grade-dashboard">
         
         <section class="bloco-grafico" aria-labelledby="grafico-trafego">
             <h3 id="grafico-trafego">Fluxo de Banda de Emergência (Satélite)</h3>
             <div class="area-grafico-ficticio" role="img" aria-label="Gráfico de linha mostrando um pico de consumo de dados às 14:00 na Região Sudeste, estabilizando logo em seguida.">
-                <p class="texto-placeholder-grafico">[ Simulação do Gráfico de Linhas - Tráfego de Dados ]</p>
+                <svg class="chart-svg" viewBox="0 0 500 200" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="cyan-gradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="var(--primary-cyan)"></stop>
+                            <stop offset="100%" stop-color="var(--primary-blue)"></stop>
+                        </linearGradient>
+                        <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.15)"></stop>
+                            <stop offset="100%" stop-color="rgba(2, 6, 23, 0)"></stop>
+                        </linearGradient>
+                    </defs>
+                    <line x1="0" y1="50" x2="500" y2="50" class="chart-grid-line"></line>
+                    <line x1="0" y1="100" x2="500" y2="100" class="chart-grid-line"></line>
+                    <line x1="0" y1="150" x2="500" y2="150" class="chart-grid-line"></line>
+                    <path d="M0 160 Q 100 130 180 80 T 300 140 T 420 50 T 500 90 L 500 200 L 0 200 Z" class="chart-line-bg"></path>
+                    <path d="M0 160 Q 100 130 180 80 T 300 140 T 420 50 T 500 90" class="chart-line"></path>
+                </svg>
             </div>
         </section>
 
         <section class="bloco-grafico" aria-labelledby="grafico-resiliencia">
             <h3 id="grafico-resiliencia">Índice de Resiliência por Região</h3>
-            <div class="area-grafico-ficticio" role="img" aria-label="Gráfico de barras indicando 99.8% de resiliência na Região Sudeste, 95.4% na Região Norte e 100% no Vale do Paraíba.">
-                <p class="texto-placeholder-grafico">[ Simulação do Gráfico de Barras - Status de Redundância ]</p>
+            <div class="area-grafico-ficticio" role="img" aria-label="Gráfico de barras indicando 98% de resiliência na Região Sudeste, 75% na Região Norte, 88% na Nordeste, 92% na Sul e 85% na Centro-Oeste.">
+                <div class="bar-chart-container">
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: 98%;">
+                            <span class="bar-value">98%</span>
+                        </div>
+                        <span class="bar-label">Sudeste</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: 75%;">
+                            <span class="bar-value">75%</span>
+                        </div>
+                        <span class="bar-label">Norte</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: 88%;">
+                            <span class="bar-value">88%</span>
+                        </div>
+                        <span class="bar-label">Nordeste</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: 92%;">
+                            <span class="bar-value">92%</span>
+                        </div>
+                        <span class="bar-label">Sul</span>
+                    </div>
+                    <div class="bar-wrapper">
+                        <div class="bar" style="height: 85%;">
+                            <span class="bar-value">85%</span>
+                        </div>
+                        <span class="bar-label">C.Oeste</span>
+                    </div>
+                </div>
             </div>
         </section>
 
     </div>
 
-    <section class="secao-relatorios" aria-labelledby="titulo-relatorios">
-        <h3 id="titulo-relatorios">Relatórios Operacionais Disponíveis</h3>
-        <p>Baixe os dados históricos compilados da plataforma para auditorias externas.</p>
-        
-        <div class="botoes-download">
-            <a href="#" class="btn-secundario" aria-label="Baixar relatório técnico mensal em formato PDF">Baixar Relatório Mensal (PDF)</a>
-            <a href="#" class="btn-secundario" aria-label="Baixar dados brutos da constelação em formato CSV">Exportar Dados Brutos (CSV)</a>
+    <!-- Tabela de Dados Recentes -->
+    <section class="secao-tabela" aria-labelledby="titulo-tabela">
+        <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
+        <div class="tabela-wrapper">
+            <table class="tabela-dados">
+                <thead>
+                    <tr>
+                        <th>Satélite Origem</th>
+                        <th>Banda (Mbps)</th>
+                        <th>Região Assistida</th>
+                        <th>Horário (UTC)</th>
+                        <th>Canal Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>OrbitSafe-03</td>
+                        <td>450 Mbps</td>
+                        <td>Litoral Sudeste</td>
+                        <td>20:05:12</td>
+                        <td><span class="badge-status ativo">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>OrbitSafe-12</td>
+                        <td>320 Mbps</td>
+                        <td>Comunidade Norte</td>
+                        <td>20:02:45</td>
+                        <td><span class="badge-status ativo">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>OrbitSafe-07</td>
+                        <td>600 Mbps</td>
+                        <td>Vale do Paraíba</td>
+                        <td>19:58:30</td>
+                        <td><span class="badge-status completo">Finalizado</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
+
+
 
 </main>
 
 <footer>
     <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 </footer>
+
+<!-- Botão SOS Flutuante -->
+<button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+
+<!-- Modal SOS -->
+<div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
+    <div class="modal-conteudo">
+        <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
+        <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
+        <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+        
+        <form id="form-sos" class="formulario-estrutura-sos" novalidate>
+            <div class="campo-grupo">
+                <label for="nome-sos">Nome do Solicitante / Organização:</label>
+                <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
+                <span class="msg-erro" id="erro-nome-sos"></span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+                <span class="msg-erro" id="erro-localizacao"></span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="gravidade">Nível de Urgência:</label>
+                <select id="gravidade" required>
+                    <option value="" disabled selected>Selecione o nível...</option>
+                    <option value="alto">Crítico (Risco imediato à vida)</option>
+                    <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                    <option value="baixo">Informativo / Alerta de risco</option>
+                </select>
+                <span class="msg-erro" id="erro-gravidade"></span>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
+                <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
+                <span class="msg-erro" id="erro-mensagem-sos"></span>
+            </div>
+
+            <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal SOS Feedback -->
+<div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
+    <div class="modal-conteudo">
+        <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
+        <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
+        <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
+    </div>
+</div>
 
 </body>
 </html>

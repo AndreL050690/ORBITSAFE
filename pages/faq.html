@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitSafe - Encontre respostas para as perguntas frequentes sobre nossa infraestrutura de satélites e monitoramento.">
     <title>OrbitSafe - Perguntas Frequentes (FAQ)</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/faq.css">
 
     <script src="../js/script.js" defer></script>
@@ -14,67 +16,71 @@
 
 <body>
 
-    <!-- Link oculto de salto para acessibilidade via teclado para as pessoas com deficiências visuais-->
-    <a href="#conteudo-principal" class="sr-only"
-        style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Pular para o
-        conteúdo principal</a>
-
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
     <header>
         <nav aria-label="Navegação Principal">
-            <h1>ORBITSAFE</h1>
+            <h1 class="logo">ORBITSAFE</h1>
+
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="monitoramento.html">Monitoramento</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="chatbot.html">Chatbot</a></li>
-                <!-- Identificação semântica (aria-current) indicando qual link do menu está ativo no momento -->
                 <li><a href="faq.html" aria-current="page">FAQ</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li><a href="integrantes.html">Equipe</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
             </ul>
         </nav>
     </header>
 
-
     <main id="conteudo-principal">
 
-        <!-- Seção de perguntas frequentes: Agrupa o título explicativo e a lista dinâmica de perguntas frequentes -->
         <section class="faq-section" aria-labelledby="titulo-faq">
             <h2 id="titulo-faq">Perguntas Frequentes</h2>
-            <p>Encontre respostas rápidas sobre o funcionamento, estabilidade e implementação do sistema OrbitSafe in
-                áreas de risco.</p>
-
+            <p>Encontre respostas rápidas sobre o funcionamento, estabilidade e implementação do sistema OrbitSafe em áreas de risco.</p>
 
             <div class="lista-faq">
 
                 <details class="item-faq">
                     <summary class="pergunta-faq">O que acontece se a tempestade danificar as antenas locais?</summary>
-                    <p class="resposta-faq">O OrbitSafe foi desenhado para operar com terminais portáteis de alta
-                        resiliência. Caso uma antena principal seja danificada, o sistema redireciona automaticamente o
-                        tráfego de dados vitais para os nós de comunicação móveis mais próximos.</p>
+                    <p class="resposta-faq">O OrbitSafe foi desenhado para operar com terminais portáteis de alta resiliência. Caso uma antena principal seja danificada, o sistema redireciona automaticamente o tráfego de dados vitais para os nós de comunicação móveis mais próximos.</p>
                 </details>
 
                 <details class="item-faq">
                     <summary class="pergunta-faq">Como o chatbot funciona sem internet convencional?</summary>
-                    <p class="resposta-faq">O nosso chatbot roda em pacotes de dados extremamente leves (via satélites
-                        de órbita baixa). Ele não precisa da rede de telefonia móvel tradicional (4G/5G) ou cabos de
-                        fibra óptica para receber e enviar orientações de triagem.</p>
+                    <p class="resposta-faq">O nosso chatbot roda em pacotes de dados extremamente leves (via satélites de órbita baixa). Ele não precisa da rede de telefonia móvel tradicional (4G/5G) ou cabos de fibra óptica para receber e enviar orientações de triagem.</p>
                 </details>
 
                 <details class="item-faq">
                     <summary class="pergunta-faq">Qual o tempo de resposta para detectar uma queda de rede?</summary>
-                    <p class="resposta-faq">A nossa IA de monitoramento faz checagens (pings) contínuas nas bases de
-                        apoio. Qualquer desconexão ou anomalia severa é detectada em menos de 30 segundos, disparando um
-                        alerta imediato no painel de controle.</p>
+                    <p class="resposta-faq">A nossa IA de monitoramento faz checagens (pings) contínuas nas bases de apoio. Qualquer desconexão ou anomalia severa é detectada em menos de 30 segundos, disparando um alerta imediato no painel de controle.</p>
                 </details>
 
                 <details class="item-faq">
                     <summary class="pergunta-faq">Quem pode ter acesso ao Dashboard de monitoramento?</summary>
-                    <p class="resposta-faq">O acesso ao Dashboard é restrito a administradores cadastrados, órgãos de
-                        Defesa Civil e equipes de resgate autorizadas, garantindo a segurança dos dados operacionais
-                        durante a crise.</p>
+                    <p class="resposta-faq">O acesso ao Dashboard é restrito a administradores cadastrados, órgãos de Defesa Civil e equipes de resgate autorizadas, garantindo a segurança dos dados operacionais durante a crise.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">Quais satélites são utilizados pela OrbitSafe?</summary>
+                    <p class="resposta-faq">Nós utilizamos satélites de órbita terrestre baixa (LEO) que oferecem latência reduzida e cobertura global, facilitando a rápida transmissão de pacotes de dados mesmo nas posições mais remotas do globo.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">É possível integrar o OrbitSafe com outros sistemas de Defesa Civil?</summary>
+                    <p class="resposta-faq">Sim. O OrbitSafe disponibiliza APIs leves e seguras compatíveis com os principais protocolos internacionais de resposta a desastres, facilitando a centralização de ocorrências em plataformas governamentais.</p>
+                </details>
+
+                <details class="item-faq">
+                    <summary class="pergunta-faq">O OrbitSafe realiza previsões climáticas?</summary>
+                    <p class="resposta-faq">Sim. Além da conexão resiliente, nosso ecossistema conta com módulos de inteligência artificial preditiva que analisam dados orbitais e climatológicos para antecipar possíveis quedas de conectividade causadas por eventos climáticos extremos.</p>
                 </details>
 
             </div>
@@ -85,6 +91,60 @@
     <footer>
         <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
     </footer>
+
+    <!-- Botão SOS Flutuante -->
+    <button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+
+    <!-- Modal SOS -->
+    <div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
+        <div class="modal-conteudo">
+            <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
+            <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
+            <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+            
+            <form id="form-sos" class="formulario-estrutura-sos" novalidate>
+                <div class="campo-grupo">
+                    <label for="nome-sos">Nome do Solicitante / Organização:</label>
+                    <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
+                    <span class="msg-erro" id="erro-nome-sos"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                    <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+                    <span class="msg-erro" id="erro-localizacao"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="gravidade">Nível de Urgência:</label>
+                    <select id="gravidade" required>
+                        <option value="" disabled selected>Selecione o nível...</option>
+                        <option value="alto">Crítico (Risco imediato à vida)</option>
+                        <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                        <option value="baixo">Informativo / Alerta de risco</option>
+                    </select>
+                    <span class="msg-erro" id="erro-gravidade"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
+                    <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
+                    <span class="msg-erro" id="erro-mensagem-sos"></span>
+                </div>
+
+                <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal SOS Feedback -->
+    <div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
+        <div class="modal-conteudo">
+            <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
+            <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
+            <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
+        </div>
+    </div>
 
 </body>
 

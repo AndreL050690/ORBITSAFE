@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrbitSafe - Conectividade via satélites de órbita baixa para prevenção e resposta a desastres climáticos.">
     <title>OrbitSafe - Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/home.css">
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -12,9 +15,11 @@
 
     <script src="./js/script.js" defer></script>
 </head>
-
 <body>
 
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
+
+    <header>
     <a href="#conteudo-principal" class="sr-only">
         Pular para o conteúdo principal
     </a>
@@ -22,7 +27,13 @@
     <header>
 
         <nav aria-label="Navegação Principal">
+            <h1 class="logo">ORBITSAFE</h1>
 
+            <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <a href="index.html" class="logo-orbitsafe">
                 <img src="./images/logo.png" alt="Logo OrbitSafe">
             </a>
@@ -32,10 +43,9 @@
                 <li><a href="pages/sobre.html">Sobre</a></li>
                 <li><a href="pages/monitoramento.html">Monitoramento</a></li>
                 <li><a href="pages/dashboard.html">Dashboard</a></li>
-                <li><a href="pages/chatbot.html">Chatbot</a></li>
                 <li><a href="pages/faq.html">FAQ</a></li>
                 <li><a href="pages/contato.html">Contato</a></li>
-                <li><a href="pages/integrantes.html">Equipe</a></li>
+                <li><a href="pages/integrantes.html">Integrantes</a></li>
             </ul>
 
         </nav>
@@ -45,6 +55,29 @@
     <main id="conteudo-principal">
 
         <section class="hero-section" aria-labelledby="titulo-hero">
+            <h1 id="titulo-hero">Conectividade Espacial que Salva Vidas</h1>
+            <p>Garantindo comunicação inteligente via satélite para regiões remotas e equipes de resgate durante desastres climáticos severos.</p>
+            <a href="pages/monitoramento.html" class="btn-principal" aria-label="Ir para a página de Monitoramento do sistema">Ver Monitoramento</a>
+        </section>
+
+        <section class="recursos-section" aria-labelledby="titulo-recursos">
+            <h2 id="titulo-recursos">Como o OrbitSafe Funciona?</h2>
+            <p>Nossa plataforma atua diretamente na resiliência de redes de comunicação quando a infraestrutura terrestre falha.</p>
+
+            <div class="grid-recursos">
+                <article>
+                    <h3>Conexão Satelital Resiliente</h3>
+                    <p>Roteamento automático de dados de emergência através de constelações de satélites parceiras.</p>
+                </article>
+
+                <article>
+                    <h3>Alertas Automatizados</h3>
+                    <p>Identificação instantânea de quedas de conectividade em bases de apoio e envio de socorro técnico.</p>
+                </article>
+
+                <article>
+                    <h3>Integração com IA</h3>
+                    <p>Triagem de dados críticos de clima via chatbot para tomada de decisões rápidas pelas equipes em solo.</p>
 
             <h2 id="titulo-hero">
                 Conectividade Espacial que Salva Vidas
@@ -119,12 +152,67 @@
     </main>
 
     <footer>
+        <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
 
         <p>
             &copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.
         </p>
 
     </footer>
+
+    <!-- Botão SOS Flutuante -->
+    <button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+
+    <!-- Modal SOS -->
+    <div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
+        <div class="modal-conteudo">
+            <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
+            <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
+            <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
+            
+            <form id="form-sos" class="formulario-estrutura-sos" novalidate>
+                <div class="campo-grupo">
+                    <label for="nome-sos">Nome do Solicitante / Organização:</label>
+                    <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
+                    <span class="msg-erro" id="erro-nome-sos"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="localizacao">Localização Atual ou Coordenadas:</label>
+                    <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
+                    <span class="msg-erro" id="erro-localizacao"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="gravidade">Nível de Urgência:</label>
+                    <select id="gravidade" required>
+                        <option value="" disabled selected>Selecione o nível...</option>
+                        <option value="alto">Crítico (Risco imediato à vida)</option>
+                        <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
+                        <option value="baixo">Informativo / Alerta de risco</option>
+                    </select>
+                    <span class="msg-erro" id="erro-gravidade"></span>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
+                    <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
+                    <span class="msg-erro" id="erro-mensagem-sos"></span>
+                </div>
+
+                <button type="submit" class="btn-sos">Transmitir via Satélite</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal SOS Feedback -->
+    <div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
+        <div class="modal-conteudo">
+            <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
+            <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
+            <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
+        </div>
+    </div>
 
 </body>
 
