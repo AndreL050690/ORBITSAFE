@@ -1,15 +1,96 @@
-main{
+/* ==========================================================================
+   ESTILO: ORBITSAFE 
+   ========================================================================== */
 
-}
-form{
-
-}
-input{
-
-}
-
-textarea{
+/* Fundo da página */
+body {
+    background-color: #0b0e14; /* Preto espacial profundo */
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-button{
+/* Container do formulário */
+.secao-contato {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #151a23; /* Cinza grafite muito escuro */
+    border: 1px solid #00d2ff; /* Borda fina ciano neon */
+    border-radius: 8px;
+}
+
+/* Títulos */
+.secao-contato h2 {
+    color: #00d2ff;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaçamento entre letras para parecer código */
+}
+
+/* Labels */
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8; /* Cinza azulado */
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Inputs e Textarea */
+.grupo-campo input, 
+.grupo-campo textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não quebre o tamanho */
+}
+
+/* Efeito de foco simples (sem comandos complexos) */
+.grupo-campo input:focus, 
+.grupo-campo textarea:focus {
+    border-color: #00d2ff;
+    outline: none;
+}
+
+/* Botão de Envio */
+.btn-principal {
+    width: 100%;
+    padding: 12px;
+    background-color: #00d2ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Mensagem de Erro */
+.msg-erro {
+    color: #ff6b6b;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+/* MODAL */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: #151a23;
+    padding: 40px;
+    border: 1px solid #00d2ff;
+    border-radius: 8px;
+    text-align: center;
 }

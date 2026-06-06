@@ -1,39 +1,212 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
+<!doctype html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrbiSafe - Home</title>
+    <title>OrbitSafe - Home</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
-
-    <script src="./js/script.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <h1>ORBISAFE</h1>
+    
+    <video autoplay muted loop playsinline class="video-fundo">
+        <source src="./video/videoterra.mp4" type="video/mp4">
+    </video>
 
-        <ul>
-            <li><a href="index.html"></a></li>
-        </ul>
-    </nav>
-</header>
+    
+    <header class="cabecalho">
 
-<main>
+        <nav class="cabecalho__navbar">
 
-    <section>
-        <h2></h2>
-        <p></p>
-    </section>
+            <a href="index.html" class="cabecalho__logo">
+                <img src="./images/logo.png" alt="Logo OrbitSafe">
+            </a>
 
-</main>
+            <ul class="cabecalho__lista">
 
-<footer>
-    <p>&copy; 2026 OrbiSafe</p>
-</footer>
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link cabecalho__link--active"
+                        href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/sobre.html">
+                        Sobre
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/monitoramento.html">
+                        Monitoramento
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/faq.html">
+                        FAQ
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/contato.html">
+                        Contato
+                    </a>
+                </li>
+
+                <li class="cabecalho__item">
+                    <a class="cabecalho__link"
+                        href="./pages/integrantes.html">
+                        Integrantes
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+  
+    <main class="conteudo">
+
+       
+        <section class="hero">
+
+            <div class="hero__container">
+
+                <div class="hero__texto">
+
+                    <h2 class="hero__bemvindo">
+                        BEM-VINDO AO
+                    </h2>
+
+                    <h1 class="hero__title">
+                        ORBITSAFE
+                    </h1>
+
+                    <div class="hero__linha"></div>
+
+                    <p class="hero__text">
+
+                        Monitoramento orbital avançado para um futuro mais seguro,
+                        conectado e preparado para situações críticas.
+
+                    </p>
+
+                    <a class="hero__btn"
+                        href="./pages/monitoramento.html">
+
+                        Acessar Monitoramento
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      
+        <div class="conteudo__container">
+
+            <section class="conteudo__sec">
+
+                <div class="card__icone">
+                    🛰️
+                </div>
+
+                <h2 class="conteudo__sub-title">
+
+                    CONEXÃO SATELITAL
+
+                </h2>
+
+                <p>
+
+                    Comunicação contínua através de satélites de órbita baixa,
+                    garantindo conectividade em regiões isoladas.
+
+                </p>
+
+            </section>
+
+
+            <section class="conteudo__sec">
+
+                <div class="card__icone">
+                    🚨
+                </div>
+
+                <h2 class="conteudo__sub-title">
+
+                    ALERTAS AUTOMATIZADOS
+
+                </h2>
+
+                <p>
+
+                    Sistema inteligente capaz de detectar riscos e enviar
+                    informações críticas para equipes de emergência.
+
+                </p>
+
+            </section>
+
+
+            <section class="conteudo__sec">
+
+                <div class="card__icone">
+                    🤖
+                </div>
+
+                <h2 class="conteudo__sub-title">
+
+                    INTELIGÊNCIA ARTIFICIAL
+
+                </h2>
+
+                <p>
+
+                    Processamento inteligente de dados climáticos para
+                    auxiliar decisões rápidas em situações críticas.
+
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    
+    <footer class="rodape">
+
+        <p>
+            © 2026 OrbitSafe - Global Solution - FIAP
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
+

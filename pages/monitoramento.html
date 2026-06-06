@@ -1,34 +1,250 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/NOME-DO-ARQUIVO.css">
+    <title>OrbitSafe - Monitoramento</title>
 
-    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/monitoramento.css">
+
 </head>
+
 <body>
 
-<header>
-    <nav>
+<header class="cabecalho">
+
+    <nav class="cabecalho__navbar">
+
+        <a href="../index.html" class="cabecalho__logo">
+
+            <img src="../images/logo.png" alt="Logo OrbitSafe">
+
+        </a>
+
+        <ul class="cabecalho__lista">
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./sobre.html">
+                    Sobre
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link cabecalho__link--active"
+                href="./monitoramento.html">
+                    Monitoramento
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./contato.html">
+                    Contato
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./integrantes.html">
+                    Integrantes
+                </a>
+            </li>
+
+        </ul>
 
     </nav>
+
 </header>
 
-<main>
 
-    <section>
+
+<main class="container-monitoramento">
+
+    <section class="titulo-central">
+
+        <h1>
+
+            Central de Monitoramento Espacial
+
+        </h1>
+
+        <p>
+
+            Acompanhamento em tempo real da cobertura da constelação OrbitSafe e das ocorrências prioritárias.
+
+        </p>
 
     </section>
 
+
+
+    <div class="cards-indicadores">
+
+        <section class="card">
+
+            <h3>Satélites em Órbita</h3>
+
+            <p class="numero">
+
+                24 / 24
+
+            </p>
+
+            <p class="status">
+
+                100% Operacional
+
+            </p>
+
+        </section>
+
+
+
+        <section class="card">
+
+            <h3>Conexões Ativas</h3>
+
+            <p class="numero">
+
+                1.420
+
+            </p>
+
+            <p class="status">
+
+                Pontos isolados atendidos
+
+            </p>
+
+        </section>
+
+
+
+        <section class="card">
+
+            <h3>Chamados Respondidos</h3>
+
+            <p class="numero">
+
+                98,4%
+
+            </p>
+
+            <p class="status">
+
+                Tempo médio: 45 segundos
+
+            </p>
+
+        </section>
+
+    </div>
+
+
+
+    <div class="painel-grade">
+
+
+        <section class="bloco-mapa">
+
+            <h2>
+
+                Visualização da Constelação
+
+            </h2>
+
+            <div class="mapa-ficticio">
+
+                <div class="radar-container">
+
+                    <div class="radar-ring"></div>
+
+                    <div class="radar-ring"></div>
+
+                    <div class="radar-ring"></div>
+
+                    <div class="radar-axis-h"></div>
+
+                    <div class="radar-axis-v"></div>
+
+                    <div class="radar-sweep"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="bloco-ocorrencias">
+
+            <h2>
+
+                Alertas Ativos
+
+            </h2>
+
+            <ul class="lista-alertas">
+
+                <li class="alerta critico">
+
+                    Região Sudeste - Volume elevado de chuvas.
+
+                </li>
+
+                <li class="alerta moderado">
+
+                    Região Norte - Tempestades isoladas.
+
+                </li>
+
+                <li class="alerta informativo">
+
+                    Vale do Paraíba - Monitoramento preventivo.
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
 </main>
 
-<footer>
+
+
+<footer class="rodape">
+
+    <p>
+
+        © 2026 OrbitSafe - Global Solution - FIAP
+
+    </p>
 
 </footer>
 
 </body>
+
 </html>
