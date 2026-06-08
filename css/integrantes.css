@@ -10,13 +10,9 @@
 :root{
 
     --bg-dark:#020617;
-
     --primary:#00cfff;
-
     --text-main:#ffffff;
-
     --titulo-main:5rem;
-
     --sub-titulo:2.5rem;
 
 }
@@ -52,7 +48,6 @@ body{
 .cabecalho{
 
     width:100%;
-
     padding:2rem;
 
 }

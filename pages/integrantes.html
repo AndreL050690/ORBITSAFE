@@ -265,6 +265,75 @@
 
 </footer>
 
-</body>
 
+<!-- BOTÃO SOS -->
+
+<button id="abrirSOS" class="sos-btn">
+
+    🚨 SOS
+
+</button>
+
+
+<!-- MODAL SOS -->
+
+<div id="modalSOS" class="sos-modal">
+
+    <div class="sos-conteudo">
+
+        <h2>SOS OrbitSafe</h2>
+
+        <form>
+
+            <label>Nome</label>
+            <input type="text">
+
+            <label>Localização</label>
+            <input type="text">
+
+            <label>Nível de Urgência</label>
+
+            <select>
+
+                <option>Baixo</option>
+                <option>Médio</option>
+                <option>Alto</option>
+                <option>Crítico</option>
+
+            </select>
+
+            <label>Pessoas em risco</label>
+            <input type="number">
+
+            <label>Descrição</label>
+            <textarea rows="5"></textarea>
+
+            <button
+                type="button"
+                id="enviarSOS"
+                class="sos-enviar">
+
+                Transmitir SOS
+
+            </button>
+
+            <button
+                type="button"
+                id="fecharSOS"
+                class="sos-fechar">
+
+                Fechar
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="../js/script.js"></script>
+
+</body>
 </html>
