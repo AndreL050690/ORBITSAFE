@@ -373,7 +373,6 @@ body{
     }
 
 }
-```
 
 .sos-btn{
 
@@ -381,7 +380,7 @@ body{
 
     bottom:25px;
 
-    right:25px;
+    left:25px;
 
     width:70px;
 

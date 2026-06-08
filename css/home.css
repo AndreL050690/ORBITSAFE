@@ -1,4 +1,4 @@
-```css
+css
 /* RESET */
 
 *{
@@ -360,7 +360,6 @@ body::before{
         grid-template-columns:1fr;
     }
 }
-```
 
 .sos-btn{
 
@@ -368,7 +367,7 @@ body::before{
 
     bottom:25px;
 
-    right:25px;
+    left:25px;
 
     width:70px;
 
