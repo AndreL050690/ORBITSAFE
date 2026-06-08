@@ -1,152 +1,207 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OrbitSafe - Entre em contato com a equipe OrbitSafe para suporte operacional ou parcerias técnicas.">
-    <title>OrbitSafe - Contato e Suporte</title>
 
-    
+    <title>OrbitSafe - Contato</title>
+
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contato.css">
-    <script src="../js/script.js" defer></script>
+
 </head>
+
 <body>
 
-<a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
+<header class="cabecalho">
 
-<header>
-    <nav aria-label="Navegação Principal">
-        <h1 class="logo">ORBITSAFE</h1>
+    <nav class="cabecalho__navbar">
 
-        <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <a href="../index.html" class="cabecalho__logo">
 
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="monitoramento.html">Monitoramento</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contato.html" aria-current="page">Contato</a></li>
-            <li><a href="integrantes.html">Integrantes</a></li>
+            <img src="../images/logo.png" alt="OrbitSafe">
+
+        </a>
+
+        <ul class="cabecalho__lista">
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./sobre.html">
+                    Sobre
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./monitoramento.html">
+                    Monitoramento
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link cabecalho__link--active"
+                href="./contato.html">
+                    Contato
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link"
+                href="./integrantes.html">
+                    Integrantes
+                </a>
+            </li>
+
         </ul>
+
     </nav>
+
 </header>
 
-<main id="conteudo-principal">
 
-    <section class="secao-contato" aria-labelledby="titulo-contato">
-        <h2 id="titulo-contato">Fale Conosco</h2>
-        <p>Envie sua mensagem, dúvida técnica ou solicitação de suporte operacional para desastres.</p>
 
-        <form id="form-contato" class="formulario-estrutura" novalidate>
-            
-            <div class="grupo-campo">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                <span class="msg-erro" id="erro-nome"></span>
-            </div>
+<main class="contato">
 
-            <div class="grupo-campo">
-                <label for="email">E-mail Corporativo ou Institucional:</label>
-                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
-                <span class="msg-erro" id="erro-email"></span>
-            </div>
+    <section class="contato__titulo">
 
-            <div class="grupo-campo">
-                <label for="assunto">Assunto Principal:</label>
-                <select id="assunto" name="assunto" required>
-                    <option value="" disabled selected>Selecione um assunto...</option>
-                    <option value="suporte">Suporte Técnico / Operacional</option>
-                    <option value="parceria">Parcerias e Integrações</option>
-                    <option value="defesa">Defesa Civil e Governo</option>
-                    <option value="outros">Outros Assuntos</option>
-                </select>
-                <span class="msg-erro" id="erro-assunto"></span>
-            </div>
+        <h1>FALE CONOSCO</h1>
 
-            <div class="grupo-campo">
-                <label for="mensagem">Mensagem / Relato do Problema:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como podemos ajudar sua equipe?"></textarea>
-                <span class="msg-erro" id="erro-mensagem"></span>
-            </div>
+        <p>
+            Envie sua mensagem para a equipe OrbitSafe.
+        </p>
 
-            <button type="submit" class="btn-principal">Enviar Mensagem</button>
-        </form>
     </section>
 
-    <!-- Modal Feedback Contato -->
-    <div id="modal-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-        <div class="modal-conteudo">
-            <h3 id="modal-titulo">Mensagem Enviada!</h3>
-            <p id="modal-texto">Sua solicitação foi registrada na nossa rede de satélites com sucesso.</p>
-            <button id="btn-fechar-modal" class="btn-secundario">Fechar</button>
+
+
+    <section class="contato__formulario">
+
+    <form action="https://formsubmit.co/andreluizramosforastieri32@gmail.com" method="POST">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="grupo-campo">
+
+            <label for="nome">
+                Nome Completo
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                placeholder="Digite seu nome">
+
         </div>
-    </div>
+
+
+        <div class="grupo-campo">
+
+            <label for="email">
+                E-mail
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="email@exemplo.com">
+
+        </div>
+
+
+        <div class="grupo-campo">
+
+            <label for="assunto">
+                Assunto
+            </label>
+
+            <select
+                id="assunto"
+                name="assunto"
+                required>
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option value="Suporte Técnico">
+                    Suporte Técnico
+                </option>
+
+                <option value="Parcerias">
+                    Parcerias
+                </option>
+
+                <option value="Defesa Civil">
+                    Defesa Civil
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="grupo-campo">
+
+            <label for="mensagem">
+                Mensagem
+            </label>
+
+            <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                required
+                placeholder="Digite sua mensagem"></textarea>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="btn-principal">
+
+            Enviar Mensagem
+
+        </button>
+
+    </form>
+
+</section>
 
 </main>
 
-<footer>
-    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
+
+
+<footer class="rodape">
+
+    <p>
+        © 2026 OrbitSafe - Global Solution - FIAP
+    </p>
+
 </footer>
-
-<!-- Botão SOS Flutuante -->
-<button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
-
-<!-- Modal SOS -->
-<div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
-    <div class="modal-conteudo">
-        <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
-        <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
-        <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
-        
-        <form id="form-sos" class="formulario-estrutura-sos" novalidate>
-            <div class="campo-grupo">
-                <label for="nome-sos">Nome do Solicitante / Organização:</label>
-                <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
-                <span class="msg-erro" id="erro-nome-sos"></span>
-            </div>
-
-            <div class="campo-grupo">
-                <label for="localizacao">Localização Atual ou Coordenadas:</label>
-                <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
-                <span class="msg-erro" id="erro-localizacao"></span>
-            </div>
-
-            <div class="campo-grupo">
-                <label for="gravidade">Nível de Urgência:</label>
-                <select id="gravidade" required>
-                    <option value="" disabled selected>Selecione o nível...</option>
-                    <option value="alto">Crítico (Risco imediato à vida)</option>
-                    <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
-                    <option value="baixo">Informativo / Alerta de risco</option>
-                </select>
-                <span class="msg-erro" id="erro-gravidade"></span>
-            </div>
-
-            <div class="campo-grupo">
-                <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
-                <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
-                <span class="msg-erro" id="erro-mensagem-sos"></span>
-            </div>
-
-            <button type="submit" class="btn-sos">Transmitir via Satélite</button>
-        </form>
-    </div>
-</div>
-
-<!-- Modal SOS Feedback -->
-<div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
-    <div class="modal-conteudo">
-        <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
-        <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
-        <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
-    </div>
-</div>
 
 </body>
 </html>

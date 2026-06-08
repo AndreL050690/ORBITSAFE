@@ -1,4 +1,4 @@
-```css
+
 *{
 
     margin:0;
@@ -43,7 +43,7 @@ body{
 
 
 
-/* CABEÇALHO */
+
 
 .cabecalho{
 
@@ -108,7 +108,7 @@ body{
 
 
 
-/* TÍTULO */
+
 
 .integrantes{
 
@@ -144,7 +144,7 @@ body{
 
 
 
-/* GRID DOS INTEGRANTES */
+
 
 .integrantes__container{
 
@@ -158,7 +158,7 @@ body{
 
 
 
-/* CARD */
+
 
 .integrante{
 
@@ -216,7 +216,7 @@ body{
 
 
 
-/* LINKS */
+
 
 .integrante__links{
 
@@ -250,7 +250,7 @@ body{
 
 
 
-/* REPOSITÓRIO */
+
 
 .repositorio{
 
@@ -320,177 +320,7 @@ body{
 
 
 
-/* SOS */
 
-.sos-btn{
-
-    position:fixed;
-
-    bottom:30px;
-
-    right:30px;
-
-    width:90px;
-
-    height:90px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#ff2222;
-
-    color:white;
-
-    font-size:2rem;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    box-shadow:0 0 20px rgba(255,0,0,.5);
-
-    z-index:999;
-
-}
-
-.sos-btn:hover{
-
-    transform:scale(1.05);
-
-}
-
-.sos-modal{
-
-    display:none;
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0,0,0,.8);
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:1000;
-
-}
-
-.sos-conteudo{
-
-    width:500px;
-
-    max-width:90%;
-
-    background:#081528;
-
-    padding:3rem;
-
-    border-radius:2rem;
-
-    border:1px solid #00cfff;
-
-}
-
-.sos-conteudo h2{
-
-    text-align:center;
-
-    color:#ff4444;
-
-    margin-bottom:2rem;
-
-}
-
-.sos-conteudo form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:1rem;
-
-}
-
-.sos-conteudo label{
-
-    color:white;
-
-}
-
-.sos-conteudo input,
-.sos-conteudo select,
-.sos-conteudo textarea{
-
-    padding:1rem;
-
-    border:1px solid #334155;
-
-    border-radius:.8rem;
-
-    background:#0b1d38;
-
-    color:white;
-
-}
-
-.sos-enviar{
-
-    padding:1.2rem;
-
-    border:none;
-
-    border-radius:1rem;
-
-    background:#ff2222;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-top:1rem;
-
-}
-
-.sos-fechar{
-
-    padding:1.2rem;
-
-    border:none;
-
-    border-radius:1rem;
-
-    background:#334155;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-.sos-enviar:hover{
-
-    background:#ff4444;
-
-}
-
-.sos-fechar:hover{
-
-    background:#475569;
-
-}
-
-
-
-/* RODAPÉ */
 
 .rodape{
 
@@ -504,7 +334,7 @@ body{
 
 
 
-/* RESPONSIVO */
+
 
 @media(max-width:900px){
 
