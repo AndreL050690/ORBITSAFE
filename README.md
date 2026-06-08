@@ -1,4 +1,4 @@
-![Logo OrbitSafe](assets/images/logo.png) # 🛰️ OrbitSafe — Sistema de Conectividade Espacial e Emergências Climáticas
+# 🛰️ OrbitSafe — Sistema de Conectividade Espacial e Emergências Climáticas
 
 > Global Solution — Turma 1TDSPH (2026)  
 > Projeto focado em conectividade via satélites de órbita baixa  para prevenção, monitoramento e resposta ágil a desastres ambientais.
@@ -31,7 +31,7 @@ A arquitetura foi inteiramente implementada utilizando tecnologias web fundament
 
 O repositório está organizado de forma modular, separando as preocupações globais de estilo das especificidades de cada página:
 
-```text
+<pre>
 ORBITSAFE/
 ├── assets/                       # Imagens de perfil dos integrantes
 │   ├── integranteAndre.png
@@ -65,7 +65,7 @@ ORBITSAFE/
 │   └── videoterra.mp4            # Vídeo de fundo/demonstração da Terra
 ├── index.html                    # Página inicial (Hero & recursos do sistema)
 └── README.md                     # Documentação técnica do projeto
-```
+</pre>
 
 ---
 
