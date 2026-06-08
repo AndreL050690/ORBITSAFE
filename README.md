@@ -21,8 +21,8 @@ O ecossistema integra:
 
 A arquitetura foi inteiramente implementada utilizando tecnologias web fundamentais, garantindo leveza absoluta em conexões de baixa velocidade:
 
-* HTML5: Estrutura semântica acessível, com tags estruturadas (<header>, <nav>, <main>, <section>, <article>, <footer>) e marcações ARIA para leitores de tela.
-* CSS3: Estilização premium baseada em Dark Mode espacial,, Layouts Flexbox e Grid altamente responsivos.
+* HTML5: Estrutura semântica acessível, com tags estruturadas (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) e marcações ARIA para leitores de tela.
+* CSS3: Estilização premium baseada em Dark Mode espacial, Layouts Flexbox e Grid altamente responsivos.
 * JavaScript: Interatividade do menu mobile hamburger, lógica de accordion de FAQ e validação rigorosa com feedback visual dos formulário de SOS.
 
 ---
