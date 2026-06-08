@@ -205,14 +205,38 @@
 
 
 <footer class="rodape">
-
-    <p>
-
-        © 2026 OrbitSafe - Global Solution - FIAP
-
-    </p>
-
+    <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
 </footer>
+
+<button class="sos-btn" id="abrirSOS">
+    🚨 SOS
+</button>
+
+<div class="sos-modal" id="modalSOS">
+
+    <div class="sos-conteudo">
+
+        <h3>🚨 Emergência</h3>
+
+        <input type="text" placeholder="Nome">
+
+        <input type="text" placeholder="Localização">
+
+        <textarea placeholder="Descreva a situação"></textarea>
+
+        <button class="sos-enviar" id="enviarSOS">
+            Transmitir
+        </button>
+
+        <button class="sos-fechar" id="fecharSOS">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>
