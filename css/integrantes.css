@@ -1,3 +1,4 @@
+
 *{
 
     margin:0;
@@ -46,7 +47,7 @@ body{
 
 
 
-/* CABEÇALHO */
+
 
 .cabecalho{
 
@@ -112,7 +113,7 @@ body{
 
 
 
-/* TÍTULO */
+
 
 .integrantes{
 
@@ -148,7 +149,7 @@ body{
 
 
 
-/* GRID DOS INTEGRANTES */
+
 
 .integrantes__container{
 
@@ -162,7 +163,7 @@ body{
 
 
 
-/* CARD */
+
 
 .integrante{
 
@@ -194,6 +195,8 @@ body{
 
     border-radius:50%;
 
+    object-fit:cover;
+
     margin-bottom:2rem;
 
 }
@@ -218,7 +221,7 @@ body{
 
 
 
-/* LINKS */
+
 
 .integrante__links{
 
@@ -252,7 +255,77 @@ body{
 
 
 
-/* RODAPÉ */
+
+
+.repositorio{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:6rem auto 0 auto;
+
+    padding:4rem;
+
+    text-align:center;
+
+    background-color:rgba(255,255,255,.05);
+
+    border-radius:3rem;
+
+    box-shadow:0 0 15px rgba(0,207,255,.1);
+
+}
+
+.repositorio h2{
+
+    color:var(--primary);
+
+    font-size:3rem;
+
+    margin-bottom:2rem;
+
+}
+
+.repositorio p{
+
+    color:#d7d7d7;
+
+    margin-bottom:3rem;
+
+}
+
+.repositorio__botao{
+
+    display:inline-block;
+
+    padding:1.5rem 3rem;
+
+    background-color:var(--primary);
+
+    color:#020617;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:1rem;
+
+    transition:.4s;
+
+}
+
+.repositorio__botao:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px rgba(0,207,255,.4);
+
+}
+
+
+
+
 
 .rodape{
 
@@ -266,7 +339,7 @@ body{
 
 
 
-/* RESPONSIVO */
+
 
 @media(max-width:900px){
 
@@ -298,4 +371,11 @@ body{
 
     }
 
+    .repositorio{
+
+        padding:2.5rem;
+
+    }
+
 }
+```
