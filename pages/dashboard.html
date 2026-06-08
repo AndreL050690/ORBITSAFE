@@ -14,28 +14,67 @@
 </head>
 <body>
 
-<a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
 
-<header>
-    <nav aria-label="Navegação Principal">
-        <h1 class="logo">ORBITSAFE</h1>
 
-        <button class="hamburger" id="hamburger-menu" aria-label="Menu de Navegação" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+<header class="cabecalho">
 
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="monitoramento.html">Monitoramento</a></li>
-            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="integrantes.html">Integrantes</a></li>
+    <nav class="cabecalho__navbar">
+
+        <a href="../index.html" class="cabecalho__logo">
+
+            <img src="../images/logo.png" alt="Logo OrbitSafe">
+
+        </a>
+
+        <ul class="cabecalho__lista">
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./sobre.html">
+                    Sobre
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./monitoramento.html">
+                    Monitoramento
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link cabecalho__link--active"
+                   href="./dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./faq.html">
+                    FAQ
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./contato.html">
+                    Contato
+                </a>
+            </li>
+
+            <li class="cabecalho__item">
+                <a class="cabecalho__link" href="./integrantes.html">
+                    Integrantes
+                </a>
+            </li>
+
         </ul>
+
     </nav>
+
 </header>
 
 <main class="container-dashboard" id="conteudo-principal">
@@ -45,14 +84,14 @@
         <p>Análise estatística volumétrica de dados transmitidos e relatórios de resiliência de banda de emergência.</p>
     </section>
 
-    <!-- Tabs para alternar visualizações -->
+  
     <div class="abas-dashboard">
         <button class="btn-aba active" data-aba="geral">Visão Geral</button>
         <button class="btn-aba" data-aba="satelites">Rede Satélites</button>
         <button class="btn-aba" data-aba="banda">Alocação Banda</button>
     </div>
 
-    <!-- Cards de Métricas -->
+   
     <section class="grid-metricas" aria-label="Principais métricas operacionais">
         <div class="card-metrica">
             <h4>Dados Transmitidos</h4>
@@ -76,7 +115,7 @@
         </div>
     </section>
 
-    <!-- Grade do Dashboard com Gráficos -->
+   
     <div class="grade-dashboard">
         
         <section class="bloco-grafico" aria-labelledby="grafico-trafego">
@@ -142,7 +181,7 @@
 
     </div>
 
-    <!-- Tabela de Dados Recentes -->
+   
     <section class="secao-tabela" aria-labelledby="titulo-tabela">
         <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
         <div class="tabela-wrapper">
@@ -187,63 +226,39 @@
 
 </main>
 
-<footer>
-    <p>&copy; 2026 OrbitSafe - Global Solution. Turma 1TDSPH — FIAP.</p>
+<footer class="rodape">
+    <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
 </footer>
 
-<!-- Botão SOS Flutuante -->
-<button class="floating-sos-btn" id="btn-open-sos" aria-label="Abrir formulário de emergência SOS">🚨</button>
+<button class="sos-btn" id="abrirSOS">
+    🚨 SOS
+</button>
 
-<!-- Modal SOS -->
-<div id="modal-sos" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-modal-titulo">
-    <div class="modal-conteudo">
-        <button class="close-modal-btn" id="btn-close-sos" aria-label="Fechar Modal">&times;</button>
-        <h3 id="sos-modal-titulo">🚨 Chamado de Emergência (SOS)</h3>
-        <p>Preencha os dados abaixo. Eles serão transmitidos via satélite OrbitSafe diretamente para as equipes de resgate.</p>
-        
-        <form id="form-sos" class="formulario-estrutura-sos" novalidate>
-            <div class="campo-grupo">
-                <label for="nome-sos">Nome do Solicitante / Organização:</label>
-                <input type="text" id="nome-sos" placeholder="Ex: João Silva ou Defesa Civil local" required>
-                <span class="msg-erro" id="erro-nome-sos"></span>
-            </div>
+<div class="sos-modal" id="modalSOS">
 
-            <div class="campo-grupo">
-                <label for="localizacao">Localização Atual ou Coordenadas:</label>
-                <input type="text" id="localizacao" placeholder="Ex: Bairro Centro, Próximo à Escola X" required>
-                <span class="msg-erro" id="erro-localizacao"></span>
-            </div>
+    <div class="sos-conteudo">
 
-            <div class="campo-grupo">
-                <label for="gravidade">Nível de Urgência:</label>
-                <select id="gravidade" required>
-                    <option value="" disabled selected>Selecione o nível...</option>
-                    <option value="alto">Crítico (Risco imediato à vida)</option>
-                    <option value="medio">Moderado (Necessita de suporte/mantimentos)</option>
-                    <option value="baixo">Informativo / Alerta de risco</option>
-                </select>
-                <span class="msg-erro" id="erro-gravidade"></span>
-            </div>
+        <h3>🚨 Emergência</h3>
 
-            <div class="campo-grupo">
-                <label for="mensagem-sos">Descrição da Situação e Necessidades:</label>
-                <textarea id="mensagem-sos" rows="4" placeholder="Descreva o que aconteceu e do que precisam..." required></textarea>
-                <span class="msg-erro" id="erro-mensagem-sos"></span>
-            </div>
+        <input type="text" placeholder="Nome">
 
-            <button type="submit" class="btn-sos">Transmitir via Satélite</button>
-        </form>
+        <input type="text" placeholder="Localização">
+
+        <textarea placeholder="Descreva a situação"></textarea>
+
+        <button class="sos-enviar" id="enviarSOS">
+            Transmitir
+        </button>
+
+        <button class="sos-fechar" id="fecharSOS">
+            Fechar
+        </button>
+
     </div>
+
 </div>
 
-<!-- Modal SOS Feedback -->
-<div id="modal-sos-feedback" class="modal-container" role="dialog" aria-modal="true" aria-labelledby="sos-feedback-titulo">
-    <div class="modal-conteudo">
-        <h3 id="sos-feedback-titulo">🚨 SOS Transmitido!</h3>
-        <p>Seu chamado foi enviado via satélite com sucesso. Equipes de socorro foram alertadas.</p>
-        <button id="btn-fechar-sos-feedback" class="btn-secundario">Fechar</button>
-    </div>
-</div>
+<script src="../js/script.js"></script>
 
 </body>
 </html>

@@ -258,80 +258,36 @@
 
 
 <footer class="rodape">
-
-    <p>
-        © 2026 OrbitSafe - Global Solution - FIAP
-    </p>
-
+    <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
 </footer>
 
-
-<!-- BOTÃO SOS -->
-
-<button id="abrirSOS" class="sos-btn">
-
+<button class="sos-btn" id="abrirSOS">
     🚨 SOS
-
 </button>
 
-
-<!-- MODAL SOS -->
-
-<div id="modalSOS" class="sos-modal">
+<div class="sos-modal" id="modalSOS">
 
     <div class="sos-conteudo">
 
-        <h2>SOS OrbitSafe</h2>
+        <h3>🚨 Emergência</h3>
 
-        <form>
+        <input type="text" placeholder="Nome">
 
-            <label>Nome</label>
-            <input type="text">
+        <input type="text" placeholder="Localização">
 
-            <label>Localização</label>
-            <input type="text">
+        <textarea placeholder="Descreva a situação"></textarea>
 
-            <label>Nível de Urgência</label>
+        <button class="sos-enviar" id="enviarSOS">
+            Transmitir
+        </button>
 
-            <select>
-
-                <option>Baixo</option>
-                <option>Médio</option>
-                <option>Alto</option>
-                <option>Crítico</option>
-
-            </select>
-
-            <label>Pessoas em risco</label>
-            <input type="number">
-
-            <label>Descrição</label>
-            <textarea rows="5"></textarea>
-
-            <button
-                type="button"
-                id="enviarSOS"
-                class="sos-enviar">
-
-                Transmitir SOS
-
-            </button>
-
-            <button
-                type="button"
-                id="fecharSOS"
-                class="sos-fechar">
-
-                Fechar
-
-            </button>
-
-        </form>
+        <button class="sos-fechar" id="fecharSOS">
+            Fechar
+        </button>
 
     </div>
 
 </div>
-
 
 <script src="../js/script.js"></script>
 

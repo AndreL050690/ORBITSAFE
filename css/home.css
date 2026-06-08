@@ -361,3 +361,104 @@ body::before{
     }
 }
 ```
+
+.sos-btn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff3333;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+}
+
+.sos-modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+}
+
+.sos-conteudo{
+
+    width:400px;
+
+    background:#07142e;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.sos-conteudo input,
+.sos-conteudo textarea{
+
+    padding:12px;
+
+}
+
+.sos-enviar{
+
+    background:#00cfff;
+
+    border:none;
+
+    padding:12px;
+
+    cursor:pointer;
+
+}
+
+.sos-fechar{
+
+    background:#ff3333;
+
+    border:none;
+
+    padding:12px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
