@@ -1,4 +1,4 @@
-# ![Logo OrbitSafe](assets/images/logo.png) 🛰️ OrbitSafe — Sistema de Conectividade Espacial e Emergências Climáticas
+# 🛰️ OrbitSafe — Sistema de Conectividade Espacial e Emergências Climáticas
 
 > Global Solution — Turma 1TDSPH (2026)  
 > Projeto focado em conectividade via satélites de órbita baixa  para prevenção, monitoramento e resposta ágil a desastres ambientais.
@@ -27,45 +27,45 @@ A arquitetura foi inteiramente implementada utilizando tecnologias web fundament
 
 ---
 
-## 📂 Estrutura de Pastas
+## 📁 Estrutura de Pastas
 
 O repositório está organizado de forma modular, separando as preocupações globais de estilo das especificidades de cada página:
 
-
-text
+<pre>
 ORBITSAFE/
-├── assets/                             # Imagens de perfil dos integrantes
-│   ├── integranteAndre.png             
-│   ├── integranteEduardo.png           
-│   ├── integranteIsabelle.png          
-│   ├── integranteMarina.png            
-│   ├── integranteMilena.png            
-│   ├── css/                            # Estilização modular
-│   │   ├── contato.css                 # Estilo do formulário de contato e feedbacks
-│   │   ├── dashboard.css               # Estilo do painel de dados (gráficos, tabs, tabelas)
-│   │   ├── faq.css                     # Estilo visual do FAQ
-│   │   ├── home.css                    # Estilo específico da página Home
-│   │   ├── integrantes.css             # Estilo dos cards de perfil e links sociais
-│   │   ├── main.css                    # Design system global, menu hamburger, modal e resets
-│   │   ├── monitoramento.css           # Estilo da Central de Monitoramento (radar e alertas)
-│   │   └── sobre.css                   # Estilo específico da página Sobre
-│   ├── images/                         
-│   │   ├── github.png                  # Ícone do GitHub para links sociais
-│   │   ├── lkd.png                     # Ícone do LinkedIn para links sociais
-│   │   └── logo.png                    # Logotipo oficial do OrbitSafe
-│   ├── js/                             
-│   │   └── script.js                   # Toda a lógica interativa e validações JavaScript
-│   ├── pages/                          # Páginas internas da plataforma
-│   │   ├── contato.html                # Canal direto para suporte e parcerias
-│   │   ├── dashboard.html              # Simulação estatísticas dashboard
-│   │   ├── faq.html                    # Perguntas frequentes para auxílio
-│   │   ├── integrantes.html            # Detalhes profissionais da equipe desenvolvedora
-│   │   ├── monitoramento.html          # Simulação Telemetria ao vivo da constelação
-│   │   └── sobre.html                  # Nossa missão e valores humanitários
-│   └── video/                         
-│       └── videoterra.mp4              # Vídeo de fundo/demonstração da Terra
-├── index.html                          # Página inicial (Hero & recursos do sistema)
-└── README.md                           # Documentação técnica do projeto
+├── assets/                       # Imagens de perfil dos integrantes
+│   ├── integranteAndre.png
+│   ├── integranteEduardo.png
+│   ├── integranteIsabelle.png
+│   ├── integranteMarina.png
+│   └── integranteMilena.png
+├── css/                          # Estilização modular
+│   ├── contato.css               # Estilo do formulário de contato e feedbacks
+│   ├── dashboard.css             # Estilo do painel de dados (gráficos, tabs, tabelas)
+│   ├── faq.css                   # Estilo visual do FAQ
+│   ├── home.css                  # Estilo específico da página Home
+│   ├── integrantes.css           # Estilo dos cards de perfil e links sociais
+│   ├── main.css                  # Design system global, menu hamburger, modal e resets
+│   ├── monitoramento.css         # Estilo da Central de Monitoramento (radar e alertas)
+│   └── sobre.css                 # Estilo específico da página Sobre
+├── images/
+│   ├── github.png                # Ícone do GitHub para links sociais
+│   ├── lkd.png                   # Ícone do LinkedIn para links sociais
+│   └── logo.png                  # Logotipo oficial do OrbitSafe
+├── js/
+│   └── script.js                 # Toda a lógica interativa e validações JavaScript
+├── pages/                        # Páginas internas da plataforma
+│   ├── contato.html              # Canal direto para suporte e parcerias
+│   ├── dashboard.html            # Simulação estatísticas dashboard
+│   ├── faq.html                  # Perguntas frequentes para auxílio
+│   ├── integrantes.html          # Detalhes profissionais da equipe desenvolvedora
+│   ├── monitoramento.html        # Simulação Telemetria ao vivo da constelação
+│   └── sobre.html                # Nossa missão e valores humanitários
+├── video/
+│   └── videoterra.mp4            # Vídeo de fundo/demonstração da Terra
+├── index.html                    # Página inicial (Hero & recursos do sistema)
+└── README.md                     # Documentação técnica do projeto
+</pre>
 
 ---
 
