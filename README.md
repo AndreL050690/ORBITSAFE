@@ -1,9 +1,17 @@
 # 🛰️ OrbitSafe — Sistema de Conectividade Espacial e Emergências Climáticas
 
+<p align="left">
+  <img src="assets/logo.png" alt="OrbitSafe Logo" width="200px">
+</p>
+
 > Global Solution — Turma 1TDSPH (2026)  
 > Projeto focado em conectividade via satélites de órbita baixa  para prevenção, monitoramento e resposta ágil a desastres ambientais.
 
 ---
+
+<p align="center">
+  <img src="assets/home.png" alt="Demonstração do OrbitSafe" width="600px">
+</p>
 
 ## 📌 Descrição do Projeto
 
@@ -34,11 +42,15 @@ O repositório está organizado de forma modular, separando as preocupações gl
 <pre>
 ORBITSAFE/
 ├── assets/                       # Imagens de perfil dos integrantes
+│   ├── github.png                # Ícone do GitHub para links sociais      
+│   ├── home.png
 │   ├── integranteAndre.png
 │   ├── integranteEduardo.png
 │   ├── integranteIsabelle.png
 │   ├── integranteMarina.png
-│   └── integranteMilena.png
+│   └── integranteMilena.png      
+│   ├── linkedin.png              # Ícone do LinkedIn para links sociais
+│   └── logo.png                  # Logotipo oficial do OrbitSafe
 ├── css/                          # Estilização modular
 │   ├── contato.css               # Estilo do formulário de contato e feedbacks
 │   ├── dashboard.css             # Estilo do painel de dados (gráficos, tabs, tabelas)
@@ -48,10 +60,6 @@ ORBITSAFE/
 │   ├── main.css                  # Design system global, menu hamburger, modal e resets
 │   ├── monitoramento.css         # Estilo da Central de Monitoramento (radar e alertas)
 │   └── sobre.css                 # Estilo específico da página Sobre
-├── images/
-│   ├── github.png                # Ícone do GitHub para links sociais
-│   ├── lkd.png                   # Ícone do LinkedIn para links sociais
-│   └── logo.png                  # Logotipo oficial do OrbitSafe
 ├── js/
 │   └── script.js                 # Toda a lógica interativa e validações JavaScript
 ├── pages/                        # Páginas internas da plataforma
@@ -73,15 +81,20 @@ ORBITSAFE/
 
 Abaixo encontram-se os detalhes dos desenvolvedores responsáveis pela arquitetura e engenharia do OrbitSafe:
 
-* Isabelle Ferreira Neri Feitoza — RM 573507 (JavaScript General & UI)
+* <img src="assets/integranteIsabelle.png" width="120px" alt="Foto de Isabelle Ferreira"/><br/>
+  Isabelle Ferreira Neri Feitoza — RM 573507 (JavaScript General & UI) - Turma: 1TDSPH
   * [LinkedIn](https://www.linkedin.com/in/isabelle-ferreira-8844593ab/) | [GitHub](https://github.com/isabelleferreiraa)
-* André Luiz Ramos Forastieri — RM 572203 (Git Architect & Repo Manager)
+* <img src="assets/integranteAndre.png" width="120px" alt="Foto de André Luiz"/><br/>
+  André Luiz Ramos Forastieri — RM 572203 (Git Architect & Repo Manager) - Turma: 1TDSPH
   * [LinkedIn](https://www.linkedin.com/in/andré-forastieri-a029913b1?utm_source=share_via&utm_content=profile&utm_medium=member_android) | [GitHub](https://github.com/AndreL050690)
-* Milena Silva Conegin — RM 568923 (HTML Semantics & UX)
+* <img src="assets/integranteMilena.png" width="120px" alt="Foto de Milena Silva"/><br/>
+  Milena Silva Conegin — RM 568923 (HTML Semantics & UX) - Turma: 1TDSPH
   * [LinkedIn](https://www.linkedin.com/in/milena-conegin-996b22269?utm_source=share_via&utm_content=profile&utm_medium=member_ios) | [GitHub](https://github.com/MilenaConegin)
-* Eduardo Damasio Guelere — RM 569960 (CSS Styling & Design)
+* <img src="assets/integranteEduardo.png" width="120px" alt="Foto de Eduardo Damasio"/><br/>
+  Eduardo Damasio Guelere — RM 569960 (CSS Styling & Design) - Turma: 1TDSPH
   * [LinkedIn](https://www.linkedin.com/in/eduardo-guelere-0902753b8/) | [GitHub](https://github.com/Eduardoguelere)
-* Marina Fernandes Gomes Mesquita — RM 571265 (Front-End Design & UX)
+* <img src="assets/integranteMarina.png" width="120px" alt="Foto de Marina Fernandes"/><br/>
+  Marina Fernandes Gomes Mesquita — RM 571265 (Front-End Design & UX) - Turma: 1TDSPH
   * [LinkedIn](https://www.linkedin.com/in/marifernandesgm-58460a40a) | [GitHub](https://github.com/marifernandesgm)
 
 ---
@@ -103,6 +116,13 @@ Abaixo encontram-se os detalhes dos desenvolvedores responsáveis pela arquitetu
    cd ORBITSAFE
    
 3. Abra o arquivo index.html em seu navegador favorito (utilizando a extensão Live Server no VS Code para uma melhor experiência com caminhos relativos).
+
+## 📞 Contato
+
+Para dúvidas, suporte técnico ou informações sobre o ecossistema OrbitSafe, entre em contato com a equipe de desenvolvimento através dos canais abaixo:
+
+* **E-mail Institucional da Equipe:** andreluizramosforastieri32@gmail.com
+* **Dúvidas Rápidas:** Abra uma [*Issue* diretamente no nosso repositório do GitHub](https://github.com/AndreL050690/ORBITSAFE/issues).
 
 ---
 OrbitSafe 2026 — Fiap Global Solution. Todos os direitos reservados.
