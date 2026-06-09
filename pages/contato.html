@@ -3,11 +3,14 @@
 
 <head>
 
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Título exibido na aba do navegador -->
     <title>OrbitSafe - Contato</title>
 
+    <!-- Arquivos de estilo da página -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contato.css">
 
@@ -15,16 +18,19 @@
 
 <body>
 
+    <!-- Cabeçalho principal com logo e menu de navegação -->
     <header class="cabecalho">
 
         <nav class="cabecalho__navbar">
 
+            <!-- Logo da OrbitSafe -->
             <a href="../index.html" class="cabecalho__logo">
 
                 <img src="../assets/logo.png" alt="OrbitSafe">
 
             </a>
 
+            <!-- Menu principal do site -->
             <ul class="cabecalho__lista">
 
                 <li class="cabecalho__item">
@@ -57,6 +63,7 @@
                     </a>
                 </li>
 
+                <!-- Página atual destacada -->
                 <li class="cabecalho__item">
                     <a class="cabecalho__link cabecalho__link--active" href="./contato.html">
                         Contato
@@ -77,8 +84,10 @@
 
 
 
+    <!-- Conteúdo principal da página -->
     <main class="contato">
 
+        <!-- Título da seção de contato -->
         <section class="contato__titulo">
 
             <h1>FALE CONOSCO</h1>
@@ -91,12 +100,16 @@
 
 
 
+        <!-- Formulário de contato -->
         <section class="contato__formulario">
 
+            <!-- Envio das mensagens para o serviço FormSubmit -->
             <form action="https://formsubmit.co/andreluizramosforastieri32@gmail.com" method="POST">
 
+                <!-- Desativa o captcha automático do FormSubmit -->
                 <input type="hidden" name="_captcha" value="false">
 
+                <!-- Campo Nome -->
                 <div class="grupo-campo">
 
                     <label for="nome">
@@ -108,6 +121,7 @@
                 </div>
 
 
+                <!-- Campo E-mail -->
                 <div class="grupo-campo">
 
                     <label for="email">
@@ -119,6 +133,7 @@
                 </div>
 
 
+                <!-- Campo Assunto -->
                 <div class="grupo-campo">
 
                     <label for="assunto">
@@ -148,6 +163,7 @@
                 </div>
 
 
+                <!-- Campo Mensagem -->
                 <div class="grupo-campo">
 
                     <label for="mensagem">
@@ -160,6 +176,7 @@
                 </div>
 
 
+                <!-- Botão para envio do formulário -->
                 <button type="submit" class="btn-principal">
 
                     Enviar Mensagem
@@ -174,30 +191,38 @@
 
 
 
+    <!-- Rodapé do site -->
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
+    <!-- Botão flutuante para abertura do SOS -->
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
+    <!-- Janela modal utilizada para envio de alertas emergenciais -->
     <div class="sos-modal" id="modalSOS">
 
         <div class="sos-conteudo">
 
             <h3>🚨 Emergência</h3>
 
+            <!-- Campo para identificação do usuário -->
             <input type="text" placeholder="Nome">
 
+            <!-- Campo para informar localização -->
             <input type="text" placeholder="Localização">
 
+            <!-- Campo para descrição da ocorrência -->
             <textarea placeholder="Descreva a situação"></textarea>
 
+            <!-- Botão para envio do alerta -->
             <button class="sos-enviar" id="enviarSOS">
                 Transmitir
             </button>
 
+            <!-- Botão para fechar a janela -->
             <button class="sos-fechar" id="fecharSOS">
                 Fechar
             </button>
@@ -206,22 +231,43 @@
 
     </div>
 
-<!-- Integração do chatbot IBM Watson Assistant -->
-
+    <!-- Integração do chatbot IBM Watson Assistant -->
     <script>
+
         window.watsonAssistantChatOptions = {
-            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
-            region: "https://integrations.us-south.assistant.watson.appdomain.cloud", // The region your integration is hosted in.
-            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa", // The ID of your service instance.
-            onLoad: async (instance) => { await instance.render(); }
+
+            // ID da integração criada no IBM Watson
+            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20",
+
+            // Região onde o serviço está hospedado
+            region: "https://integrations.us-south.assistant.watson.appdomain.cloud",
+
+            // ID da instância do serviço Watson Assistant
+            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa",
+
+            // Renderiza o chatbot ao carregar
+            onLoad: async (instance) => {
+                await instance.render();
+            }
         };
+
+        // Carrega dinamicamente o script do chatbot
         setTimeout(function () {
+
             const t = document.createElement('script');
-            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+
+            t.src =
+                "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+                (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+                "/WatsonAssistantChatEntry.js";
+
             document.head.appendChild(t);
+
         });
+
     </script>
 
+    <!-- Script principal do projeto -->
     <script src="../js/script.js"></script>
 
 </body>

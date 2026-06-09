@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
     <header class="cabecalho">
 
         <nav class="cabecalho__navbar">
@@ -63,10 +64,10 @@
 
     </header>
 
-
-
+    <!-- Conteúdo principal da página de integrantes -->
     <main class="integrantes">
 
+        <!-- Seção de apresentação da equipe do projeto -->
         <section class="integrantes__titulo">
 
             <h1>Nossa Equipe</h1>
@@ -77,11 +78,10 @@
 
         </section>
 
-
-
+        <!-- Container que reúne todos os membros da equipe -->
         <div class="integrantes__container">
 
-
+            <!-- Card com informações da integrante Isabelle -->
             <section class="integrante">
 
                 <img src="../assets/integranteIsabelle.png" alt="Isabelle Ferreira">
@@ -110,8 +110,7 @@
 
             </section>
 
-
-
+            <!-- Card com informações do integrante André -->
             <section class="integrante">
 
                 <img src="../assets/integranteAndre.png" alt="André Ramos">
@@ -140,8 +139,7 @@
 
             </section>
 
-
-
+            <!-- Card com informações da integrante Milena -->
             <section class="integrante">
 
                 <img src="../assets/integranteMilena.png" alt="Milena Conegin">
@@ -170,8 +168,7 @@
 
             </section>
 
-
-
+            <!-- Card com informações do integrante Eduardo -->
             <section class="integrante">
 
                 <img src="../assets/integranteEduardo.png" alt="Eduardo Guelere">
@@ -200,8 +197,7 @@
 
             </section>
 
-
-
+            <!-- Card com informações da integrante Marina -->
             <section class="integrante">
 
                 <img src="../assets/integranteMarina.png" alt="Marina Fernandes">
@@ -232,8 +228,7 @@
 
         </div>
 
-
-
+        <!-- Seção que disponibiliza o acesso ao repositório do projeto -->
         <section class="repositorio">
 
             <h2>Repositório do Projeto</h2>
@@ -252,16 +247,17 @@
 
     </main>
 
-
-
+    <!-- Rodapé com informações institucionais do projeto -->
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
+    <!-- Botão de acesso rápido para envio de alertas SOS -->
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
+    <!-- Modal utilizado para registrar solicitações de emergência -->
     <div class="sos-modal" id="modalSOS">
 
         <div class="sos-conteudo">
@@ -286,13 +282,12 @@
 
     </div>
 
-<!-- Integração do chatbot IBM Watson Assistant -->
-
+    <!-- Integração do chatbot IBM Watson Assistant -->
     <script>
         window.watsonAssistantChatOptions = {
-            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
-            region: "https://integrations.us-south.assistant.watson.appdomain.cloud", // The region your integration is hosted in.
-            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa", // The ID of your service instance.
+            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20",
+            region: "https://integrations.us-south.assistant.watson.appdomain.cloud",
+            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa",
             onLoad: async (instance) => { await instance.render(); }
         };
         setTimeout(function () {
@@ -302,6 +297,7 @@
         });
     </script>
 
+    <!-- Script responsável pelas funcionalidades interativas da página -->
     <script src="../js/script.js"></script>
 
 </body>
