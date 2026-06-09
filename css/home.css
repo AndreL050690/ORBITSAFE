@@ -383,67 +383,20 @@ body::before{
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA TABLETS
-================================================== */
-@media (max-width:900px){
-
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:3rem;
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .hero__title{
-
-        font-size:5rem;
-    }
-
-    .hero__text{
-
-        width:90%;
-    }
-
-    .conteudo__container{
-
-        grid-template-columns:1fr;
-    }
-}
-
-/* ==================================================
    BOTÃO SOS FLUTUANTE
 ================================================== */
 .sos-btn{
-
     position:fixed;
-
     bottom:25px;
-
     left:25px;
-
     width:70px;
-
     height:70px;
-
     border:none;
-
     border-radius:50%;
-
     background:#ff3333;
-
     color:white;
-
     font-size:2rem;
-
     cursor:pointer;
-
     z-index:9999;
 }
 
@@ -451,23 +404,15 @@ body::before{
    MODAL DE EMERGÊNCIA SOS
 ================================================== */
 .sos-modal{
-
     display:none;
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
     height:100%;
-
     background:rgba(0,0,0,.8);
-
     justify-content:center;
-
     align-items:center;
-
     z-index:10000;
 }
 
@@ -475,19 +420,12 @@ body::before{
    CONTEÚDO INTERNO DO MODAL SOS
 ================================================== */
 .sos-conteudo{
-
     width:400px;
-
     background:#07142e;
-
     padding:30px;
-
     border-radius:20px;
-
     display:flex;
-
     flex-direction:column;
-
     gap:15px;
 }
 
@@ -496,7 +434,6 @@ body::before{
 ================================================== */
 .sos-conteudo input,
 .sos-conteudo textarea{
-
     padding:12px;
 }
 
@@ -504,13 +441,9 @@ body::before{
    BOTÃO ENVIAR SOS
 ================================================== */
 .sos-enviar{
-
     background:#00cfff;
-
     border:none;
-
     padding:12px;
-
     cursor:pointer;
 }
 
@@ -518,132 +451,160 @@ body::before{
    BOTÃO FECHAR SOS
 ================================================== */
 .sos-fechar{
-
     background:#ff3333;
-
     border:none;
-
     padding:12px;
-
     color:white;
-
     cursor:pointer;
 }
 
 /* ==================================================
-   RESPONSIVIDADE INTERMEDIÁRIA
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ================================================== */
-@media(max-width:900px){
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .cabecalho__navbar{
-        flex-direction:column;
-        gap:3rem;
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   RESPONSIVIDADE ADAPTADA PARA O MENU HAMBÚRGUER (Telas até 900px)
+================================================== */
+@media (max-width: 900px) {
+
+    /* Exibe o botão de três listras (☰) */
+    .cabecalho__hamburger {
+        display: block;
     }
 
-    .cabecalho__lista{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:2rem;
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
     }
 
-    .hero{
-        height:auto;
-        padding:10rem 0;
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
     }
 
-    .hero__title{
-        font-size:5rem;
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
     }
 
-    .hero__text{
-        width:90%;
+    .hero {
+        height: auto;
+        padding: 10rem 0;
     }
 
-    .conteudo__container{
-        grid-template-columns:1fr;
+    .hero__title {
+        font-size: 5rem;
+    }
+
+    .hero__text {
+        width: 90%;
+    }
+
+    .conteudo__container {
+        grid-template-columns: 1fr;
     }
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA CELULARES
+   RESPONSIVIDADE PARA CELULARES PEQUENOS (Telas até 480px)
 ================================================== */
-@media(max-width:480px){
+@media (max-width: 480px) {
 
-    html{
-        font-size:50%;
+    html {
+        font-size: 50%;
     }
 
-    .cabecalho{
-        padding:1rem;
+    .cabecalho {
+        padding: 1rem;
     }
 
-    .cabecalho__navbar{
-        padding:2rem;
+    .cabecalho__navbar {
+        padding: 1.5rem 2rem;
     }
 
-    .cabecalho__logo img{
-        height:6rem;
+    .cabecalho__logo img {
+        height: 5.5rem;
     }
 
-    .cabecalho__lista{
-        flex-direction:column;
-        align-items:center;
-        gap:1.5rem;
+    .hero {
+        height: auto;
+        padding: 8rem 0;
     }
 
-    .hero{
-        height:auto;
-        padding:8rem 0;
+    .hero__bemvindo {
+        letter-spacing: .5rem;
+        font-size: 1.6rem;
     }
 
-    .hero__bemvindo{
-        letter-spacing:.5rem;
-        font-size:1.6rem;
+    .hero__title {
+        font-size: 4rem;
     }
 
-    .hero__title{
-        font-size:4rem;
+    .hero__linha {
+        width: 15rem;
     }
 
-    .hero__linha{
-        width:15rem;
+    .hero__text {
+        width: 95%;
+        font-size: 1.6rem;
     }
 
-    .hero__text{
-        width:95%;
-        font-size:1.6rem;
+    .hero__btn {
+        padding: 1.5rem 3rem;
     }
 
-    .hero__btn{
-        padding:1.5rem 3rem;
+    .conteudo__container {
+        width: 95%;
     }
 
-    .conteudo__container{
-        width:95%;
-        grid-template-columns:1fr;
+    .conteudo__sec {
+        padding: 3rem;
     }
 
-    .conteudo__sec{
-        padding:3rem;
+    .card__icone {
+        font-size: 4rem;
     }
 
-    .card__icone{
-        font-size:4rem;
+    .conteudo__sub-title {
+        font-size: 2rem;
     }
 
-    .conteudo__sub-title{
-        font-size:2rem;
+    .sos-conteudo {
+        width: 90%;
+        padding: 2rem;
     }
 
-    .sos-conteudo{
-        width:90%;
-        padding:2rem;
+    .sos-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
     }
-
-    .sos-btn{
-        width:60px;
-        height:60px;
-        font-size:1.6rem;
-    }
-
 }

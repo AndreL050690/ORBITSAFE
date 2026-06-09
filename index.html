@@ -12,13 +12,13 @@
 
 <body>
 
-<!-- Vídeo de fundo utilizado para reforçar a identidade visual da página inicial -->
+    <!-- Vídeo de fundo utilizado para reforçar a identidade visual da página inicial -->
 
     <video autoplay muted loop playsinline class="video-fundo">
         <source src="./video/videoterra.mp4" type="video/mp4">
     </video>
 
- <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
+    <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
 
     <header class="cabecalho">
 
@@ -28,44 +28,42 @@
                 <img src="./assets/logo.png" alt="Logo OrbitSafe">
             </a>
 
-            <ul class="cabecalho__lista">
+            <button id="menu-toggle" class="cabecalho__hamburger">
+                ☰
+            </button>
+
+            <ul class="cabecalho__lista" id="nav-menu">
 
                 <li class="cabecalho__item">
                     <a class="cabecalho__link cabecalho__link--active" href="index.html">
                         Home
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/sobre.html">
                         Sobre
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/monitoramento.html">
                         Monitoramento
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/dashboard.html">
                         Dashboard
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/faq.html">
                         FAQ
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/contato.html">
                         Contato
                     </a>
                 </li>
-
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="./pages/integrantes.html">
                         Integrantes
@@ -78,11 +76,11 @@
 
     </header>
 
- <!-- Conteúdo principal da página inicial -->
+    <!-- Conteúdo principal da página inicial -->
 
     <main class="conteudo">
 
-<!-- Seção de destaque que apresenta a OrbitSafe ao usuário -->
+        <!-- Seção de destaque que apresenta a OrbitSafe ao usuário -->
 
         <section class="hero">
 
@@ -119,11 +117,11 @@
 
         </section>
 
-<!-- Seção que apresenta os principais recursos da plataforma -->
+        <!-- Seção que apresenta os principais recursos da plataforma -->
 
         <div class="conteudo__container">
 
-<!-- Card sobre conectividade via satélites de órbita baixa -->
+            <!-- Card sobre conectividade via satélites de órbita baixa -->
 
             <section class="conteudo__sec">
 
@@ -146,7 +144,7 @@
 
             </section>
 
-<!-- Card sobre emissão automática de alertas de emergência -->
+            <!-- Card sobre emissão automática de alertas de emergência -->
 
             <section class="conteudo__sec">
 
@@ -169,7 +167,7 @@
 
             </section>
 
-<!-- Card sobre o uso de Inteligência Artificial na solução -->
+            <!-- Card sobre o uso de Inteligência Artificial na solução -->
 
             <section class="conteudo__sec">
 
@@ -196,19 +194,19 @@
 
     </main>
 
-<!-- Rodapé com informações institucionais do projeto -->
+    <!-- Rodapé com informações institucionais do projeto -->
 
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
- <!-- Botão de acesso rápido para envio de alertas SOS -->
+    <!-- Botão de acesso rápido para envio de alertas SOS -->
 
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
-<!-- Modal utilizado para registrar solicitações de emergência -->
+    <!-- Modal utilizado para registrar solicitações de emergência -->
 
     <div class="sos-modal" id="modalSOS">
 
@@ -216,11 +214,11 @@
 
             <h3>🚨 Emergência</h3>
 
-            <input type="text" placeholder="Nome">
+            <input type="text" id="sos-nome" placeholder="Nome">
 
-            <input type="text" placeholder="Localização">
+            <input type="text" id="sos-localizacao" placeholder="Localização">
 
-            <textarea placeholder="Descreva a situação"></textarea>
+            <textarea id="sos-mensagem" placeholder="Descreva a situação"></textarea>
 
             <button class="sos-enviar" id="enviarSOS">
                 Transmitir
@@ -234,8 +232,8 @@
 
     </div>
 
-<!-- Integração do chatbot IBM Watson Assistant -->
-     
+    <!-- Integração do chatbot IBM Watson Assistant -->
+
     <script>
         window.watsonAssistantChatOptions = {
             integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
@@ -250,7 +248,7 @@
         });
     </script>
 
-  <!-- Script responsável pelas funcionalidades interativas da página -->
+    <!-- Script responsável pelas funcionalidades interativas da página -->
 
     <script src="./js/script.js"></script>
 

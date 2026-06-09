@@ -353,50 +353,82 @@
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA TABLETS
-   ================================================== */
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
+================================================== */
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: #00cfff; /* Cor primária do seu Dashboard */
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   RESPONSIVIDADE UNIFICADA (Telas até 1100px)
+   Ajusta os gráficos do Dashboard para tablets grandes
+================================================== */
 @media(max-width:1100px){
-
-    .grid-metricas{
-
-        grid-template-columns:1fr 1fr;
-    }
-
     .grade-dashboard{
-
-        grid-template-columns:1fr;
+        grid-template-columns:1fr; /* Gráficos ficam um embaixo do outro */
     }
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA TELAS MÉDIAS
-   ================================================== */
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+================================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão de três listras (☰) */
+    .cabecalho__hamburger {
+        display: block;
+    }
 
-@media(max-width:700px){
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
+    }
 
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
+    }
+
+    /* Ajuste fino das métricas para telas desse tamanho */
     .grid-metricas{
-
-        grid-template-columns:1fr;
-    }
-
-    .titulo-dashboard h2{
-
-        font-size:3rem;
-    }
-
-    .abas-dashboard{
-
-        flex-wrap:wrap;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA CELULARES
-   ================================================== */
-
+   RESPONSIVIDADE TOTAL PARA CELULARES (Telas até 600px)
+   Mantém as reduções do seu Dashboard original salvas
+================================================== */
 @media(max-width:600px){
-
     html{
         font-size:50%;
     }
@@ -420,6 +452,10 @@
 
     .btn-aba{
         width:100%;
+    }
+
+    .grid-metricas{
+        grid-template-columns:1fr;
     }
 
     .card-metrica{
@@ -463,9 +499,7 @@
         padding:1rem;
         font-size:1.4rem;
     }
-
 }
-
 /* ==========================================
    ESTILIZAÇÃO DO PARÁGRAFO DE DETALHES (SATÉLITES)
 ========================================== */

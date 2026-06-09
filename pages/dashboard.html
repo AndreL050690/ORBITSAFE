@@ -12,24 +12,25 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/dashboard.css">
 
-    <script src="../js/script.js" defer></script>
 </head>
 
 <body>
 
-<!-- Cabeçalho principal com logo e menu de navegação -->
+    <!-- Cabeçalho principal com logo e menu de navegação -->
 
     <header class="cabecalho">
 
         <nav class="cabecalho__navbar">
 
             <a href="../index.html" class="cabecalho__logo">
-
                 <img src="../assets/logo.png" alt="Logo OrbitSafe">
-
             </a>
 
-            <ul class="cabecalho__lista">
+            <button id="menu-toggle" class="cabecalho__hamburger">
+                ☰
+            </button>
+
+            <ul class="cabecalho__lista" id="nav-menu">
 
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="../index.html">
@@ -79,7 +80,7 @@
 
     </header>
 
- <!-- Área principal do dashboard -->
+    <!-- Área principal do dashboard -->
 
     <main class="container-dashboard" id="conteudo-principal">
 
@@ -89,7 +90,7 @@
             </p>
         </section>
 
-<!-- Cards com os indicadores mais importantes do sistema -->
+        <!-- Cards com os indicadores mais importantes do sistema -->
 
         <section class="grid-metricas" aria-label="Principais métricas operacionais">
             <div class="card-metrica">
@@ -114,11 +115,11 @@
             </div>
         </section>
 
-<!-- Área que reúne os gráficos do dashboard -->
+        <!-- Área que reúne os gráficos do dashboard -->
 
         <div class="grade-dashboard">
 
- <!-- Gráfico de fluxo de banda transmitida pelos satélites -->
+            <!-- Gráfico de fluxo de banda transmitida pelos satélites -->
 
             <section class="bloco-grafico" aria-labelledby="grafico-trafego">
                 <h3 id="grafico-trafego">Fluxo de Banda de Emergência (Satélite)</h3>
@@ -145,7 +146,7 @@
                 </div>
             </section>
 
- <!-- Gráfico comparativo de resiliência por região -->
+            <!-- Gráfico comparativo de resiliência por região -->
 
             <section class="bloco-grafico" aria-labelledby="grafico-resiliencia">
                 <h3 id="grafico-resiliencia">Índice de Resiliência por Região</h3>
@@ -188,7 +189,7 @@
 
         </div>
 
-  <!-- Tabela com o histórico das transmissões realizadas -->
+        <!-- Tabela com o histórico das transmissões realizadas -->
 
         <section class="secao-tabela" aria-labelledby="titulo-tabela">
             <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
@@ -231,23 +232,26 @@
 
         </section>
 
-        <p class="texto-satelite">Garantir canais de comunicação resilientes é o núcleo da solução OrbitSafe. Esta seção monitora o fluxo de dados e a integridade das transmissions destinadas a áreas sob alerta. A análise de banda e o status dos canais evitam apagões de dados, permitindo que órgãos de defesa civil tomem decisões baseadas em relatórios meteorológicos geoespaciais ininterruptos.</p>
+        <p class="texto-satelite">Garantir canais de comunicação resilientes é o núcleo da solução OrbitSafe. Esta seção
+            monitora o fluxo de dados e a integridade das transmissions destinadas a áreas sob alerta. A análise de
+            banda e o status dos canais evitam apagões de dados, permitindo que órgãos de defesa civil tomem decisões
+            baseadas em relatórios meteorológicos geoespaciais ininterruptos.</p>
 
     </main>
 
-<!-- Rodapé institucional do projeto -->
+    <!-- Rodapé institucional do projeto -->
 
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
-   <!-- Botão de acesso rápido para envio de SOS -->
+    <!-- Botão de acesso rápido para envio de SOS -->
 
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
- <!-- Janela modal para envio de mensagens de emergência -->
+    <!-- Janela modal para envio de mensagens de emergência -->
 
     <div class="sos-modal" id="modalSOS">
 
@@ -273,7 +277,7 @@
 
     </div>
 
-<!-- Integração do chatbot IBM Watson Assistant -->
+    <!-- Integração do chatbot IBM Watson Assistant -->
 
     <script>
         window.watsonAssistantChatOptions = {
@@ -289,7 +293,7 @@
         });
     </script>
 
-<!-- Script principal com as funcionalidades da página -->
+    <!-- Script principal com as funcionalidades da página -->
 
     <script src="../js/script.js"></script>
 

@@ -411,129 +411,145 @@ body{
     cursor:pointer;
 
 }
-
-
-
-/* =========================================
-   RESPONSIVIDADE - TABLETS
-========================================= */
-
-@media(max-width:900px){
-
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:3rem;
-
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-    .valores__container{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .sobre__container{
-
-        width:90%;
-
-    }
-
-    .sobre__title{
-
-        font-size:4rem;
-
-    }
-
+/* ==========================================
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
+========================================== */
+.cabecalho__hamburger {
+    display: none; /* Escondido em telas de computador */
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
 
+/* ==========================================
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+========================================== */
+@media (max-width: 900px) {
+    /* Ativa o botão de três listras */
+    .cabecalho__hamburger {
+        display: block;
+    }
 
-/* =========================================
-   RESPONSIVIDADE - CELULARES
-========================================= */
+    /* Ajusta o alinhamento horizontal do topo */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Base de posicionamento do menu drop */
+        flex-direction: row;
+        gap: 0;
+    }
 
+    /* Recolhe e esconde a lista principal para o formato hambúrguer */
+    .cabecalho__lista {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* Ativado dinamicamente via JS ao clicar no botão */
+    .cabecalho__lista.active {
+        display: flex;
+    }
+
+    /* Layout da sua página Sobre mantido intacto para tablets */
+    .valores__container {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre__container {
+        width: 90%;
+    }
+
+    .sobre__title {
+        font-size: 4rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE GERAL PARA CELULARES (Telas até 480px)
+========================================== */
 @media(max-width:480px){
-
-    html{
-        font-size:50%;
+    html {
+        font-size: 50%;
     }
 
-    .cabecalho{
-        padding:1rem;
+    .cabecalho {
+        padding: 1rem;
     }
 
-    .cabecalho__navbar{
-        padding:2rem;
+    .cabecalho__navbar {
+        padding: 2rem;
     }
 
-    .cabecalho__logo img{
-        height:6rem;
+    .cabecalho__logo img {
+        height: 6rem;
     }
 
-    .cabecalho__lista{
-        flex-direction:column;
-        align-items:center;
-        gap:1.5rem;
+    .sobre {
+        padding: 5rem 0;
     }
 
-    .sobre{
-        padding:5rem 0;
+    .sobre__container {
+        width: 95%;
+        padding: 3rem;
     }
 
-    .sobre__container{
-        width:95%;
-        padding:3rem;
+    .sobre__title {
+        font-size: 3.5rem;
     }
 
-    .sobre__title{
-        font-size:3.5rem;
+    .sobre__text {
+        font-size: 1.6rem;
+        line-height: 1.8;
     }
 
-    .sobre__text{
-        font-size:1.6rem;
-        line-height:1.8;
+    .valores {
+        padding: 4rem 0;
     }
 
-    .valores{
-        padding:4rem 0;
+    .valores__title {
+        font-size: 3rem;
     }
 
-    .valores__title{
-        font-size:3rem;
+    .valores__container {
+        width: 95%;
+        grid-template-columns: 1fr;
     }
 
-    .valores__container{
-        width:95%;
-        grid-template-columns:1fr;
+    .valores__card {
+        padding: 3rem;
     }
 
-    .valores__card{
-        padding:3rem;
+    .valores__sub-title {
+        font-size: 2rem;
     }
 
-    .valores__sub-title{
-        font-size:2rem;
+    .sos-conteudo {
+        width: 90%;
+        padding: 2rem;
     }
 
-    .sos-conteudo{
-        width:90%;
-        padding:2rem;
+    .sos-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
     }
-
-    .sos-btn{
-        width:60px;
-        height:60px;
-        font-size:1.6rem;
-    }
-
 }

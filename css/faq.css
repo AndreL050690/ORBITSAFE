@@ -259,238 +259,111 @@ body{
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA TABLETS
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ================================================== */
-@media(max-width:900px){
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: #00cfff; /* Mantendo o azul padrão do projeto */
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .cabecalho__navbar{
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
 
-        flex-direction:column;
-
-        gap:3rem;
-
+/* ==================================================
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+================================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão de três listras (☰) */
+    .cabecalho__hamburger {
+        display: block;
     }
 
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
+        flex-direction: row; /* Garante que logo e botão fiquem na mesma linha */
+        gap: 0;
     }
 
-    .faq__titulo h1{
-
-        font-size:4rem;
-
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
     }
 
-    .faq__card{
-
-        padding:3rem;
-
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
     }
 
+    /* Ajustes da FAQ salvos para tablets */
+    .faq__titulo h1 {
+        font-size: 4rem;
+    }
+
+    .faq__card {
+        padding: 3rem;
+    }
 }
 
 /* ==================================================
-   BOTÃO SOS FLUTUANTE
-================================================== */
-.sos-btn{
-
-    position:fixed;
-
-    bottom:25px;
-
-    left:25px;
-
-    width:70px;
-
-    height:70px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#ff3333;
-
-    color:white;
-
-    font-size:2rem;
-
-    cursor:pointer;
-
-    z-index:9999;
-
-}
-
-/* ==================================================
-   MODAL DE EMERGÊNCIA SOS
-================================================== */
-.sos-modal{
-
-    display:none;
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.8);
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:10000;
-
-}
-
-/* ==================================================
-   CONTEÚDO INTERNO DO MODAL SOS
-================================================== */
-.sos-conteudo{
-
-    width:400px;
-
-    background:#07142e;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-}
-
-/* ==================================================
-   CAMPOS DE TEXTO DO MODAL SOS
-================================================== */
-.sos-conteudo input,
-.sos-conteudo textarea{
-
-    padding:12px;
-
-}
-
-/* ==================================================
-   BOTÃO DE ENVIO DO SOS
-================================================== */
-.sos-enviar{
-
-    background:#00cfff;
-
-    border:none;
-
-    padding:12px;
-
-    cursor:pointer;
-
-}
-
-/* ==================================================
-   BOTÃO DE FECHAR O MODAL
-================================================== */
-.sos-fechar{
-
-    background:#ff3333;
-
-    border:none;
-
-    padding:12px;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-/* ==================================================
-   RESPONSIVIDADE PARA CELULARES
+   RESPONSIVIDADE GERAL DA FAQ (Telas até 600px)
 ================================================== */
 @media(max-width:600px){
-
     html{
-
         font-size:50%;
-
     }
 
     .cabecalho{
-
         padding:1rem;
-
-    }
-
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:2rem;
-
-        padding:2rem;
-
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:1.5rem;
-
     }
 
     .faq{
-
         width:95%;
-
         padding:5rem 0;
-
     }
 
     .faq__titulo h1{
-
         font-size:3.5rem;
-
     }
 
     .faq__titulo p{
-
         line-height:1.7;
-
     }
 
     .faq__card{
-
         padding:2.5rem;
-
     }
 
     .faq__card h2{
-
         font-size:2rem;
-
         line-height:1.5;
-
     }
 
     .faq__card p{
-
         font-size:1.6rem;
-
         line-height:1.8;
-
     }
-
 }
 
 /* ==================================================

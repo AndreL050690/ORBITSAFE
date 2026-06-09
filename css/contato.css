@@ -442,27 +442,118 @@ textarea:invalid{
 }
 
 /* ==================================================
-   RESPONSIVIDADE DO MODAL SOS
-   ================================================== */
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
+================================================== */
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: #00d2ff; /* Usando a cor primary da página */
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+================================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão de três listras (☰) nas outras páginas */
+    .cabecalho__hamburger {
+        display: block;
+    }
+
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
+    }
+
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
+    }
+}
+
+/* ==================================================
+   RESPONSIVIDADE GERAL PARA TELAS MENORES (Até 600px)
+================================================== */
+@media(max-width:600px){
+    html{
+        font-size:50%;
+    }
+
+    .contato{
+        padding: 4rem 1rem;
+    }
+
+    .contato__titulo h1{
+        font-size: 3.5rem;
+    }
+
+    .contato__titulo p{
+        line-height: 1.7;
+    }
+
+    .contato__formulario{
+        width: 95%;
+        padding: 2rem;
+    }
+
+    .grupo-campo input,
+    .grupo-campo select,
+    .grupo-campo textarea{
+        padding: 1rem;
+    }
+
+    .btn-principal{
+        padding: 1.3rem;
+    }
+}
+
+/* ==================================================
+   RESPONSIVIDADE PARA CELULARES PEQUENOS E MODAL SOS (Até 480px)
+================================================== */
 @media(max-width:480px){
+    .contato__titulo h1{
+        font-size: 3rem;
+    }
+
+    .contato__formulario{
+        padding: 2rem;
+    }
 
     .sos-conteudo{
-
-        width:90%;
-
-        padding:2rem;
-
+        width: 90%;
+        padding: 2rem;
     }
 
     .sos-btn{
-
-        width:60px;
-
-        height:60px;
-
-        font-size:1.8rem;
-
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
     }
-
 }

@@ -12,7 +12,7 @@
 
 <body>
 
- <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
+    <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
 
     <header class="cabecalho">
 
@@ -22,7 +22,11 @@
                 <img src="../assets/logo.png" alt="Logo OrbitSafe">
             </a>
 
-            <ul class="cabecalho__lista">
+            <button id="menu-toggle" class="cabecalho__hamburger">
+                ☰
+            </button>
+
+            <ul class="cabecalho__lista" id="nav-menu">
 
                 <li class="cabecalho__item">
                     <a class="cabecalho__link" href="../index.html">Home</a>
@@ -58,11 +62,11 @@
 
     </header>
 
-<!-- Conteúdo principal da página Sobre -->
+    <!-- Conteúdo principal da página Sobre -->
 
     <main class="conteudo">
 
-<!-- Seção que apresenta a missão e o propósito da OrbitSafe -->
+        <!-- Seção que apresenta a missão e o propósito da OrbitSafe -->
 
         <section class="sobre">
 
@@ -73,18 +77,25 @@
                 </h1>
 
                 <p class="sobre__text">
-                   A OrbitSafe nasceu com o propósito de solucionar uma das maiores vulnerabilidades em cenários de desastres climáticos: a perda da comunicação terrestre. Eventos como enchentes, deslizamentos e tempestades severas podem comprometer as redes tradicionais, dificultando a coordenação de ações emergenciais.
-                   Para enfrentar esse desafio, desenvolvemos uma plataforma inteligente capaz de manter fluxos de dados essenciais ativos por meio de satélites de órbita baixa (LEO). Dessa forma, garantimos maior continuidade na comunicação mesmo em situações críticas.
-                   Nossa solução foi pensada para apoiar equipes de resgate, Defesa Civil e comunidades afetadas, permitindo a troca rápida e segura de informações importantes para a tomada de decisões e para a resposta a emergências.
+                    A OrbitSafe nasceu com o propósito de solucionar uma das maiores vulnerabilidades em cenários de
+                    desastres climáticos: a perda da comunicação terrestre. Eventos como enchentes, deslizamentos e
+                    tempestades severas podem comprometer as redes tradicionais, dificultando a coordenação de ações
+                    emergenciais.
+                    Para enfrentar esse desafio, desenvolvemos uma plataforma inteligente capaz de manter fluxos de
+                    dados essenciais ativos por meio de satélites de órbita baixa (LEO). Dessa forma, garantimos maior
+                    continuidade na comunicação mesmo em situações críticas.
+                    Nossa solução foi pensada para apoiar equipes de resgate, Defesa Civil e comunidades afetadas,
+                    permitindo a troca rápida e segura de informações importantes para a tomada de decisões e para a
+                    resposta a emergências.
                 </p>
 
-                
+
 
             </div>
 
         </section>
 
- <!-- Seção que apresenta os valores fundamentais do projeto -->
+        <!-- Seção que apresenta os valores fundamentais do projeto -->
 
         <section class="valores">
 
@@ -103,7 +114,7 @@
 
             <div class="valores__container">
 
-<!-- Card que destaca a confiabilidade da solução -->
+                <!-- Card que destaca a confiabilidade da solução -->
 
                 <section class="valores__card">
 
@@ -132,7 +143,7 @@
 
                 </section>
 
- <!-- Card que destaca a inovação tecnológica voltada à preservação de vidas -->
+                <!-- Card que destaca a inovação tecnológica voltada à preservação de vidas -->
 
                 <section class="valores__card">
 
@@ -153,19 +164,19 @@
 
     </main>
 
-<!-- Rodapé com informações institucionais do projeto -->
+    <!-- Rodapé com informações institucionais do projeto -->
 
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
-<!-- Botão de acesso rápido para envio de alertas SOS -->
+    <!-- Botão de acesso rápido para envio de alertas SOS -->
 
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
- <!-- Modal utilizado para registrar solicitações de emergência -->
+    <!-- Modal utilizado para registrar solicitações de emergência -->
 
     <div class="sos-modal" id="modalSOS">
 
@@ -191,7 +202,7 @@
 
     </div>
 
-<!-- Integração do chatbot IBM Watson Assistant -->
+    <!-- Integração do chatbot IBM Watson Assistant -->
 
     <script>
         window.watsonAssistantChatOptions = {
@@ -207,7 +218,7 @@
         });
     </script>
 
-<!-- Script responsável pelas funcionalidades interativas da página -->
+    <!-- Script responsável pelas funcionalidades interativas da página -->
 
     <script src="../js/script.js"></script>
 
