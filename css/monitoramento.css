@@ -1,10 +1,16 @@
-
+/* ==========================================
+   RESET GLOBAL
+========================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
+/* ==========================================
+   VARIÁVEIS GLOBAIS
+========================================== */
 
 :root{
 
@@ -20,6 +26,10 @@
     --sub-titulo:2.5rem;
 
 }
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+========================================== */
 
 html{
     font-size:62.5%;
@@ -45,9 +55,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   CABEÇALHO E MENU DE NAVEGAÇÃO
+========================================== */
 
 .cabecalho{
 
@@ -117,9 +127,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   CONTAINER PRINCIPAL DA PÁGINA
+========================================== */
 
 .container-monitoramento{
 
@@ -131,9 +141,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   TÍTULO PRINCIPAL
+========================================== */
 
 .titulo-central{
 
@@ -160,9 +170,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   CARDS DE INDICADORES
+========================================== */
 
 .cards-indicadores{
 
@@ -222,9 +232,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   GRADE PRINCIPAL DO PAINEL
+========================================== */
 
 .painel-grade{
 
@@ -236,9 +246,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   BLOCO DO MAPA / RADAR
+========================================== */
 
 .bloco-mapa{
 
@@ -261,9 +271,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   ÁREA VISUAL DO RADAR
+========================================== */
 
 .mapa-ficticio{
 
@@ -290,6 +300,10 @@ body{
     overflow:hidden;
 
 }
+
+/* ==========================================
+   ANÉIS DO RADAR
+========================================== */
 
 .radar-ring{
 
@@ -337,6 +351,10 @@ body{
 
 }
 
+/* ==========================================
+   EIXOS DO RADAR
+========================================== */
+
 .radar-axis-h{
 
     position:absolute;
@@ -365,6 +383,10 @@ body{
 
 }
 
+/* ==========================================
+   FEIXE GIRATÓRIO DO RADAR
+========================================== */
+
 .radar-sweep{
 
     position:absolute;
@@ -388,24 +410,25 @@ body{
 
 }
 
+/* ==========================================
+   ANIMAÇÃO DO RADAR
+========================================== */
+
 @keyframes radar{
 
     from{
-
         transform:rotate(0deg);
-
     }
 
     to{
-
         transform:rotate(360deg);
-
     }
 
 }
 
-
-
+/* ==========================================
+   BLOCO DE OCORRÊNCIAS E ALERTAS
+========================================== */
 
 .bloco-ocorrencias{
 
@@ -428,6 +451,10 @@ body{
 
 }
 
+/* ==========================================
+   LISTA DE ALERTAS
+========================================== */
+
 .lista-alertas{
 
     list-style:none;
@@ -449,6 +476,10 @@ body{
     color:white;
 
 }
+
+/* ==========================================
+   NÍVEIS DE ALERTA
+========================================== */
 
 .critico{
 
@@ -474,9 +505,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   RODAPÉ
+========================================== */
 
 .rodape{
 
@@ -490,9 +521,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   RESPONSIVIDADE PARA TABLETS
+========================================== */
 
 @media(max-width:900px){
 
@@ -513,15 +544,11 @@ body{
     }
 
     .cards-indicadores{
-
         grid-template-columns:1fr;
-
     }
 
     .painel-grade{
-
         grid-template-columns:1fr;
-
     }
 
     .radar-container{
@@ -533,6 +560,11 @@ body{
     }
 
 }
+
+/* ==========================================
+   BOTÃO SOS FLUTUANTE
+========================================== */
+
 .sos-btn{
 
     position:fixed;
@@ -561,6 +593,10 @@ body{
 
 }
 
+/* ==========================================
+   MODAL SOS
+========================================== */
+
 .sos-modal{
 
     display:none;
@@ -582,6 +618,10 @@ body{
     z-index:10000;
 
 }
+
+/* ==========================================
+   CONTEÚDO DO MODAL SOS
+========================================== */
 
 .sos-conteudo{
 
@@ -607,6 +647,10 @@ body{
     padding:12px;
 
 }
+
+/* ==========================================
+   BOTÕES DO SOS
+========================================== */
 
 .sos-enviar{
 
@@ -634,7 +678,9 @@ body{
 
 }
 
-
+/* ==========================================
+   RESPONSIVIDADE PARA CELULARES
+========================================== */
 
 @media(max-width:600px){
 
@@ -647,15 +693,23 @@ body{
     }
 
     .cabecalho__navbar{
+
         padding:2rem;
+
         flex-direction:column;
+
         gap:2rem;
+
     }
 
     .cabecalho__lista{
+
         flex-wrap:wrap;
+
         justify-content:center;
+
         gap:1.5rem;
+
     }
 
     .titulo-central h1{
@@ -663,8 +717,11 @@ body{
     }
 
     .container-monitoramento{
+
         width:95%;
+
         padding:5rem 0;
+
     }
 
     .cards-indicadores{
@@ -682,29 +739,47 @@ body{
     }
 
     .radar-container{
+
         width:230px;
+
         height:230px;
+
     }
 
     .radar-ring:nth-child(1){
+
         width:70px;
+
         height:70px;
+
         top:80px;
+
         left:80px;
+
     }
 
     .radar-ring:nth-child(2){
+
         width:140px;
+
         height:140px;
+
         top:45px;
+
         left:45px;
+
     }
 
     .radar-ring:nth-child(3){
+
         width:210px;
+
         height:210px;
+
         top:10px;
+
         left:10px;
+
     }
 
     .alerta{
@@ -712,14 +787,18 @@ body{
     }
 
     .rodape{
+
         margin-top:5rem;
+
         padding:3rem;
+
     }
 
 }
 
-
-
+/* ==========================================
+   ESTILIZAÇÃO DOS CAMPOS DO SOS
+========================================== */
 
 .sos-conteudo input,
 .sos-conteudo textarea{
@@ -734,7 +813,6 @@ body{
 
 }
 
-
 .sos-conteudo input:focus,
 .sos-conteudo textarea:focus{
 
@@ -744,6 +822,9 @@ body{
 
 }
 
+/* ==========================================
+   EFEITOS DOS BOTÕES SOS
+========================================== */
 
 .sos-enviar{
 
@@ -756,11 +837,8 @@ body{
 }
 
 .sos-enviar:hover{
-
     background:#38dfff;
-
 }
-
 
 .sos-fechar{
 
@@ -770,6 +848,9 @@ body{
 
 }
 
+/* ==========================================
+   AJUSTES FINAIS PARA TELAS PEQUENAS
+========================================== */
 
 @media(max-width:480px){
 

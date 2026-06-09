@@ -1,11 +1,16 @@
+/* ==========================================
+   RESET GLOBAL
+========================================== */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
+
+/* ==========================================
+   VARIÁVEIS GLOBAIS
+========================================== */
 
 :root{
 
@@ -17,16 +22,17 @@
 
 }
 
+/* ==========================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+========================================== */
+
 html{
-
     font-size:62.5%;
-
 }
 
 body{
 
     font-size:2rem;
-
     font-family:'Segoe UI',sans-serif;
 
     background-image:
@@ -41,9 +47,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   CABEÇALHO E MENU DE NAVEGAÇÃO
+========================================== */
 
 .cabecalho{
 
@@ -55,7 +61,6 @@ body{
 .cabecalho__navbar{
 
     width:95%;
-
     margin:auto;
 
     padding:2rem 4rem;
@@ -63,7 +68,6 @@ body{
     display:flex;
 
     justify-content:space-between;
-
     align-items:center;
 
     background-color:rgba(255,255,255,.05);
@@ -75,9 +79,7 @@ body{
 }
 
 .cabecalho__logo img{
-
     height:8rem;
-
 }
 
 .cabecalho__lista{
@@ -101,14 +103,12 @@ body{
 }
 
 .cabecalho__link:hover{
-
     color:var(--primary);
-
 }
 
-
-
-
+/* ==========================================
+   SEÇÃO PRINCIPAL DOS INTEGRANTES
+========================================== */
 
 .integrantes{
 
@@ -119,6 +119,10 @@ body{
     padding:8rem 0;
 
 }
+
+/* ==========================================
+   TÍTULO DA PÁGINA
+========================================== */
 
 .integrantes__titulo{
 
@@ -137,14 +141,12 @@ body{
 }
 
 .integrantes__titulo p{
-
     color:#d7d7d7;
-
 }
 
-
-
-
+/* ==========================================
+   GRID DOS CARDS DOS INTEGRANTES
+========================================== */
 
 .integrantes__container{
 
@@ -156,9 +158,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   CARD INDIVIDUAL DE CADA INTEGRANTE
+========================================== */
 
 .integrante{
 
@@ -177,15 +179,16 @@ body{
 }
 
 .integrante:hover{
-
     box-shadow:0 0 35px rgba(0,207,255,.25);
-
 }
+
+/* ==========================================
+   FOTO DO INTEGRANTE
+========================================== */
 
 .integrante img{
 
     width:18rem;
-
     height:18rem;
 
     border-radius:50%;
@@ -195,6 +198,10 @@ body{
     margin-bottom:2rem;
 
 }
+
+/* ==========================================
+   INFORMAÇÕES DO INTEGRANTE
+========================================== */
 
 .integrante h2{
 
@@ -214,9 +221,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   LINKS (GITHUB E LINKEDIN)
+========================================== */
 
 .integrante__links{
 
@@ -243,14 +250,12 @@ body{
 }
 
 .integrante__links img:hover{
-
     transform:scale(1.1);
-
 }
 
-
-
-
+/* ==========================================
+   SEÇÃO DO REPOSITÓRIO GITHUB
+========================================== */
 
 .repositorio{
 
@@ -290,6 +295,10 @@ body{
 
 }
 
+/* ==========================================
+   BOTÃO DE ACESSO AO REPOSITÓRIO
+========================================== */
+
 .repositorio__botao{
 
     display:inline-block;
@@ -318,9 +327,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   RODAPÉ
+========================================== */
 
 .rodape{
 
@@ -332,9 +341,9 @@ body{
 
 }
 
-
-
-
+/* ==========================================
+   RESPONSIVIDADE PARA TABLETS
+========================================== */
 
 @media(max-width:900px){
 
@@ -355,35 +364,31 @@ body{
     }
 
     .integrantes__container{
-
         grid-template-columns:1fr;
-
     }
 
     .integrantes__titulo h1{
-
         font-size:4rem;
-
     }
 
     .repositorio{
-
         padding:2.5rem;
-
     }
 
 }
+
+/* ==========================================
+   BOTÃO SOS FLUTUANTE
+========================================== */
 
 .sos-btn{
 
     position:fixed;
 
     bottom:25px;
-
     left:25px;
 
     width:70px;
-
     height:70px;
 
     border:none;
@@ -401,6 +406,10 @@ body{
     z-index:9999;
 
 }
+
+/* ==========================================
+   MODAL SOS
+========================================== */
 
 .sos-modal{
 
@@ -424,6 +433,10 @@ body{
 
 }
 
+/* ==========================================
+   CONTEÚDO INTERNO DO MODAL SOS
+========================================== */
+
 .sos-conteudo{
 
     width:400px;
@@ -444,10 +457,12 @@ body{
 
 .sos-conteudo input,
 .sos-conteudo textarea{
-
     padding:12px;
-
 }
+
+/* ==========================================
+   BOTÕES DO MODAL SOS
+========================================== */
 
 .sos-enviar{
 
@@ -475,20 +490,18 @@ body{
 
 }
 
-
+/* ==========================================
+   RESPONSIVIDADE PARA CELULARES
+========================================== */
 
 @media(max-width:600px){
 
     html{
-
         font-size:50%;
-
     }
 
     .cabecalho{
-
         padding:1rem;
-
     }
 
     .cabecalho__navbar{
@@ -520,41 +533,31 @@ body{
     }
 
     .integrantes__titulo h1{
-
         font-size:3.5rem;
-
     }
 
     .integrantes__titulo p{
-
         line-height:1.7;
-
     }
 
     .integrante{
-
         padding:3rem;
-
     }
 
     .integrante img{
 
         width:15rem;
-
         height:15rem;
 
     }
 
     .integrante h2{
-
         font-size:2rem;
-
     }
 
     .integrante__links img{
 
         width:4rem;
-
         height:4rem;
 
     }
@@ -568,60 +571,48 @@ body{
     }
 
     .repositorio h2{
-
         font-size:2.5rem;
-
     }
 
 }
 
-
-
+/* ==========================================
+   ANIMAÇÕES E EFEITOS VISUAIS
+========================================== */
 
 .integrante{
-
     transition:.4s;
-
 }
 
 .integrante:hover{
-
     transform:translateY(-8px);
-
 }
 
 .integrante img{
-
     transition:.4s;
-
 }
 
 .integrante:hover img{
 
     box-shadow:
-
     0 0 30px rgba(0,207,255,.5);
 
 }
 
-
-
-
 .repositorio{
-
     transition:.4s;
-
 }
 
 .repositorio:hover{
 
     box-shadow:
-
     0 0 30px rgba(0,207,255,.25);
 
 }
 
-
+/* ==========================================
+   ESTILIZAÇÃO DOS CAMPOS DO SOS
+========================================== */
 
 .sos-conteudo input,
 .sos-conteudo textarea{
@@ -656,9 +647,7 @@ body{
 }
 
 .sos-enviar:hover{
-
     background:#35dcff;
-
 }
 
 .sos-fechar{
@@ -669,8 +658,9 @@ body{
 
 }
 
-
-
+/* ==========================================
+   AJUSTES FINAIS PARA TELAS PEQUENAS
+========================================== */
 
 @media(max-width:480px){
 
@@ -685,7 +675,6 @@ body{
     .sos-btn{
 
         width:60px;
-
         height:60px;
 
         font-size:1.8rem;
