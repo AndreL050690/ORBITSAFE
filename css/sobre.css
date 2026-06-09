@@ -1,3 +1,6 @@
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================= */
 
 *{
     margin:0;
@@ -5,6 +8,7 @@
     box-sizing:border-box;
 }
 
+/* Variáveis globais do projeto */
 :root{
 
     --bg-dark:#020617;
@@ -20,10 +24,12 @@
 
 }
 
+/* Define base de cálculo para REM */
 html{
     font-size:62.5%;
 }
 
+/* Configurações gerais da página */
 body{
 
     font-size:2rem;
@@ -46,7 +52,9 @@ body{
 
 
 
-
+/* =========================================
+   CABEÇALHO E MENU DE NAVEGAÇÃO
+========================================= */
 
 .cabecalho{
 
@@ -79,6 +87,7 @@ body{
 
 }
 
+/* Logo principal */
 .cabecalho__logo img{
 
     height:8rem;
@@ -90,6 +99,7 @@ body{
 
 }
 
+/* Lista de navegação */
 .cabecalho__lista{
 
     display:flex;
@@ -100,6 +110,7 @@ body{
 
 }
 
+/* Links do menu */
 .cabecalho__link{
 
     text-decoration:none;
@@ -118,7 +129,9 @@ body{
 
 
 
-
+/* =========================================
+   SEÇÃO SOBRE O PROJETO
+========================================= */
 
 .sobre{
 
@@ -128,6 +141,7 @@ body{
 
 }
 
+/* Container principal da seção */
 .sobre__container{
 
     width:80%;
@@ -145,6 +159,7 @@ body{
 
 }
 
+/* Título principal */
 .sobre__title{
 
     font-size:var(--titulo-main);
@@ -158,6 +173,7 @@ body{
 
 }
 
+/* Texto explicativo */
 .sobre__text{
 
     text-align:center;
@@ -172,7 +188,9 @@ body{
 
 
 
-
+/* =========================================
+   SEÇÃO DE VALORES
+========================================= */
 
 .valores{
 
@@ -182,6 +200,7 @@ body{
 
 }
 
+/* Cabeçalho da seção */
 .valores__cabecalho{
 
     text-align:center;
@@ -190,6 +209,7 @@ body{
 
 }
 
+/* Título da seção */
 .valores__title{
 
     font-size:4rem;
@@ -198,12 +218,14 @@ body{
 
 }
 
+/* Texto introdutório */
 .valores__text{
 
     color:#d7d7d7;
 
 }
 
+/* Grid dos cards */
 .valores__container{
 
     width:90%;
@@ -218,6 +240,7 @@ body{
 
 }
 
+/* Card individual */
 .valores__card{
 
     background-color:rgba(255,255,255,.05);
@@ -240,6 +263,7 @@ body{
 
 }
 
+/* Subtítulo dos cards */
 .valores__sub-title{
 
     color:var(--primary);
@@ -250,6 +274,7 @@ body{
 
 }
 
+/* Texto dos cards */
 .valores__card p{
 
     color:#d7d7d7;
@@ -260,6 +285,9 @@ body{
 
 
 
+/* =========================================
+   RODAPÉ
+========================================= */
 
 .rodape{
 
@@ -273,46 +301,11 @@ body{
 
 
 
+/* =========================================
+   BOTÃO SOS E MODAL DE EMERGÊNCIA
+========================================= */
 
-
-@media(max-width:900px){
-
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:3rem;
-
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-    .valores__container{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .sobre__container{
-
-        width:90%;
-
-    }
-
-    .sobre__title{
-
-        font-size:4rem;
-
-    }
-
-}
-
+/* Botão flutuante SOS */
 .sos-btn{
 
     position:fixed;
@@ -341,6 +334,7 @@ body{
 
 }
 
+/* Fundo escurecido do modal */
 .sos-modal{
 
     display:none;
@@ -363,6 +357,7 @@ body{
 
 }
 
+/* Caixa do formulário SOS */
 .sos-conteudo{
 
     width:400px;
@@ -381,6 +376,7 @@ body{
 
 }
 
+/* Campos do formulário */
 .sos-conteudo input,
 .sos-conteudo textarea{
 
@@ -388,6 +384,7 @@ body{
 
 }
 
+/* Botão enviar */
 .sos-enviar{
 
     background:#00cfff;
@@ -400,6 +397,7 @@ body{
 
 }
 
+/* Botão fechar */
 .sos-fechar{
 
     background:#ff3333;
@@ -416,36 +414,53 @@ body{
 
 
 
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
+
 @media(max-width:900px){
 
     .cabecalho__navbar{
+
         flex-direction:column;
+
         gap:3rem;
+
     }
 
     .cabecalho__lista{
+
         flex-wrap:wrap;
+
         justify-content:center;
-        gap:2rem;
+
     }
 
     .valores__container{
+
         grid-template-columns:1fr;
+
     }
 
     .sobre__container{
+
         width:90%;
-        padding:4rem;
+
     }
 
     .sobre__title{
+
         font-size:4rem;
+
     }
 
 }
 
 
 
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
 
 @media(max-width:480px){
 

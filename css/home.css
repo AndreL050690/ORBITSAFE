@@ -1,11 +1,17 @@
-
-
+/* ==================================================
+   RESET GLOBAL
+   Remove margens e paddings padrões do navegador
+================================================== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* ==================================================
+   VARIÁVEIS GLOBAIS
+   Cores, tamanhos e estilos reutilizados
+================================================== */
 :root{
 
     --bg-dark:#020617;
@@ -20,6 +26,9 @@
     --sub-titulo:2.5rem;
 }
 
+/* ==================================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+================================================== */
 html{
     font-size:62.5%;
 }
@@ -37,9 +46,9 @@ body{
     overflow-x:hidden;
 }
 
-
-
-
+/* ==================================================
+   VÍDEO DE FUNDO DA PÁGINA
+================================================== */
 .video-fundo{
 
     position:fixed;
@@ -55,6 +64,9 @@ body{
     z-index:-2;
 }
 
+/* ==================================================
+   CAMADA ESCURA SOBRE O VÍDEO
+================================================== */
 body::before{
 
     content:"";
@@ -76,10 +88,9 @@ body::before{
     z-index:-1;
 }
 
-
-
-
-
+/* ==================================================
+   CABEÇALHO DA PÁGINA
+================================================== */
 .cabecalho{
 
     width:100%;
@@ -87,6 +98,9 @@ body::before{
     padding:2rem;
 }
 
+/* ==================================================
+   BARRA DE NAVEGAÇÃO
+================================================== */
 .cabecalho__navbar{
 
     width:95%;
@@ -110,6 +124,9 @@ body::before{
     backdrop-filter:blur(10px);
 }
 
+/* ==================================================
+   LOGO DO PROJETO
+================================================== */
 .cabecalho__logo img{
 
     height:8rem;
@@ -120,6 +137,9 @@ body::before{
     0 0 20px rgba(0,207,255,.5);
 }
 
+/* ==================================================
+   LISTA DE LINKS DO MENU
+================================================== */
 .cabecalho__lista{
 
     list-style:none;
@@ -129,6 +149,9 @@ body::before{
     gap:4rem;
 }
 
+/* ==================================================
+   LINKS DO MENU
+================================================== */
 .cabecalho__link{
 
     color:white;
@@ -143,16 +166,18 @@ body::before{
     color:var(--primary);
 }
 
-
-
-
-
+/* ==================================================
+   SEÇÃO HERO (APRESENTAÇÃO PRINCIPAL)
+================================================== */
 .hero{
 
     width:100%;
     height:90vh;
 }
 
+/* ==================================================
+   CONTAINER INTERNO DA HERO
+================================================== */
 .hero__container{
 
     width:100%;
@@ -165,6 +190,9 @@ body::before{
     align-items:center;
 }
 
+/* ==================================================
+   BLOCO DE TEXTO PRINCIPAL
+================================================== */
 .hero__texto{
 
     display:flex;
@@ -178,6 +206,9 @@ body::before{
     text-align:center;
 }
 
+/* ==================================================
+   TEXTO DE BOAS-VINDAS
+================================================== */
 .hero__bemvindo{
 
     color:var(--primary);
@@ -187,6 +218,9 @@ body::before{
     font-size:2rem;
 }
 
+/* ==================================================
+   TÍTULO PRINCIPAL DA HOME
+================================================== */
 .hero__title{
 
     font-size:var(--titulo-main);
@@ -197,6 +231,9 @@ body::before{
     0 0 20px rgba(0,207,255,.8);
 }
 
+/* ==================================================
+   LINHA DECORATIVA ABAIXO DO TÍTULO
+================================================== */
 .hero__linha{
 
     width:25rem;
@@ -206,6 +243,9 @@ body::before{
     background-color:var(--primary);
 }
 
+/* ==================================================
+   TEXTO DESCRITIVO PRINCIPAL
+================================================== */
 .hero__text{
 
     width:70rem;
@@ -215,6 +255,9 @@ body::before{
     color:#d7d7d7;
 }
 
+/* ==================================================
+   BOTÃO PRINCIPAL DA HOME
+================================================== */
 .hero__btn{
 
     background-image:
@@ -237,16 +280,18 @@ body::before{
     transition:.4s;
 }
 
+/* ==================================================
+   EFEITO HOVER DO BOTÃO
+================================================== */
 .hero__btn:hover{
 
     box-shadow:
     0 0 30px rgba(0,207,255,.7);
 }
 
-
-
-
-
+/* ==================================================
+   CONTAINER DOS CARDS DE CONTEÚDO
+================================================== */
 .conteudo__container{
 
     width:90%;
@@ -262,6 +307,9 @@ body::before{
     margin-bottom:10rem;
 }
 
+/* ==================================================
+   CARD INDIVIDUAL DE CONTEÚDO
+================================================== */
 .conteudo__sec{
 
     background-color:var(--bg-card);
@@ -275,6 +323,9 @@ body::before{
     transition:.5s;
 }
 
+/* ==================================================
+   EFEITO HOVER DOS CARDS
+================================================== */
 .conteudo__sec:hover{
 
     transform:translateY(-10px);
@@ -283,6 +334,9 @@ body::before{
     0 0 35px rgba(0,207,255,.25);
 }
 
+/* ==================================================
+   ÍCONES DOS CARDS
+================================================== */
 .card__icone{
 
     font-size:5rem;
@@ -290,6 +344,9 @@ body::before{
     margin-bottom:2rem;
 }
 
+/* ==================================================
+   SUBTÍTULOS DOS CARDS
+================================================== */
 .conteudo__sub-title{
 
     font-size:var(--sub-titulo);
@@ -301,6 +358,9 @@ body::before{
     font-weight:bold;
 }
 
+/* ==================================================
+   TEXTO DOS CARDS
+================================================== */
 .conteudo__sec p{
 
     line-height:1.8;
@@ -308,9 +368,9 @@ body::before{
     color:#d7d7d7;
 }
 
-
-
-
+/* ==================================================
+   RODAPÉ DA PÁGINA
+================================================== */
 .rodape{
 
     padding:4rem;
@@ -322,10 +382,9 @@ body::before{
     background-color:rgba(0,0,0,.2);
 }
 
-
-
-
-
+/* ==================================================
+   RESPONSIVIDADE PARA TABLETS
+================================================== */
 @media (max-width:900px){
 
     .cabecalho__navbar{
@@ -358,6 +417,9 @@ body::before{
     }
 }
 
+/* ==================================================
+   BOTÃO SOS FLUTUANTE
+================================================== */
 .sos-btn{
 
     position:fixed;
@@ -383,9 +445,11 @@ body::before{
     cursor:pointer;
 
     z-index:9999;
-
 }
 
+/* ==================================================
+   MODAL DE EMERGÊNCIA SOS
+================================================== */
 .sos-modal{
 
     display:none;
@@ -405,9 +469,11 @@ body::before{
     align-items:center;
 
     z-index:10000;
-
 }
 
+/* ==================================================
+   CONTEÚDO INTERNO DO MODAL SOS
+================================================== */
 .sos-conteudo{
 
     width:400px;
@@ -423,16 +489,20 @@ body::before{
     flex-direction:column;
 
     gap:15px;
-
 }
 
+/* ==================================================
+   CAMPOS DO FORMULÁRIO SOS
+================================================== */
 .sos-conteudo input,
 .sos-conteudo textarea{
 
     padding:12px;
-
 }
 
+/* ==================================================
+   BOTÃO ENVIAR SOS
+================================================== */
 .sos-enviar{
 
     background:#00cfff;
@@ -442,9 +512,11 @@ body::before{
     padding:12px;
 
     cursor:pointer;
-
 }
 
+/* ==================================================
+   BOTÃO FECHAR SOS
+================================================== */
 .sos-fechar{
 
     background:#ff3333;
@@ -456,10 +528,11 @@ body::before{
     color:white;
 
     cursor:pointer;
-
 }
 
-
+/* ==================================================
+   RESPONSIVIDADE INTERMEDIÁRIA
+================================================== */
 @media(max-width:900px){
 
     .cabecalho__navbar{
@@ -491,8 +564,9 @@ body::before{
     }
 }
 
-
-
+/* ==================================================
+   RESPONSIVIDADE PARA CELULARES
+================================================== */
 @media(max-width:480px){
 
     html{

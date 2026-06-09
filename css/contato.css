@@ -1,3 +1,7 @@
+/* ==================================================
+   SEÇÃO PRINCIPAL DE CONTATO
+   ================================================== */
+
 .contato{
 
     width:100%;
@@ -12,6 +16,10 @@
 
     gap:3rem;
 }
+
+/* ==================================================
+   TÍTULO DA PÁGINA DE CONTATO
+   ================================================== */
 
 .contato__titulo{
 
@@ -31,6 +39,10 @@
 
     color:#ffffff;
 }
+
+/* ==================================================
+   FORMULÁRIO DE CONTATO
+   ================================================== */
 
 .contato__formulario{
 
@@ -54,6 +66,10 @@
 
     gap:2rem;
 }
+
+/* ==================================================
+   CAMPOS DO FORMULÁRIO
+   ================================================== */
 
 .grupo-campo{
 
@@ -84,6 +100,10 @@
     color:#ffffff;
 }
 
+/* ==================================================
+   VALIDAÇÃO VISUAL DOS CAMPOS
+   ================================================== */
+
 input:valid,
 textarea:valid{
 
@@ -95,6 +115,10 @@ textarea:invalid{
 
     border:1px solid #e28484;
 }
+
+/* ==================================================
+   BOTÃO DE ENVIO DO FORMULÁRIO
+   ================================================== */
 
 .btn-principal{
 
@@ -118,6 +142,10 @@ textarea:invalid{
     background:#32c7f0;
 }
 
+/* ==================================================
+   RESPONSIVIDADE PARA CELULARES PEQUENOS
+   ================================================== */
+
 @media (min-width:320px) and (max-width:425px){
 
     .contato__titulo h1{
@@ -131,6 +159,10 @@ textarea:invalid{
     }
 
 }
+
+/* ==================================================
+   BOTÃO FLUTUANTE SOS
+   ================================================== */
 
 .sos-btn{
 
@@ -160,6 +192,10 @@ textarea:invalid{
 
 }
 
+/* ==================================================
+   MODAL DE EMERGÊNCIA SOS
+   ================================================== */
+
 .sos-modal{
 
     display:none;
@@ -181,6 +217,10 @@ textarea:invalid{
     z-index:10000;
 
 }
+
+/* ==================================================
+   CONTEÚDO INTERNO DO MODAL SOS
+   ================================================== */
 
 .sos-conteudo{
 
@@ -207,6 +247,10 @@ textarea:invalid{
 
 }
 
+/* ==================================================
+   BOTÃO DE ENVIO DO ALERTA SOS
+   ================================================== */
+
 .sos-enviar{
 
     background:#00cfff;
@@ -218,6 +262,10 @@ textarea:invalid{
     cursor:pointer;
 
 }
+
+/* ==================================================
+   BOTÃO DE FECHAMENTO DO MODAL SOS
+   ================================================== */
 
 .sos-fechar{
 
@@ -233,7 +281,9 @@ textarea:invalid{
 
 }
 
-
+/* ==================================================
+   RESPONSIVIDADE GERAL PARA TELAS MENORES
+   ================================================== */
 
 @media(max-width:600px){
 
@@ -285,8 +335,9 @@ textarea:invalid{
 
 }
 
-
-
+/* ==================================================
+   EFEITO DE FOCO NOS CAMPOS DO FORMULÁRIO
+   ================================================== */
 
 .grupo-campo input:focus,
 .grupo-campo select:focus,
@@ -298,8 +349,9 @@ textarea:invalid{
 
 }
 
-
-
+/* ==================================================
+   EFEITO VISUAL NO FORMULÁRIO
+   ================================================== */
 
 .contato__formulario{
 
@@ -314,6 +366,10 @@ textarea:invalid{
 
 }
 
+/* ==================================================
+   EFEITOS VISUAIS DO BOTÃO PRINCIPAL
+   ================================================== */
+
 .btn-principal{
 
     transition:.3s;
@@ -327,8 +383,9 @@ textarea:invalid{
 
 }
 
-
-
+/* ==================================================
+   ESTILIZAÇÃO DOS CAMPOS DO MODAL SOS
+   ================================================== */
 
 .sos-conteudo input,
 .sos-conteudo textarea{
@@ -352,6 +409,10 @@ textarea:invalid{
 
 }
 
+/* ==================================================
+   ESTILIZAÇÃO DO BOTÃO ENVIAR SOS
+   ================================================== */
+
 .sos-enviar{
 
     border-radius:1rem;
@@ -368,6 +429,10 @@ textarea:invalid{
 
 }
 
+/* ==================================================
+   ESTILIZAÇÃO DO BOTÃO FECHAR SOS
+   ================================================== */
+
 .sos-fechar{
 
     border-radius:1rem;
@@ -376,8 +441,9 @@ textarea:invalid{
 
 }
 
-
-
+/* ==================================================
+   RESPONSIVIDADE DO MODAL SOS
+   ================================================== */
 
 @media(max-width:480px){
 
