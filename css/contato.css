@@ -138,7 +138,7 @@ textarea:invalid{
 
     bottom:25px;
 
-    right:25px;
+    left:25px;
 
     width:70px;
 
@@ -230,5 +230,173 @@ textarea:invalid{
     color:white;
 
     cursor:pointer;
+
+}
+
+
+
+@media(max-width:600px){
+
+    html{
+
+        font-size:50%;
+
+    }
+
+    .contato{
+
+        padding:4rem 1rem;
+
+    }
+
+    .contato__titulo h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .contato__titulo p{
+
+        line-height:1.7;
+
+    }
+
+    .contato__formulario{
+
+        width:95%;
+
+        padding:2rem;
+
+    }
+
+    .grupo-campo input,
+    .grupo-campo select,
+    .grupo-campo textarea{
+
+        padding:1rem;
+
+    }
+
+    .btn-principal{
+
+        padding:1.3rem;
+
+    }
+
+}
+
+
+
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus{
+
+    outline:none;
+
+    border:1px solid #00d2ff;
+
+}
+
+
+
+
+.contato__formulario{
+
+    transition:.4s;
+
+}
+
+.contato__formulario:hover{
+
+    box-shadow:
+    0 0 30px rgba(0,210,255,.2);
+
+}
+
+.btn-principal{
+
+    transition:.3s;
+
+}
+
+.btn-principal:hover{
+
+    box-shadow:
+    0 0 20px rgba(0,210,255,.4);
+
+}
+
+
+
+
+.sos-conteudo input,
+.sos-conteudo textarea{
+
+    background:#0b1d38;
+
+    border:1px solid #334155;
+
+    color:white;
+
+    border-radius:1rem;
+
+}
+
+.sos-conteudo input:focus,
+.sos-conteudo textarea:focus{
+
+    outline:none;
+
+    border:1px solid #00cfff;
+
+}
+
+.sos-enviar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.sos-enviar:hover{
+
+    background:#32d8ff;
+
+}
+
+.sos-fechar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+}
+
+
+
+
+@media(max-width:480px){
+
+    .sos-conteudo{
+
+        width:90%;
+
+        padding:2rem;
+
+    }
+
+    .sos-btn{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.8rem;
+
+    }
 
 }

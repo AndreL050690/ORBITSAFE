@@ -539,7 +539,7 @@ body{
 
     bottom:25px;
 
-    right:25px;
+    left:25px;
 
     width:70px;
 
@@ -631,5 +631,164 @@ body{
     color:white;
 
     cursor:pointer;
+
+}
+
+
+
+@media(max-width:600px){
+
+    html{
+        font-size:50%;
+    }
+
+    .cabecalho{
+        padding:1rem;
+    }
+
+    .cabecalho__navbar{
+        padding:2rem;
+        flex-direction:column;
+        gap:2rem;
+    }
+
+    .cabecalho__lista{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:1.5rem;
+    }
+
+    .titulo-central h1{
+        font-size:3.5rem;
+    }
+
+    .container-monitoramento{
+        width:95%;
+        padding:5rem 0;
+    }
+
+    .cards-indicadores{
+        grid-template-columns:1fr;
+    }
+
+    .painel-grade{
+        grid-template-columns:1fr;
+    }
+
+    .card,
+    .bloco-mapa,
+    .bloco-ocorrencias{
+        padding:3rem;
+    }
+
+    .radar-container{
+        width:230px;
+        height:230px;
+    }
+
+    .radar-ring:nth-child(1){
+        width:70px;
+        height:70px;
+        top:80px;
+        left:80px;
+    }
+
+    .radar-ring:nth-child(2){
+        width:140px;
+        height:140px;
+        top:45px;
+        left:45px;
+    }
+
+    .radar-ring:nth-child(3){
+        width:210px;
+        height:210px;
+        top:10px;
+        left:10px;
+    }
+
+    .alerta{
+        padding:2rem;
+    }
+
+    .rodape{
+        margin-top:5rem;
+        padding:3rem;
+    }
+
+}
+
+
+
+
+.sos-conteudo input,
+.sos-conteudo textarea{
+
+    background:#0b1d38;
+
+    border:1px solid #334155;
+
+    color:white;
+
+    border-radius:1rem;
+
+}
+
+
+.sos-conteudo input:focus,
+.sos-conteudo textarea:focus{
+
+    outline:none;
+
+    border:1px solid #00cfff;
+
+}
+
+
+.sos-enviar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.sos-enviar:hover{
+
+    background:#38dfff;
+
+}
+
+
+.sos-fechar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+}
+
+
+@media(max-width:480px){
+
+    .sos-conteudo{
+
+        width:90%;
+
+        padding:2rem;
+
+    }
+
+    .sos-btn{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.8rem;
+
+    }
 
 }

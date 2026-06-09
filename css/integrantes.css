@@ -373,7 +373,6 @@ body{
     }
 
 }
-```
 
 .sos-btn{
 
@@ -381,7 +380,7 @@ body{
 
     bottom:25px;
 
-    right:25px;
+    left:25px;
 
     width:70px;
 
@@ -473,5 +472,224 @@ body{
     color:white;
 
     cursor:pointer;
+
+}
+
+
+
+@media(max-width:600px){
+
+    html{
+
+        font-size:50%;
+
+    }
+
+    .cabecalho{
+
+        padding:1rem;
+
+    }
+
+    .cabecalho__navbar{
+
+        flex-direction:column;
+
+        gap:2rem;
+
+        padding:2rem;
+
+    }
+
+    .cabecalho__lista{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:1.5rem;
+
+    }
+
+    .integrantes{
+
+        width:95%;
+
+        padding:5rem 0;
+
+    }
+
+    .integrantes__titulo h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .integrantes__titulo p{
+
+        line-height:1.7;
+
+    }
+
+    .integrante{
+
+        padding:3rem;
+
+    }
+
+    .integrante img{
+
+        width:15rem;
+
+        height:15rem;
+
+    }
+
+    .integrante h2{
+
+        font-size:2rem;
+
+    }
+
+    .integrante__links img{
+
+        width:4rem;
+
+        height:4rem;
+
+    }
+
+    .repositorio{
+
+        width:95%;
+
+        padding:3rem 2rem;
+
+    }
+
+    .repositorio h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+
+
+.integrante{
+
+    transition:.4s;
+
+}
+
+.integrante:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.integrante img{
+
+    transition:.4s;
+
+}
+
+.integrante:hover img{
+
+    box-shadow:
+
+    0 0 30px rgba(0,207,255,.5);
+
+}
+
+
+
+
+.repositorio{
+
+    transition:.4s;
+
+}
+
+.repositorio:hover{
+
+    box-shadow:
+
+    0 0 30px rgba(0,207,255,.25);
+
+}
+
+
+
+.sos-conteudo input,
+.sos-conteudo textarea{
+
+    background:#0b1d38;
+
+    border:1px solid #334155;
+
+    border-radius:1rem;
+
+    color:white;
+
+}
+
+.sos-conteudo input:focus,
+.sos-conteudo textarea:focus{
+
+    outline:none;
+
+    border:1px solid #00cfff;
+
+}
+
+.sos-enviar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.sos-enviar:hover{
+
+    background:#35dcff;
+
+}
+
+.sos-fechar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+}
+
+
+
+
+@media(max-width:480px){
+
+    .sos-conteudo{
+
+        width:90%;
+
+        padding:2rem;
+
+    }
+
+    .sos-btn{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.8rem;
+
+    }
 
 }

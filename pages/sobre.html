@@ -151,38 +151,53 @@
 
 
     <footer class="rodape">
-    <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
-</footer>
+        <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
+    </footer>
 
-<button class="sos-btn" id="abrirSOS">
-    🚨 SOS
-</button>
+    <button class="sos-btn" id="abrirSOS">
+        🚨 SOS
+    </button>
 
-<div class="sos-modal" id="modalSOS">
+    <div class="sos-modal" id="modalSOS">
 
-    <div class="sos-conteudo">
+        <div class="sos-conteudo">
 
-        <h3>🚨 Emergência</h3>
+            <h3>🚨 Emergência</h3>
 
-        <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Nome">
 
-        <input type="text" placeholder="Localização">
+            <input type="text" placeholder="Localização">
 
-        <textarea placeholder="Descreva a situação"></textarea>
+            <textarea placeholder="Descreva a situação"></textarea>
 
-        <button class="sos-enviar" id="enviarSOS">
-            Transmitir
-        </button>
+            <button class="sos-enviar" id="enviarSOS">
+                Transmitir
+            </button>
 
-        <button class="sos-fechar" id="fecharSOS">
-            Fechar
-        </button>
+            <button class="sos-fechar" id="fecharSOS">
+                Fechar
+            </button>
+
+        </div>
 
     </div>
 
-</div>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
+            region: "https://integrations.us-south.assistant.watson.appdomain.cloud", // The region your integration is hosted in.
+            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
 
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
+
 </html>
