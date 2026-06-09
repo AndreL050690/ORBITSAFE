@@ -17,7 +17,7 @@
 
 <body>
 
-
+<!-- Cabeçalho principal com logo e menu de navegação -->
 
     <header class="cabecalho">
 
@@ -79,6 +79,8 @@
 
     </header>
 
+ <!-- Área principal do dashboard -->
+
     <main class="container-dashboard" id="conteudo-principal">
 
         <section class="titulo-dashboard" aria-labelledby="header-dashboard">
@@ -86,6 +88,8 @@
             <p>Análise estatística volumétrica de dados transmitidos e relatórios de resiliência de banda de emergência.
             </p>
         </section>
+
+<!-- Cards com os indicadores mais importantes do sistema -->
 
         <section class="grid-metricas" aria-label="Principais métricas operacionais">
             <div class="card-metrica">
@@ -110,8 +114,11 @@
             </div>
         </section>
 
+<!-- Área que reúne os gráficos do dashboard -->
 
         <div class="grade-dashboard">
+
+ <!-- Gráfico de fluxo de banda transmitida pelos satélites -->
 
             <section class="bloco-grafico" aria-labelledby="grafico-trafego">
                 <h3 id="grafico-trafego">Fluxo de Banda de Emergência (Satélite)</h3>
@@ -137,6 +144,8 @@
                     </svg>
                 </div>
             </section>
+
+ <!-- Gráfico comparativo de resiliência por região -->
 
             <section class="bloco-grafico" aria-labelledby="grafico-resiliencia">
                 <h3 id="grafico-resiliencia">Índice de Resiliência por Região</h3>
@@ -179,6 +188,7 @@
 
         </div>
 
+  <!-- Tabela com o histórico das transmissões realizadas -->
 
         <section class="secao-tabela" aria-labelledby="titulo-tabela">
             <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
@@ -224,13 +234,19 @@
 
     </main>
 
+<!-- Rodapé institucional do projeto -->
+
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
+   <!-- Botão de acesso rápido para envio de SOS -->
+
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
+
+ <!-- Janela modal para envio de mensagens de emergência -->
 
     <div class="sos-modal" id="modalSOS">
 
@@ -256,6 +272,8 @@
 
     </div>
 
+<!-- Integração do chatbot IBM Watson Assistant -->
+
     <script>
         window.watsonAssistantChatOptions = {
             integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
@@ -269,6 +287,8 @@
             document.head.appendChild(t);
         });
     </script>
+
+<!-- Script principal com as funcionalidades da página -->
 
     <script src="../js/script.js"></script>
 

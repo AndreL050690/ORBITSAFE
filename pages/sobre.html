@@ -12,6 +12,8 @@
 
 <body>
 
+ <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
+
     <header class="cabecalho">
 
         <nav class="cabecalho__navbar">
@@ -56,8 +58,11 @@
 
     </header>
 
+<!-- Conteúdo principal da página Sobre -->
 
     <main class="conteudo">
+
+<!-- Seção que apresenta a missão e o propósito da OrbitSafe -->
 
         <section class="sobre">
 
@@ -79,6 +84,7 @@
 
         </section>
 
+ <!-- Seção que apresenta os valores fundamentais do projeto -->
 
         <section class="valores">
 
@@ -95,8 +101,9 @@
 
             </div>
 
-
             <div class="valores__container">
+
+<!-- Card que destaca a confiabilidade da solução -->
 
                 <section class="valores__card">
 
@@ -125,6 +132,7 @@
 
                 </section>
 
+ <!-- Card que destaca a inovação tecnológica voltada à preservação de vidas -->
 
                 <section class="valores__card">
 
@@ -145,14 +153,19 @@
 
     </main>
 
+<!-- Rodapé com informações institucionais do projeto -->
 
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
+<!-- Botão de acesso rápido para envio de alertas SOS -->
+
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
+
+ <!-- Modal utilizado para registrar solicitações de emergência -->
 
     <div class="sos-modal" id="modalSOS">
 
@@ -178,6 +191,8 @@
 
     </div>
 
+<!-- Integração do chatbot IBM Watson Assistant -->
+
     <script>
         window.watsonAssistantChatOptions = {
             integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
@@ -191,6 +206,8 @@
             document.head.appendChild(t);
         });
     </script>
+
+<!-- Script responsável pelas funcionalidades interativas da página -->
 
     <script src="../js/script.js"></script>
 

@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- Cabeçalho principal contendo a logo e o menu de navegação -->
     <header class="cabecalho">
 
         <nav class="cabecalho__navbar">
@@ -75,10 +76,10 @@
 
     </header>
 
-
-
+    <!-- Conteúdo principal da central de monitoramento -->
     <main class="container-monitoramento">
 
+        <!-- Seção de apresentação da central de monitoramento -->
         <section class="titulo-central">
 
             <h1>
@@ -95,10 +96,10 @@
 
         </section>
 
-
-
+        <!-- Cards com os principais indicadores operacionais do sistema -->
         <div class="cards-indicadores">
 
+            <!-- Indicador da quantidade de satélites em operação -->
             <section class="card">
 
                 <h3>Satélites em Órbita</h3>
@@ -117,8 +118,7 @@
 
             </section>
 
-
-
+            <!-- Indicador das conexões ativas da plataforma -->
             <section class="card">
 
                 <h3>Conexões Ativas</h3>
@@ -137,8 +137,7 @@
 
             </section>
 
-
-
+            <!-- Indicador da taxa de resposta aos chamados -->
             <section class="card">
 
                 <h3>Chamados Respondidos</h3>
@@ -159,11 +158,10 @@
 
         </div>
 
-
-
+        <!-- Painel principal contendo radar e alertas ativos -->
         <div class="painel-grade">
 
-
+            <!-- Área de visualização da constelação de satélites -->
             <section class="bloco-mapa">
 
                 <h2>
@@ -174,6 +172,7 @@
 
                 <div class="mapa-ficticio">
 
+                    <!-- Elementos visuais que simulam um radar de monitoramento -->
                     <div class="radar-container">
 
                         <div class="radar-ring"></div>
@@ -194,8 +193,7 @@
 
             </section>
 
-
-
+            <!-- Área responsável por exibir alertas e ocorrências monitoradas -->
             <section class="bloco-ocorrencias">
 
                 <h2>
@@ -232,16 +230,17 @@
 
     </main>
 
-
-
+    <!-- Rodapé com informações institucionais do projeto -->
     <footer class="rodape">
         <p>© 2026 OrbitSafe - Global Solution - FIAP</p>
     </footer>
 
+    <!-- Botão de acesso rápido para envio de alertas SOS -->
     <button class="sos-btn" id="abrirSOS">
         🚨 SOS
     </button>
 
+    <!-- Modal utilizado para registrar solicitações de emergência -->
     <div class="sos-modal" id="modalSOS">
 
         <div class="sos-conteudo">
@@ -266,11 +265,12 @@
 
     </div>
 
+    <!-- Integração do chatbot IBM Watson Assistant -->
     <script>
         window.watsonAssistantChatOptions = {
-            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20", // The ID of this integration.
-            region: "https://integrations.us-south.assistant.watson.appdomain.cloud", // The region your integration is hosted in.
-            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa", // The ID of your service instance.
+            integrationID: "79fb87eb-c816-4fd3-aa18-846c47cedc20",
+            region: "https://integrations.us-south.assistant.watson.appdomain.cloud",
+            serviceInstanceID: "0177986c-b5c0-4d7f-a7f8-b4a819fe3eaa",
             onLoad: async (instance) => { await instance.render(); }
         };
         setTimeout(function () {
@@ -280,6 +280,7 @@
         });
     </script>
 
+    <!-- Script responsável pelas funcionalidades interativas da página -->
     <script src="../js/script.js"></script>
 
 </body>
