@@ -361,3 +361,171 @@ body{
     cursor:pointer;
 
 }
+
+
+@media(max-width:600px){
+
+    html{
+
+        font-size:50%;
+
+    }
+
+    .cabecalho{
+
+        padding:1rem;
+
+    }
+
+    .cabecalho__navbar{
+
+        flex-direction:column;
+
+        gap:2rem;
+
+        padding:2rem;
+
+    }
+
+    .cabecalho__lista{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:1.5rem;
+
+    }
+
+    .faq{
+
+        width:95%;
+
+        padding:5rem 0;
+
+    }
+
+    .faq__titulo h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .faq__titulo p{
+
+        line-height:1.7;
+
+    }
+
+    .faq__card{
+
+        padding:2.5rem;
+
+    }
+
+    .faq__card h2{
+
+        font-size:2rem;
+
+        line-height:1.5;
+
+    }
+
+    .faq__card p{
+
+        font-size:1.6rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+
+
+
+.faq__card{
+
+    transition:.4s;
+
+}
+
+.faq__card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+.sos-conteudo input,
+.sos-conteudo textarea{
+
+    background:#0b1d38;
+
+    border:1px solid #334155;
+
+    border-radius:1rem;
+
+    color:white;
+
+}
+
+.sos-conteudo input:focus,
+.sos-conteudo textarea:focus{
+
+    outline:none;
+
+    border:1px solid #00cfff;
+
+}
+
+.sos-enviar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.sos-enviar:hover{
+
+    background:#37d9ff;
+
+}
+
+.sos-fechar{
+
+    border-radius:1rem;
+
+    font-weight:bold;
+
+}
+
+
+
+
+@media(max-width:480px){
+
+    .sos-conteudo{
+
+        width:90%;
+
+        padding:2rem;
+
+    }
+
+    .sos-btn{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.8rem;
+
+    }
+
+}
