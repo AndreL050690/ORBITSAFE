@@ -460,10 +460,10 @@
 
     /* Transforma a lista horizontal em um menu suspenso oculto */
     .cabecalho__lista {
-        display: none; /* ESCONDE o menu por padrão no mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Surge logo abaixo da barra de navegação */
+        top: 100%; 
         left: 0;
         width: 100%;
         background-color: rgba(7, 20, 46, 0.95);
@@ -476,7 +476,7 @@
         z-index: 999;
     }
 
-    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    /* classe ativada quando clicada, mostra o menu */
     .cabecalho__lista.active {
         display: flex;
     }
@@ -488,7 +488,7 @@
 }
 
 /* ==================================================
-   RESPONSIVIDADE TOTAL PARA CELULARES (Telas até 600px)
+   RESPONSIVIDADE TOTAL PARA CELULARES 
    Mantém as reduções do seu Dashboard original salvas
 ================================================== */
 @media(max-width:600px){

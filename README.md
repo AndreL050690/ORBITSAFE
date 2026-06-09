@@ -42,7 +42,8 @@ O repositório está organizado de forma modular, separando as preocupações gl
 <pre>
 ORBITSAFE/
 ├── assets/                       # Imagens de perfil dos integrantes
-│   ├── github.png                # Ícone do GitHub para links sociais      
+│   ├── github.png                # Ícone do GitHub para links sociais   
+│   ├── grafico2.png   
 │   ├── home.png
 │   ├── integranteAndre.png
 │   ├── integranteEduardo.png

@@ -415,7 +415,7 @@ body{
    ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ========================================== */
 .cabecalho__hamburger {
-    display: none; /* Escondido em telas de computador */
+    display: none; 
     background: none;
     border: none;
     color: var(--primary);
@@ -429,10 +429,9 @@ body{
 }
 
 /* ==========================================
-   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+   RESPONSIVIDADE DO MENU HAMBÚRGUER 
 ========================================== */
 @media (max-width: 900px) {
-    /* Ativa o botão de três listras */
     .cabecalho__hamburger {
         display: block;
     }
@@ -441,7 +440,7 @@ body{
     .cabecalho__navbar {
         width: 90%;
         padding: 1.5rem 3rem;
-        position: relative; /* Base de posicionamento do menu drop */
+        position: relative; 
         flex-direction: row;
         gap: 0;
     }
@@ -484,7 +483,7 @@ body{
 }
 
 /* ==========================================
-   RESPONSIVIDADE GERAL PARA CELULARES (Telas até 480px)
+   RESPONSIVIDADE GERAL PARA CELULARES 
 ========================================== */
 @media(max-width:480px){
     html {
