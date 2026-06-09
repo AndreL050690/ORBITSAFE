@@ -342,238 +342,128 @@ body{
 }
 
 /* ==========================================
-   RESPONSIVIDADE PARA TABLETS
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ========================================== */
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: var(--primary); /* Usa o azul definido nas variáveis */
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-@media(max-width:900px){
-
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:3rem;
-
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-    .integrantes__container{
-        grid-template-columns:1fr;
-    }
-
-    .integrantes__titulo h1{
-        font-size:4rem;
-    }
-
-    .repositorio{
-        padding:2.5rem;
-    }
-
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
 }
 
 /* ==========================================
-   BOTÃO SOS FLUTUANTE
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
 ========================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão de três listras (☰) */
+    .cabecalho__hamburger {
+        display: block;
+    }
 
-.sos-btn{
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
+        flex-direction: row; /* Garante que logo e botão fiquem lado a lado */
+        gap: 0;
+    }
 
-    position:fixed;
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
+    }
 
-    bottom:25px;
-    left:25px;
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
+    }
 
-    width:70px;
-    height:70px;
+    /* Mantém os ajustes de grid originais da sua página de integrantes */
+    .integrantes__container {
+        grid-template-columns: 1fr;
+    }
 
-    border:none;
+    .integrantes__titulo h1 {
+        font-size: 4rem;
+    }
 
-    border-radius:50%;
-
-    background:#ff3333;
-
-    color:white;
-
-    font-size:2rem;
-
-    cursor:pointer;
-
-    z-index:9999;
-
+    .repositorio {
+        padding: 2.5rem;
+    }
 }
 
 /* ==========================================
-   MODAL SOS
+   RESPONSIVIDADE GERAL PARA CELULARES (Telas até 600px)
 ========================================== */
-
-.sos-modal{
-
-    display:none;
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.8);
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:10000;
-
-}
-
-/* ==========================================
-   CONTEÚDO INTERNO DO MODAL SOS
-========================================== */
-
-.sos-conteudo{
-
-    width:400px;
-
-    background:#07142e;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-}
-
-.sos-conteudo input,
-.sos-conteudo textarea{
-    padding:12px;
-}
-
-/* ==========================================
-   BOTÕES DO MODAL SOS
-========================================== */
-
-.sos-enviar{
-
-    background:#00cfff;
-
-    border:none;
-
-    padding:12px;
-
-    cursor:pointer;
-
-}
-
-.sos-fechar{
-
-    background:#ff3333;
-
-    border:none;
-
-    padding:12px;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-/* ==========================================
-   RESPONSIVIDADE PARA CELULARES
-========================================== */
-
 @media(max-width:600px){
-
     html{
         font-size:50%;
     }
 
-    .cabecalho{
-        padding:1rem;
+    .cabecalho {
+        padding: 1rem;
     }
 
-    .cabecalho__navbar{
-
-        flex-direction:column;
-
-        gap:2rem;
-
-        padding:2rem;
-
-    }
-
-    .cabecalho__lista{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:1.5rem;
-
-    }
-
-    .integrantes{
-
-        width:95%;
-
-        padding:5rem 0;
-
+    .integrantes {
+        width: 95%;
+        padding: 5rem 0;
     }
 
     .integrantes__titulo h1{
-        font-size:3.5rem;
+        font-size: 3.5rem;
     }
 
     .integrantes__titulo p{
-        line-height:1.7;
+        line-height: 1.7;
     }
 
     .integrante{
-        padding:3rem;
+        padding: 3rem;
     }
 
     .integrante img{
-
-        width:15rem;
-        height:15rem;
-
+        width: 15rem;
+        height: 15rem;
     }
 
     .integrante h2{
-        font-size:2rem;
+        font-size: 2rem;
     }
 
     .integrante__links img{
-
-        width:4rem;
-        height:4rem;
-
+        width: 4rem;
+        height: 4rem;
     }
 
-    .repositorio{
-
-        width:95%;
-
-        padding:3rem 2rem;
-
+    .repositorio {
+        width: 95%;
+        padding: 3rem 2rem;
     }
 
     .repositorio h2{
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
-
 }
 
 /* ==========================================

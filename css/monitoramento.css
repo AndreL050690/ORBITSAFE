@@ -332,27 +332,77 @@ body{
 }
 
 /* ==========================================
-   RESPONSIVIDADE PARA TABLETS
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ========================================== */
-@media(max-width:900px){
-    .cabecalho__navbar{
-        flex-direction:column;
-        gap:3rem;
+.cabecalho__hamburger {
+    display: none; /* Fica escondido em telas grandes */
+    background: none;
+    border: none;
+    color: var(--primary); /* Mantém o azul primário */
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cabecalho__hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+========================================== */
+@media (max-width: 900px) {
+    /* Exibe o botão de três listras (☰) */
+    .cabecalho__hamburger {
+        display: block;
     }
-    .cabecalho__lista{
-        flex-wrap:wrap;
-        justify-content:center;
+
+    /* Modifica a barra de navegação para manter o alinhamento com o botão */
+    .cabecalho__navbar {
+        width: 90%;
+        padding: 1.5rem 3rem;
+        position: relative; /* Necessário para posicionar o menu suspenso */
+        flex-direction: row; /* Mantém logo e botão alinhados horizontalmente */
+        gap: 0;
     }
-    .cards-indicadores{
-        grid-template-columns:1fr;
+
+    /* Transforma a lista horizontal em um menu suspenso oculto */
+    .cabecalho__lista {
+        display: none; /* ESCONDE o menu por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Surge logo abaixo da barra de navegação */
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 20, 46, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(0, 207, 255, 0.2);
+        border-radius: 2rem;
+        padding: 3rem;
+        gap: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 999;
     }
-    .painel-grade{
-        grid-template-columns:1fr;
+
+    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    .cabecalho__lista.active {
+        display: flex;
     }
-    .radar-container{
-        width:280px;
-        height:280px;
+
+    /* Suas configurações originais do painel de monitoramento para tablets */
+    .cards-indicadores {
+        grid-template-columns: 1fr;
     }
+
+    .painel-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .radar-container {
+        width: 280px;
+        height: 280px;
+    }
+
     .texto-satelite {
         width: 100%;
         padding: 0 2rem;
@@ -360,141 +410,73 @@ body{
 }
 
 /* ==========================================
-   BOTÃO SOS FLUTUANTE
-========================================== */
-.sos-btn{
-    position:fixed;
-    bottom:25px;
-    left:25px;
-    width:70px;
-    height:70px;
-    border:none;
-    border-radius:50%;
-    background:#ff3333;
-    color:white;
-    font-size:2rem;
-    cursor:pointer;
-    z-index:9999;
-}
-
-/* ==========================================
-   MODAL SOS
-========================================== */
-.sos-modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.8);
-    justify-content:center;
-    align-items:center;
-    z-index:10000;
-}
-
-/* ==========================================
-   CONTEÚDO DO MODAL SOS
-========================================== */
-.sos-conteudo{
-    width:400px;
-    background:#07142e;
-    padding:30px;
-    border-radius:20px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.sos-conteudo input,
-.sos-conteudo textarea{
-    padding:12px;
-}
-
-/* ==========================================
-   BOTÕES DO SOS
-========================================== */
-.sos-enviar{
-    background:#00cfff;
-    border:none;
-    padding:12px;
-    cursor:pointer;
-}
-
-.sos-fechar{
-    background:#ff3333;
-    border:none;
-    padding:12px;
-    color:white;
-    cursor:pointer;
-}
-
-/* ==========================================
-   RESPONSIVIDADE PARA CELULARES
+   RESPONSIVIDADE GERAL PARA CELULARES (Telas até 600px)
 ========================================== */
 @media(max-width:600px){
-    html{
-        font-size:50%;
+    html {
+        font-size: 50%;
     }
-    .cabecalho{
-        padding:1rem;
+
+    .cabecalho {
+        padding: 1rem;
     }
-    .cabecalho__navbar{
-        padding:2rem;
-        flex-direction:column;
-        gap:2rem;
+
+    .titulo-central h1 {
+        font-size: 3.5rem;
     }
-    .cabecalho__lista{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:1.5rem;
+
+    .container-monitoramento {
+        width: 95%;
+        padding: 5rem 0;
     }
-    .titulo-central h1{
-        font-size:3.5rem;
+
+    .cards-indicadores {
+        grid-template-columns: 1fr;
     }
-    .container-monitoramento{
-        width:95%;
-        padding:5rem 0;
+
+    .painel-grade {
+        grid-template-columns: 1fr;
     }
-    .cards-indicadores{
-        grid-template-columns:1fr;
-    }
-    .painel-grade{
-        grid-template-columns:1fr;
-    }
+
     .card,
     .bloco-mapa,
-    .bloco-ocorrencias{
-        padding:3rem;
+    .bloco-ocorrencias {
+        padding: 3rem;
     }
-    .radar-container{
-        width:230px;
-        height:230px;
+
+    .radar-container {
+        width: 230px;
+        height: 230px;
     }
-    .radar-ring:nth-child(1){
-        width:70px;
-        height:70px;
-        top:80px;
-        left:80px;
+
+    .radar-ring:nth-child(1) {
+        width: 70px;
+        height: 70px;
+        top: 80px;
+        left: 80px;
     }
-    .radar-ring:nth-child(2){
-        width:140px;
-        height:140px;
-        top:45px;
-        left:45px;
+
+    .radar-ring:nth-child(2) {
+        width: 140px;
+        height: 140px;
+        top: 45px;
+        left: 45px;
     }
-    .radar-ring:nth-child(3){
-        width:210px;
-        height:210px;
-        top:10px;
-        left:10px;
+
+    .radar-ring:nth-child(3) {
+        width: 210px;
+        height: 210px;
+        top: 10px;
+        left: 10px;
     }
-    .alerta{
-        padding:2rem;
+
+    .alerta {
+        padding: 2rem;
     }
-    .rodape{
-        margin-top:5rem;
-        padding:3rem;
+
+    .rodape {
+        margin-top: 5rem;
+        padding: 3rem;
     }
 }
 
