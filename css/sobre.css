@@ -413,3 +413,112 @@ body{
     cursor:pointer;
 
 }
+
+
+
+@media(max-width:900px){
+
+    .cabecalho__navbar{
+        flex-direction:column;
+        gap:3rem;
+    }
+
+    .cabecalho__lista{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:2rem;
+    }
+
+    .valores__container{
+        grid-template-columns:1fr;
+    }
+
+    .sobre__container{
+        width:90%;
+        padding:4rem;
+    }
+
+    .sobre__title{
+        font-size:4rem;
+    }
+
+}
+
+
+
+
+@media(max-width:480px){
+
+    html{
+        font-size:50%;
+    }
+
+    .cabecalho{
+        padding:1rem;
+    }
+
+    .cabecalho__navbar{
+        padding:2rem;
+    }
+
+    .cabecalho__logo img{
+        height:6rem;
+    }
+
+    .cabecalho__lista{
+        flex-direction:column;
+        align-items:center;
+        gap:1.5rem;
+    }
+
+    .sobre{
+        padding:5rem 0;
+    }
+
+    .sobre__container{
+        width:95%;
+        padding:3rem;
+    }
+
+    .sobre__title{
+        font-size:3.5rem;
+    }
+
+    .sobre__text{
+        font-size:1.6rem;
+        line-height:1.8;
+    }
+
+    .valores{
+        padding:4rem 0;
+    }
+
+    .valores__title{
+        font-size:3rem;
+    }
+
+    .valores__container{
+        width:95%;
+        grid-template-columns:1fr;
+    }
+
+    .valores__card{
+        padding:3rem;
+    }
+
+    .valores__sub-title{
+        font-size:2rem;
+    }
+
+    .sos-conteudo{
+        width:90%;
+        padding:2rem;
+    }
+
+    .sos-btn{
+        width:60px;
+        height:60px;
+        font-size:1.6rem;
+    }
+
+}

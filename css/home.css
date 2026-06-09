@@ -1,5 +1,4 @@
-css
-/* RESET */
+
 
 *{
     margin:0;
@@ -40,7 +39,6 @@ body{
 
 
 
-/* VIDEO */
 
 .video-fundo{
 
@@ -80,7 +78,7 @@ body::before{
 
 
 
-/* CABEÇALHO */
+
 
 .cabecalho{
 
@@ -147,7 +145,7 @@ body::before{
 
 
 
-/* HERO */
+
 
 .hero{
 
@@ -247,7 +245,7 @@ body::before{
 
 
 
-/* CARDS */
+
 
 .conteudo__container{
 
@@ -312,7 +310,6 @@ body::before{
 
 
 
-/* RODAPÉ */
 
 .rodape{
 
@@ -327,7 +324,7 @@ body::before{
 
 
 
-/* RESPONSIVO */
+
 
 @media (max-width:900px){
 
@@ -459,5 +456,120 @@ body::before{
     color:white;
 
     cursor:pointer;
+
+}
+
+
+@media(max-width:900px){
+
+    .cabecalho__navbar{
+        flex-direction:column;
+        gap:3rem;
+    }
+
+    .cabecalho__lista{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:2rem;
+    }
+
+    .hero{
+        height:auto;
+        padding:10rem 0;
+    }
+
+    .hero__title{
+        font-size:5rem;
+    }
+
+    .hero__text{
+        width:90%;
+    }
+
+    .conteudo__container{
+        grid-template-columns:1fr;
+    }
+}
+
+
+
+@media(max-width:480px){
+
+    html{
+        font-size:50%;
+    }
+
+    .cabecalho{
+        padding:1rem;
+    }
+
+    .cabecalho__navbar{
+        padding:2rem;
+    }
+
+    .cabecalho__logo img{
+        height:6rem;
+    }
+
+    .cabecalho__lista{
+        flex-direction:column;
+        align-items:center;
+        gap:1.5rem;
+    }
+
+    .hero{
+        height:auto;
+        padding:8rem 0;
+    }
+
+    .hero__bemvindo{
+        letter-spacing:.5rem;
+        font-size:1.6rem;
+    }
+
+    .hero__title{
+        font-size:4rem;
+    }
+
+    .hero__linha{
+        width:15rem;
+    }
+
+    .hero__text{
+        width:95%;
+        font-size:1.6rem;
+    }
+
+    .hero__btn{
+        padding:1.5rem 3rem;
+    }
+
+    .conteudo__container{
+        width:95%;
+        grid-template-columns:1fr;
+    }
+
+    .conteudo__sec{
+        padding:3rem;
+    }
+
+    .card__icone{
+        font-size:4rem;
+    }
+
+    .conteudo__sub-title{
+        font-size:2rem;
+    }
+
+    .sos-conteudo{
+        width:90%;
+        padding:2rem;
+    }
+
+    .sos-btn{
+        width:60px;
+        height:60px;
+        font-size:1.6rem;
+    }
 
 }
