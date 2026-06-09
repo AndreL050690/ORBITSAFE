@@ -442,13 +442,13 @@ textarea:invalid{
 }
 
 /* ==================================================
-   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
+   ESTILO PADRÃO DO BOTÃO HAMBÚRGUER
 ================================================== */
 .cabecalho__hamburger {
-    display: none; /* Fica escondido em telas grandes */
+    display: none; 
     background: none;
     border: none;
-    color: #00d2ff; /* Usando a cor primary da página */
+    color: #00d2ff; 
     font-size: 3rem;
     cursor: pointer;
     transition: 0.3s;
@@ -459,10 +459,9 @@ textarea:invalid{
 }
 
 /* ==================================================
-   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+   RESPONSIVIDADE DO MENU HAMBÚRGUER
 ================================================== */
 @media (max-width: 900px) {
-    /* Exibe o botão de três listras (☰) nas outras páginas */
     .cabecalho__hamburger {
         display: block;
     }
@@ -471,15 +470,15 @@ textarea:invalid{
     .cabecalho__navbar {
         width: 90%;
         padding: 1.5rem 3rem;
-        position: relative; /* Necessário para posicionar o menu suspenso */
+        position: relative; 
     }
 
     /* Transforma a lista horizontal em um menu suspenso oculto */
     .cabecalho__lista {
-        display: none; /* ESCONDE o menu por padrão no mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Surge logo abaixo da barra de navegação */
+        top: 100%; 
         left: 0;
         width: 100%;
         background-color: rgba(7, 20, 46, 0.95);
@@ -492,14 +491,14 @@ textarea:invalid{
         z-index: 999;
     }
 
-    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    /* classe ativada quando clicada, mostra o menu */
     .cabecalho__lista.active {
         display: flex;
     }
 }
 
 /* ==================================================
-   RESPONSIVIDADE GERAL PARA TELAS MENORES (Até 600px)
+   RESPONSIVIDADE GERAL PARA TELAS MENORES
 ================================================== */
 @media(max-width:600px){
     html{

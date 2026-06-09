@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     /* ==========================================
-       1. MENU RESPONSIVO (5,5 pontos)
+        MENU RESPONSIVO 
        ========================================== */
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ==========================================
-       2. MODAL SOS & VALIDAÇÃO (5,5 + 3,0 pontos)
+        MODAL SOS E VALIDAÇÃO 
        ========================================== */
     const abrirSOS = document.getElementById("abrirSOS");
     const fecharSOS = document.getElementById("fecharSOS");

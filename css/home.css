@@ -462,7 +462,7 @@ body::before{
    ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ================================================== */
 .cabecalho__hamburger {
-    display: none; /* Fica escondido em telas grandes */
+    display: none; 
     background: none;
     border: none;
     color: var(--primary);
@@ -476,7 +476,7 @@ body::before{
 }
 
 /* ==================================================
-   RESPONSIVIDADE ADAPTADA PARA O MENU HAMBÚRGUER (Telas até 900px)
+   RESPONSIVIDADE ADAPTADA PARA O MENU HAMBÚRGUER 
 ================================================== */
 @media (max-width: 900px) {
 
@@ -489,15 +489,15 @@ body::before{
     .cabecalho__navbar {
         width: 90%;
         padding: 1.5rem 3rem;
-        position: relative; /* Necessário para posicionar o menu suspenso */
+        position: relative; 
     }
 
     /* Transforma a lista horizontal em um menu suspenso oculto */
     .cabecalho__lista {
-        display: none; /* ESCONDE o menu por padrão no mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Surge logo abaixo da barra de navegação */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: rgba(7, 20, 46, 0.95);
@@ -510,7 +510,7 @@ body::before{
         z-index: 999;
     }
 
-    /* CLASSE ATIVADA PELO JAVASCRIPT: Quando clicado, mostra o menu */
+    /* classe ativada quando clicada, mostra o menu */
     .cabecalho__lista.active {
         display: flex;
     }
@@ -534,7 +534,7 @@ body::before{
 }
 
 /* ==================================================
-   RESPONSIVIDADE PARA CELULARES PEQUENOS (Telas até 480px)
+   RESPONSIVIDADE PARA CELULARES PEQUENOS (
 ================================================== */
 @media (max-width: 480px) {
 
