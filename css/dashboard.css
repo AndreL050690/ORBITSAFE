@@ -466,6 +466,17 @@
 
 }
 
+/* ==========================================
+   ESTILIZAÇÃO DO PARÁGRAFO DE DETALHES (SATÉLITES)
+========================================== */
+.texto-satelite {
+    text-align: center;         
+    max-width: 850px;           
+    margin: 4rem auto 0 auto;   
+    line-height: 1.6;           
+    color: #e2e8f0;             
+}
+
 /* ==================================================
    EFEITOS DE HOVER NOS CARDS E BLOCOS
    ================================================== */
