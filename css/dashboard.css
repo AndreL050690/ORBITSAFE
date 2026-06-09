@@ -217,17 +217,6 @@
    GRÁFICO DE BARRAS
    ================================================== */
 
-.bar-chart-container{
-
-    height:250px;
-
-    display:flex;
-
-    justify-content:space-around;
-
-    align-items:flex-end;
-}
-
 .bar-wrapper{
 
     display:flex;
@@ -353,13 +342,87 @@
 }
 
 /* ==================================================
+   GRÁFICO DE BARRAS 
+   ================================================== */
+
+.area-grafico-ficticio{
+
+    background:#081528;
+    border:1px dashed #00cfff;
+    border-radius:2rem;
+    padding:1rem;
+    min-height:280px;
+}
+
+.bar-chart-container {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-grafico-resiliencia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.imagem-grafico-barras {
+    width: 100%;
+    height: 120%;
+    object-fit: fill; 
+    display: block;
+}
+
+.container-legendas-regiao {
+    position: absolute;
+    bottom: 5px; 
+    left: 0;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 2; 
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de tamanhos idênticos */
+    text-align: center;
+}
+
+.legenda-item {
+    display: block;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); /* Cria contraste caso o texto fique sobre a barra */
+}
+
+.legenda-item span {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.legenda-item small {
+    display: block;
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+.bar-wrapper, .bar, .bar-value, .bar-label {
+    display: none;
+}
+
+/* ==================================================
    ESTILO PADRÃO DO BOTÃO HAMBÚRGUER (PC/DESKTOP)
 ================================================== */
 .cabecalho__hamburger {
-    display: none; /* Fica escondido em telas grandes */
+    display: none; 
     background: none;
     border: none;
-    color: #00cfff; /* Cor primária do seu Dashboard */
+    color: #00cfff; 
     font-size: 3rem;
     cursor: pointer;
     transition: 0.3s;
@@ -370,17 +433,17 @@
 }
 
 /* ==================================================
-   RESPONSIVIDADE UNIFICADA (Telas até 1100px)
+   RESPONSIVIDADE UNIFICADA 
    Ajusta os gráficos do Dashboard para tablets grandes
 ================================================== */
 @media(max-width:1100px){
     .grade-dashboard{
-        grid-template-columns:1fr; /* Gráficos ficam um embaixo do outro */
+        grid-template-columns:1fr; 
     }
 }
 
 /* ==================================================
-   RESPONSIVIDADE DO MENU HAMBÚRGUER (Telas até 900px)
+   RESPONSIVIDADE DO MENU HAMBÚRGUER 
 ================================================== */
 @media (max-width: 900px) {
     /* Exibe o botão de três listras (☰) */
@@ -392,7 +455,7 @@
     .cabecalho__navbar {
         width: 90%;
         padding: 1.5rem 3rem;
-        position: relative; /* Necessário para posicionar o menu suspenso */
+        position: relative; 
     }
 
     /* Transforma a lista horizontal em um menu suspenso oculto */
