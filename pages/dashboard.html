@@ -147,95 +147,93 @@
             </section>
 
             <!-- Gráfico comparativo de resiliência por região -->
-
             <section class="bloco-grafico" aria-labelledby="grafico-resiliencia">
                 <h3 id="grafico-resiliencia">Índice de Resiliência por Região</h3>
                 <div class="area-grafico-ficticio" role="img"
                     aria-label="Gráfico de barras indicando 98% de resiliência na Região Sudeste, 75% na Região Norte, 88% na Nordeste, 92% na Sul e 85% na Centro-Oeste.">
+
                     <div class="bar-chart-container">
-                        <div class="bar-wrapper">
-                            <div class="bar" style="height: 98%;">
-                                <span class="bar-value">98%</span>
-                            </div>
-                            <span class="bar-label">Sudeste</span>
+                        <div class="container-grafico-resiliencia">
+                            <img src="../assets/grafico2.png" alt="Gráfico de Barras - Resiliência"
+                                class="imagem-grafico-barras">
                         </div>
-                        <div class="bar-wrapper">
-                            <div class="bar" style="height: 75%;">
-                                <span class="bar-value">75%</span>
+
+                        <div class="container-legendas-regiao">
+                            <div class="legenda-item">
+                                <span>98%</span>
+                                <small>Sudeste</small>
                             </div>
-                            <span class="bar-label">Norte</span>
-                        </div>
-                        <div class="bar-wrapper">
-                            <div class="bar" style="height: 88%;">
-                                <span class="bar-value">88%</span>
+                            <div class="legenda-item">
+                                <span>75%</span>
+                                <small>Norte</small>
                             </div>
-                            <span class="bar-label">Nordeste</span>
-                        </div>
-                        <div class="bar-wrapper">
-                            <div class="bar" style="height: 92%;">
-                                <span class="bar-value">92%</span>
+                            <div class="legenda-item">
+                                <span>88%</span>
+                                <small>Nordeste</small>
                             </div>
-                            <span class="bar-label">Sul</span>
-                        </div>
-                        <div class="bar-wrapper">
-                            <div class="bar" style="height: 85%;">
-                                <span class="bar-value">85%</span>
+                            <div class="legenda-item">
+                                <span>92%</span>
+                                <small>Sul</small>
                             </div>
-                            <span class="bar-label">C.Oeste</span>
+                            <div class="legenda-item">
+                                <span>85%</span>
+                                <small>C.Oeste</small>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </section>
 
-        </div>
+            <!-- Tabela com o histórico das transmissões realizadas -->
 
-        <!-- Tabela com o histórico das transmissões realizadas -->
+            <section class="secao-tabela" aria-labelledby="titulo-tabela">
+                <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
+                <div class="tabela-wrapper">
+                    <table class="tabela-dados">
+                        <thead>
+                            <tr>
+                                <th>Satélite Origem</th>
+                                <th>Banda (Mbps)</th>
+                                <th>Região Assistida</th>
+                                <th>Horário (UTC)</th>
+                                <th>Canal Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OrbitSafe-03</td>
+                                <td>450 Mbps</td>
+                                <td>Litoral Sudeste</td>
+                                <td>20:05:12</td>
+                                <td><span class="badge-status ativo">Ativo</span></td>
+                            </tr>
+                            <tr>
+                                <td>OrbitSafe-12</td>
+                                <td>320 Mbps</td>
+                                <td>Comunidade Norte</td>
+                                <td>20:02:45</td>
+                                <td><span class="badge-status ativo">Ativo</span></td>
+                            </tr>
+                            <tr>
+                                <td>OrbitSafe-07</td>
+                                <td>600 Mbps</td>
+                                <td>Vale do Paraíba</td>
+                                <td>19:58:30</td>
+                                <td><span class="badge-status completo">Finalizado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <section class="secao-tabela" aria-labelledby="titulo-tabela">
-            <h3 id="titulo-tabela">Histórico Recente de Transmissões Orbitais</h3>
-            <div class="tabela-wrapper">
-                <table class="tabela-dados">
-                    <thead>
-                        <tr>
-                            <th>Satélite Origem</th>
-                            <th>Banda (Mbps)</th>
-                            <th>Região Assistida</th>
-                            <th>Horário (UTC)</th>
-                            <th>Canal Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>OrbitSafe-03</td>
-                            <td>450 Mbps</td>
-                            <td>Litoral Sudeste</td>
-                            <td>20:05:12</td>
-                            <td><span class="badge-status ativo">Ativo</span></td>
-                        </tr>
-                        <tr>
-                            <td>OrbitSafe-12</td>
-                            <td>320 Mbps</td>
-                            <td>Comunidade Norte</td>
-                            <td>20:02:45</td>
-                            <td><span class="badge-status ativo">Ativo</span></td>
-                        </tr>
-                        <tr>
-                            <td>OrbitSafe-07</td>
-                            <td>600 Mbps</td>
-                            <td>Vale do Paraíba</td>
-                            <td>19:58:30</td>
-                            <td><span class="badge-status completo">Finalizado</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            </section>
 
-        </section>
-
-        <p class="texto-satelite">Garantir canais de comunicação resilientes é o núcleo da solução OrbitSafe. Esta seção
-            monitora o fluxo de dados e a integridade das transmissions destinadas a áreas sob alerta. A análise de
-            banda e o status dos canais evitam apagões de dados, permitindo que órgãos de defesa civil tomem decisões
-            baseadas em relatórios meteorológicos geoespaciais ininterruptos.</p>
+            <p class="texto-satelite">Garantir canais de comunicação resilientes é o núcleo da solução OrbitSafe. Esta
+                seção
+                monitora o fluxo de dados e a integridade das transmissions destinadas a áreas sob alerta. A análise de
+                banda e o status dos canais evitam apagões de dados, permitindo que órgãos de defesa civil tomem
+                decisões
+                baseadas em relatórios meteorológicos geoespaciais ininterruptos.</p>
 
     </main>
 
