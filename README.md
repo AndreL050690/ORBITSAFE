@@ -13,6 +13,8 @@
   <img src="assets/home.png" alt="Demonstração do OrbitSafe" width="600px">
 </p>
 
+https://youtu.be/k454SNrbKLE?si=Pwvth4V9jTb0qPP4
+
 ## 📌 Descrição do Projeto
 
 O OrbitSafe é uma plataforma front-end concebida para atuar na ameização dos impactos causados por desastres ambientais (enchentes, queimadas, deslizamentos, tempestades) em regiões remotas ou temporariamente isoladas. Quando a infraestrutura terrestre de telecomunicação (cabos de fibra e antenas de celular) colapsa, o OrbitSafe restabelece a troca de dados vitais roteando o tráfego por satélites de órbita baixa.
