@@ -388,7 +388,7 @@
     z-index: 2; 
     
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas de tamanhos idênticos */
+    grid-template-columns: repeat(5, 1fr); 
     text-align: center;
 }
 
@@ -397,7 +397,7 @@
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); /* Cria contraste caso o texto fique sobre a barra */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); 
 }
 
 .legenda-item span {
